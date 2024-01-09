@@ -1,0 +1,29 @@
+.cartaTratamientos{
+    width: 35vw;
+    height: 60vh;
+    max-width: 550px;
+    max-height: 600px;
+    background-color: rgb(237, 240, 243);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+    font-weight: 200;
+    border-radius: 5px;
+    border: 1px solid rgba(72, 136, 219, 0.404);
+}
+.tituloTratamientos{
+    color: var(--miColor);
+}
+.imagenTratamientos{
+    width: 30vw;
+    height: 30vh;
+}
+
+.parrafoTratamientos{
+  font-weight: 400;
+}
+.aTratamientos{
+    text-align: left;
+}

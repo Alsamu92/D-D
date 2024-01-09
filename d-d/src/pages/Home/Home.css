@@ -1,0 +1,9 @@
+.divJuego{
+    width: 60vw;
+    background-color: grey;
+    height: 80vh;
+    margin: 50px auto;
+    min-width: 320px;
+    border-radius: 10px;
+    max-width: 600px;
+}
