@@ -1,50 +1,69 @@
-// import axios from "axios"
-// import { updateToken } from "../utils/updateToken"
-
-// export const extraConfig = () => {
-// return (axios.create({
-//   baseURL: "http://localhost:8081/api/v1",
-//   headers: {
-//       Accept: "application/json",
-//       "Content-Type":"application/json",
-//       "Access-Control-Allow-Origin": "*",
-//       Authorization:`Bearer ${updateToken()}`
-//   },
-//   timeout: 60000,
-// }))
-// }
-
-
-
-// export const getById = async (userId) => {
-//     const APIGeneral = extraConfig();
+export const persSeleccionables = [
+    {
+      name: "Lirena",
+      surname:"Hojasanta",
+      img: "https://res.cloudinary.com/djfkchzyq/image/upload/v1704801406/ullpaqzt6zppkskmwzwz.png",
+      oro: "",
+    salud: "",
+    clase: "",
+    descripcion:"Lirena no es una aventurera al uso, solo deja de proteger al lider de su religión para atender tareas que no son confiables a nadie mas.Todos estos años de servicio han hecho que sea bendecida directamente por su Dios, lo que le ha conferido fuerza y voluntad más allá de un ser humano corriente, además es capaz de sanar heridas leves gracias a esta bendición",
+    fuerza:2,
+    inteligencia:3,
+    carisma:1,
+    sigilo:0,
+    },
   
-//     return APIGeneral.get(`/users/${userId}`)
-//       .then((res) => res)
-//       .catch((error) => error);
-//   };
 
-//   // Función que devuelve una promesa
-// function cargarDatos() {
-//     return new Promise((resolve, reject) => {
-//       // Simulamos una operación asíncrona, por ejemplo, una solicitud HTTP
-//       setTimeout(() => {
-//         const exito = true; // Cambia a false para simular un error
-//         if (exito) {
-//           const datos = { mensaje: 'Datos cargados correctamente' };
-//           resolve(datos); // Resolvemos la promesa con los datos
-//         } else {
-//           reject(new Error('Error al cargar los datos')); // Rechazamos la promesa con un error
-//         }
-//       }, 2000); // Simulamos un tiempo de carga de 2 segundos
-//     });
-//   }
-  
-//   // Utilizamos la promesa
-//   cargarDatos()
-//     .then((resultado) => {
-//       console.log(resultado.mensaje);
-//     })
-//     .catch((error) => {
-//       console.error(error.message);
-//     });
+    {
+      name: "Bruster",
+      surname:"Manollameante",
+      img: "https://res.cloudinary.com/djfkchzyq/image/upload/v1704801406/qpnweeg26egvqrxwylts.png",
+      oro: "",
+    salud: "",
+    clase: "",
+    descripcion:"Quemar accidentalmente el horfanato dondo lo criaban es solo el primero de muchos tormentosos recuerdos que tiene Bruster.Desde ese día solo ha estado buscando maneras de que lo mismo que ocasionó tanto daño sirva ahora para mejorar la vida de alguien. Trabaja en conjunto con los líderes del reino para traer la paz.",
+    fuerza:0,
+    inteligencia:3,
+    carisma:2,
+    sigilo:1,
+    },
+    {
+      name: "Krista",
+      surname:"Alaplata",
+      img: "https://res.cloudinary.com/djfkchzyq/image/upload/v1704801406/gs78l2xqy4z7cy6tdj9e.png",
+      oro: "",
+    salud: "",
+    clase: "",
+    descripcion:"Lirena no es una aventurera al uso, solo deja de proteger al lider de su religión para atender tareas que no son confiables a nadie mas.Todos estos años de servicio han hecho que sea bendecida directamente por su Dios, lo que le ha conferido fuerza y voluntad más allá de un ser humano corriente, además es capaz de sanar heridas leves gracias a esta bendición",
+    fuerza:2,
+    inteligencia:3,
+    carisma:0,
+    sigilo:0,
+    },
+    {
+      name: "Furtur",
+      surname:"Manosduras",
+      img: "https://res.cloudinary.com/djfkchzyq/image/upload/v1704801406/lc9xf3fnobm7wtnymbrt.png",
+      oro: "",
+    salud: "",
+    clase: "",
+    descripcion:"Lirena no es una aventurera al uso, solo deja de proteger al lider de su religión para atender tareas que no son confiables a nadie mas.Todos estos años de servicio han hecho que sea bendecida directamente por su Dios, lo que le ha conferido fuerza y voluntad más allá de un ser humano corriente, además es capaz de sanar heridas leves gracias a esta bendición",
+    fuerza:2,
+    inteligencia:3,
+    carisma:0,
+    sigilo:0,
+    },
+    {
+      name: "Darion",
+      surname:"Muertesombra",
+      img: "https://res.cloudinary.com/djfkchzyq/image/upload/v1704801517/eyijc8gkbetvbbzy2ymu.png",
+      oro: "",
+    salud: "",
+    clase: "",
+    descripcion:"Lirena no es una aventurera al uso, solo deja de proteger al lider de su religión para atender tareas que no son confiables a nadie mas.Todos estos años de servicio han hecho que sea bendecida directamente por su Dios, lo que le ha conferido fuerza y voluntad más allá de un ser humano corriente, además es capaz de sanar heridas leves gracias a esta bendición",
+    fuerza:2,
+    inteligencia:3,
+    carisma:0,
+    sigilo:0,
+    },
+  ];
