@@ -1,14 +1,4 @@
-.persDetallado {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 20px;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transform-style: preserve-3d;
-    animation: giro 0.5s ease-in-out;
-  }
+
   
   @keyframes giro {
     from {
@@ -46,4 +36,13 @@
   .persDetallado button:hover {
     background-color: #45a049;
   }
+  .persDetallado{
+    height: 70%;
+    width: 70%;
+    min-width: 280px;
+    padding: 10px;
+    background-color: rgb(154, 154, 195);
+    border-radius: 10px;
+}
+
   

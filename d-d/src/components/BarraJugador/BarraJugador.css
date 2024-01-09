@@ -1,0 +1,30 @@
+
+.divRol{
+    display: flex;
+    background-color: rgb(219, 230, 64);
+    justify-content: space-around;
+    height: 25%;
+}
+.stats{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+ 
+}
+.perfil{
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end;
+   align-items: center;
+   
+}
+.perfil img{
+    height: 110px;
+}
+.stats p{
+    margin: 0;
+}
+.stats h2{
+    margin: 0;
+}
