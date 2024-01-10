@@ -11,7 +11,7 @@ import { CartaAccion } from './../../../components/CartaAccion';
 export const Aldea = () => {
   const [selectedPersonaje, setSelectedPersonaje] = useState(null);
   const [pjConfirmed, setPjConfirmed] = useState(null);
-  const [numAccion, setNumAccion] = useState(1);
+ 
   const [start, setStart] = useState(null);
   const { setGaleriaItems, dataPag, ComponentPaginacion } = usePaginacion();
   const handlePersonajeClick = (person) => {
@@ -23,12 +23,11 @@ export const Aldea = () => {
   const handleStart = () => {
     setStart(true);
   };
-  const handleNumAc = (prop) => {
-    setNumAccion(prop)
-  };
-console.log(numAccion)
   useEffect(() => setGaleriaItems(persSeleccionables), []);
+  
+  useEffect(() =>console.log(), [pjConfirmed]);
 
+console.log()
   return (
     <>
       {pjConfirmed ? (
@@ -43,33 +42,15 @@ console.log(numAccion)
               </p>
               <button onClick={() => handleStart()}>Empezar ya!</button>
             </div>
-            <BarraJugador
-              name={selectedPersonaje.name}
-              oro={selectedPersonaje.oro}
-              salud={selectedPersonaje.salud}
-              img={selectedPersonaje.img}
-              fuerza={selectedPersonaje.fuerza}
-              inteligencia={selectedPersonaje.inteligencia}
-              sigilo={selectedPersonaje.sigilo}
-              carisma={selectedPersonaje.carisma}
-            />
+           
           </div>
         ) : (
           <>
            <div className="divJuego"> 
            <div className="divPreguntas">
-           <CartaAccion />
+           <CartaAccion miPj={pjConfirmed}/>
            </div>
-           <BarraJugador
-          name={selectedPersonaje.name}
-          oro={selectedPersonaje.oro}
-          salud={selectedPersonaje.salud}
-          img={selectedPersonaje.img}
-          fuerza={selectedPersonaje.fuerza}
-          inteligencia={selectedPersonaje.inteligencia}
-          sigilo={selectedPersonaje.sigilo}
-          carisma={selectedPersonaje.carisma}
-        /></div>
+        </div>
          
           </>
          
