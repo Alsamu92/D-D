@@ -1,9 +1,15 @@
-.divJuego{
+.divJuego {
+    background-image: url("https://res.cloudinary.com/djfkchzyq/image/upload/v1704990401/xih3t7f9nqbsq0rfmlxc.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 50px;
+    position: absolute;
     width: 60vw;
-    background-color: grey;
-    height: 80vh;
-    margin: 50px auto;
-    min-width: 320px;
-    border-radius: 10px;
+    min-width: 370px;
     max-width: 600px;
-}
+    transform-style: preserve-3d;
+    animation: giro 0.5s ease-in-out;
+    height: 80vh;
+  }
+  

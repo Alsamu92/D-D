@@ -58,10 +58,10 @@ console.log()
       ) : (
         <div className="divJuego">
           <div>
-            <h2>¡Bienvenido!</h2>
-            <h3>Selecciona tu personaje</h3>
+          
+            <h2 className="">Selecciona tu personaje</h2>
           </div>
-          {!selectedPersonaje ? (
+        
             <div className="mainSeleccion">
               {dataPag.map((person) => (
                 <CardPersonaje
@@ -70,23 +70,13 @@ console.log()
                   name={person.name}
                   surname={person.surname}
                   img={person.img}
+                
+                  confirmed={() => handleConfirmedClick(selectedPersonaje)}
                 />
               ))}
               <ComponentPaginacion />
             </div>
-          ) : (
-            <CardPersonajeRev
-              confirmed={() => handleConfirmedClick(selectedPersonaje)}
-              name={selectedPersonaje.name}
-              surname={selectedPersonaje.surname}
-              fuerza={selectedPersonaje.fuerza}
-              inteligencia={selectedPersonaje.inteligencia}
-              sigilo={selectedPersonaje.sigilo}
-              carisma={selectedPersonaje.carisma}
-              descripcion={selectedPersonaje.descripcion}
-              volver={() => setSelectedPersonaje(null)}
-            />
-          )}
+         
         </div>
       )}
     </>

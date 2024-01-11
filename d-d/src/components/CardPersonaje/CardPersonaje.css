@@ -1,26 +1,42 @@
-.figurePers{
+.figurePers {
+  background-color: #ffffff00;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
 
-        background-color: #fff;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        padding: 20px;
-        margin: 20px;
-        text-align: center;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        transform-style: preserve-3d;
-        animation: giro 0.5s ease-in-out;
-      }
-      
-      @keyframes giro {
-        0% {
-           background-color:black;
-          transform: rotateY(180deg);
-        }
-        25% {
-           background-color:black;
-      
-        }
-        100% {
-          transform: rotateY(0deg);
-        }
-      }
+  height: 350px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.figurePers img {
+  height: 70%;
+
+  transform-style: preserve-3d;
+  animation: giro 0.5s ease-in-out;
+}
+.figurePers img:hover {
+  scale: 1.05;
+  transition: 0.5s ease;
+}
+
+.figurePers h2 {
+  text-align: center;
+}
+
+@keyframes giro {
+  0% {
+    background-color: black;
+    transform: rotateY(180deg);
+  }
+  25% {
+    background-color: black;
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}

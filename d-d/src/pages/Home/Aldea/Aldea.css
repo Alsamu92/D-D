@@ -3,19 +3,22 @@
     justify-content: space-between;
     max-width: 250px;
     align-items: center;
+    position: relative;
+    top: -105px;
+    left: 0px;
+    
 }
 .mainSeleccion{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    height: 100%;
+    margin: 0;
 }
-.figurePers{
-    height: 500px;
-  
-    display: flex;
-    flex-direction: column;
-
+.seleccionPersonaje{
+    position: relative;
+    top: 20px;
 }
 
 .divJuego h2 {
@@ -24,20 +27,7 @@
 .divJuego h3{
     text-align: center;
 }
-.figurePers img{
-   height: 90%;
-   cursor: pointer;
-   
 
-}
-.figurePers img:hover{
-    scale: 1.05;
-    transition: .5s ease;
-}
-
-.figurePers h2{
-    text-align: center;
-}
 .divInstrucciones{
     min-height: 80%;
     background-color: lightcoral;

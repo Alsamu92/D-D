@@ -6,16 +6,16 @@ export const CartaAccion = ({ miPj }) => {
   const [consecuencia, setConsecuencia] = useState();
   const [accion, setAccion] = useState(0);
   const [indice, setIndice] = useState();
-console.log(miPj)
+console.log(accion)
   const handleAccion = (num) => {
+    num++
     setAccion(num);
   };
   const actualizarRecursos=(oro,salud)=>{
 miPj.oro+=(oro)
-
 miPj.salud+=(salud)
-console.log(miPj.oro)
-console.log(miPj.salud)
+
+
   }
 if(miPj.oro<0) miPj.oro=0;
   return (
@@ -42,7 +42,7 @@ if(miPj.oro<0) miPj.oro=0;
           <div className="cartaAccion">{consecuencia}</div>
           
           <button onClick={() => {
-          handleAccion(secuelas[accion].rutas[indice][miPj.name])
+          handleAccion(accion)
 
            actualizarRecursos(((secuelas[accion].oro?(secuelas[accion].oro[indice][miPj.name]):0)),(secuelas[accion].salud?(secuelas[accion].salud[indice][miPj.name]):0))
   setConsecuencia(null);
