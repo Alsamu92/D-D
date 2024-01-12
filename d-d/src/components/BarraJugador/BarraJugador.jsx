@@ -21,10 +21,11 @@ export const BarraJugador = ({miPj }) => {
         </div>
         <div className="stats">
           <h2>  Estadísticas</h2>
-          <p><strong>Fuerza</strong>:{miPj.fuerza}</p>  
-          <p><strong>Inteligencia</strong>:{miPj.inteligencia}</p> 
+          <p><strong>Combate</strong>:{miPj.combate}</p>  
+          <p><strong>Sabiduría</strong>:{miPj.sabiduria}</p> 
           <p><strong>Sigilo</strong>:{miPj.sigilo}</p>
-          <p><strong>Carisma</strong>:{miPj.carisma}</p> 
+          <p><strong>Ayuda</strong>:{miPj.ayuda}</p> 
+          <p><strong>Justicia</strong>:{miPj.justicia}</p> 
         </div>
       </div>
     </>

@@ -1,9 +1,12 @@
 
 .divRol{
     display: flex;
-    background-color: rgb(219, 230, 64);
+    width: 90%;
+padding: 0 10px;
     justify-content: space-around;
     height: 25%;
+    position: relative;
+    top: -13%;
 }
 .stats{
     display: flex;
@@ -21,10 +24,12 @@
 }
 .perfil img{
     height: 110px;
+    margin: 10px;
 }
 .stats p{
     margin: 0;
 }
 .stats h2{
-    margin: 0;
+    margin: 10px;
+    font-size: 18px;
 }

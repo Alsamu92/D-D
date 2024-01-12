@@ -6,17 +6,14 @@ import { persSeleccionables } from "../../../services/services";
 import { CardPersonaje } from "../../../components/CardPersonaje/CardPersonaje";
 import { useConfirmacionPj } from "../../../hooks/useConfirmacionPj";
 import { BarraJugador } from "../../../components/BarraJugador/BarraJugador";
-import { CartaAccion } from './../../../components/CartaAccion';
+import { CartaAccion } from "./../../../components/CartaAccion";
 
 export const Aldea = () => {
-  const [selectedPersonaje, setSelectedPersonaje] = useState(null);
   const [pjConfirmed, setPjConfirmed] = useState(null);
- 
+
   const [start, setStart] = useState(null);
   const { setGaleriaItems, dataPag, ComponentPaginacion } = usePaginacion();
-  const handlePersonajeClick = (person) => {
-    setSelectedPersonaje(person);
-  };
+
   const handleConfirmedClick = (person) => {
     useConfirmacionPj(setPjConfirmed, person);
   };
@@ -24,10 +21,8 @@ export const Aldea = () => {
     setStart(true);
   };
   useEffect(() => setGaleriaItems(persSeleccionables), []);
-  
-  useEffect(() =>console.log(), [pjConfirmed]);
 
-console.log()
+  console.log();
   return (
     <>
       {pjConfirmed ? (
@@ -35,48 +30,51 @@ console.log()
           <div className="divJuego">
             <div className="divInstrucciones">
               <h1>Instrucciones</h1>
-              <p>
-                Sobrevive todo el tiempo que puedas escogiendo la opción que
-                creas más conveniente. La partida acaba si los PS de tu
-                personaje llegan a 0
-              </p>
-              <button onClick={() => handleStart()}>Empezar ya!</button>
+              <img
+                src="https://res.cloudinary.com/djfkchzyq/image/upload/v1705014940/mmvgaitxijvqv5keghnl.png"
+                alt="imagen control"
+              />
+              <ul className="textInstrucciones">
+                <li>Sobrevive todo lo que puedas.</li>
+              <li>
+                {" "}
+                Los puntos de tu personaje en la acción que elijas decidirá el
+                éxito.
+              </li>
+              <li>Puntos bajos restará salud</li>
+              <li>Puntos altos dará oro</li>
+              <li>
+                El objetivo es llegar al final con la mayor cantidad de oro
+                posible
+              </li>
+              </ul>
+              
+              <button onClick={() => handleStart()}>Empezar!</button>
             </div>
-           
           </div>
         ) : (
           <>
-           <div className="divJuego"> 
-           <div className="divPreguntas">
-           <CartaAccion miPj={pjConfirmed}/>
-           </div>
-        </div>
-         
+            <div className="divJuego">
+              <div className="divPreguntas">
+                <CartaAccion miPj={pjConfirmed} />
+              </div>
+            </div>
           </>
-         
         )
       ) : (
         <div className="divJuego">
-          <div>
-          
-            <h2 className="">Selecciona tu personaje</h2>
+          <h2 className="">Selecciona tu personaje</h2>
+
+          <div className="mainSeleccion">
+            {dataPag.map((person) => (
+              <CardPersonaje
+                key={person.name}
+                selected={person}
+                confirmed={() => handleConfirmedClick(person)}
+              />
+            ))}
+            <ComponentPaginacion />
           </div>
-        
-            <div className="mainSeleccion">
-              {dataPag.map((person) => (
-                <CardPersonaje
-                  key={person.name}
-                  selected={() => handlePersonajeClick(person)}
-                  name={person.name}
-                  surname={person.surname}
-                  img={person.img}
-                
-                  confirmed={() => handleConfirmedClick(selectedPersonaje)}
-                />
-              ))}
-              <ComponentPaginacion />
-            </div>
-         
         </div>
       )}
     </>

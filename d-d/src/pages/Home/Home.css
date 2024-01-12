@@ -8,8 +8,7 @@
     width: 60vw;
     min-width: 370px;
     max-width: 600px;
-    transform-style: preserve-3d;
-    animation: giro 0.5s ease-in-out;
+  
     height: 80vh;
   }
   

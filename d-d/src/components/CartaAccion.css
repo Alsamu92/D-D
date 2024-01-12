@@ -1,3 +1,74 @@
 .cartaAccion{
-    min-height: 62vh;
+    min-height: 34vh;
+    position: relative;
+    top: 12%;
+   color :white;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    gap: 2px;
 }
+.cartaAccion button{
+   
+    text-align: left;
+    padding: 5px 0px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.cartaAccion button:hover{
+   
+  background-color: rgba(249, 215, 153, 0.942);
+  transition: 0.2s ease-in-out;
+}
+.cartaConsecuencia{
+    height: 34vh;
+    position: relative;
+    top: 12%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   color :white;
+    width: 80%;
+    z-index: 0;
+}
+.cartaConsecuencia p{
+  z-index: 2;
+  font-weight: 700;
+}
+.cartaConsecuencia img{
+    min-width: 300px;
+    z-index: -1;
+    width: 90%;
+    position: relative;
+    top: -6%;
+
+    overflow: hidden;
+    
+}
+.botonConsecuencias{
+    position: relative;
+    top: 31.5%;
+    left: 34%;
+    background-color: rgba(255, 0, 0, 0);
+    border: none;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+  
+}
+@media screen and (max-width: 768px) {
+    .elegirButton {
+  font-size: 16px;
+   
+   
+    }
+    .botonConsecuencias {
+  font-size: 15px;
+ 
+   
+   
+    }
+  }

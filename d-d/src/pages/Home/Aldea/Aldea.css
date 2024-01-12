@@ -8,6 +8,27 @@
     left: 0px;
     
 }
+.botonesPaginacion button{
+   
+     
+        
+        padding: 7px 15px;
+        font-size: 10px;
+        font-family: 'Uncial Antiqua', sans-serif;
+        text-transform: uppercase;
+        background-color: #3D2B1F; 
+        color: #FFD700; 
+        border: 2px solid #3D2B1F;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+     
+      }
+      #disabled{
+        background-color: #9a7c68;
+        color: #b2ab87; 
+      }
+    
 .mainSeleccion{
     display: flex;
     flex-direction: column;
@@ -21,18 +42,81 @@
     top: 20px;
 }
 
-.divJuego h2 {
-    text-align: center;
-}
+.divJuego > h2 {
+text-align: center;
+position: relative;
+top: 15px;
+ }
 .divJuego h3{
     text-align: center;
 }
 
 .divInstrucciones{
-    min-height: 80%;
-    background-color: lightcoral;
+width: 80%;
+
+height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+position: relative;
+left: 10%;
+top: 10%;
+margin: 0;
+padding: 0;
+
 }
+.divInstrucciones h1{
+   
+    position: relative;
+    top: -8.5%;
+    text-align: center;
+}
+.divInstrucciones img{
+    position: relative;
+    top: -15%;
+ height: 300px;
+    width: 100%;
+}
+.divInstrucciones p{
+  position: relative;
+  top: -20%;
+  font-weight: 600;
+  margin: 0;
+padding: 0;
+}
+.divInstrucciones button{
+  position: relative;
+  top: -17%;
+  border: none;
+  background-color: #3d2b1f00;
+  left: 77%;
+  font-size: 16px;
+  width: 30%;
+  cursor: pointer;
+  font-weight: 700;
+  margin: 0;
+padding: 0;
+}
+.textInstrucciones{
+    position: relative;
+    top: -12%;
+ 
+}
+@media screen and (max-width: 768px) {
+    .divInstrucciones button {
+font-size: 14px;
+   
+   
+    }
+  }
 .divPreguntas{
-    min-height: 80%;
-    background-color: lightcoral;
+    display: flex;
+    height: 750px;
+   
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+    position: absolute;
+
+ 
 }
