@@ -22,7 +22,7 @@ export const CartaAccion = ({ miPj }) => {
         !consecuencia ? (
           <div className="cartaAccion">
             <p>{acciones[accion].accion}</p>
-            <p>{acciones[accion].accionMasInfo}</p>
+        
             {acciones[accion].opcion.map((op, index) => (
               <button
                 key={op.accion}
@@ -40,9 +40,9 @@ export const CartaAccion = ({ miPj }) => {
         ) : (
           <>
             <div className="cartaConsecuencia">
-              <p>{consecuencia}</p>{" "}
+              <p>{consecuencia}</p>
               <img
-                src="https://res.cloudinary.com/djfkchzyq/image/upload/v1705020121/u9aeomvdxatmm8llt22o.jpg"
+                src={secuelas[accion].oro[indice][miPj.name]==0?"https://res.cloudinary.com/djfkchzyq/image/upload/v1705064810/dtxkqyzkbslt7o9zo4cq.jpg" :"https://res.cloudinary.com/djfkchzyq/image/upload/v1705020121/u9aeomvdxatmm8llt22o.jpg"}
                 alt=""
               />
             </div>

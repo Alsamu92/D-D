@@ -18,12 +18,19 @@ padding: 0 10px;
 .perfil{
    display: flex;
    flex-direction: column;
-   justify-content: flex-end;
+   justify-content: center;
    align-items: center;
+   position: relative;
+   top: 0%;
+   
+}
+.perfil h3{
+margin:0
    
 }
 .perfil img{
-    height: 110px;
+   width: 90%;
+   height: 80%;
     margin: 10px;
 }
 .stats p{

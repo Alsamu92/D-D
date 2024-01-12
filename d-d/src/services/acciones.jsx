@@ -2,7 +2,7 @@ export const acciones = [
   // --------------ACCION 0-----------------
   {
     accion:
-      "Tras una ardua búsqueda, finalmente descubres el lugar donde mantienen cautiva a yu hermano. Al llegar, te das cuenta de que la situación es más compleja de lo esperado. Un grupo de captores fuertemente armados está custodiando la ubicación.",
+      "Tras una ardua búsqueda, finalmente descubres el lugar donde mantienen cautivo a tu hermano. Al llegar, te das cuenta de que la situación es más compleja de lo esperado. Un grupo de captores fuertemente armados está custodiando la ubicación.",
     accionMasInfo: "¿Qué vas a hacer?",
     opcion: [
       "Desarrollar un plan astuto para rescatar a la persona sin que te detecten.",
@@ -43,22 +43,22 @@ export const acciones = [
   },
   // --------------ACCION 4-----------------
   {
-    accion: "Explorando una antigua biblioteca, el personaje descubre un libro misterioso que contiene información crucial para derrotar a un enemigo poderoso. Al llegar, se encuentra con guardianes que protegen el conocimiento.",
+    accion: "Explorando una antigua biblioteca, el personaje descubre un libro misterioso que contiene información crucial para  el reino.",
     accionMasInfo: "¿Qué vas a hacer?",
     opcion: [
-      "Utilizar el sigilo para evitar a los guardianes y tomar el libro sin ser visto.",
-      "Enfrentar a los guardianes en combate para acceder al libro por la fuerza.",
-      "Buscar conocimientos adicionales en la biblioteca para encontrar una solución pacífica."
+      "LLevarlo a la biblioteca para que lo estudien y mejoren infraestructura.",
+      "Levarlo a los hospitales para solucionar una epidemia.",
+      "Guardarse el libro para venderlo al mejor postor."
     ]
   },
   // --------------ACCION 5-----------------
   {
-    accion: "En una aldea remota, el personaje descubre que un grupo de bandidos está extorsionando a los aldeanos. Al llegar al lugar, se da cuenta de que los bandidos tienen rehenes y están armados.",
+    accion: "Defendiendo tu ciudad de un ejercito enemigo te das cuenta que la batallaestá perdida.Un druida te ofrece adoptar la forma de un Dios animal",
     accionMasInfo: "¿Qué vas a hacer?",
     opcion: [
-      "Desarrollar un plan astuto para liberar a los rehenes sin alertar a los bandidos.",
-      "Enfrentar a los bandidos en combate directo para proteger a los aldeanos.",
-      "Buscar aliados en la aldea y organizar una resistencia pacífica contra los bandidos."
+      "Grizxy:el oso ",
+      "Trux:el buho",
+      "Frul:el buey"
     ]
   },
   // --------------ACCION 6-----------------
@@ -217,7 +217,7 @@ export const secuelas = [
       Lirena: "Lirena se acerca con determinación, utilizando su aura sagrada para evaluar la situación y buscar una solución pacífica. Puede intentar comunicarse con las criaturas místicas de manera amigable para entender sus intenciones.Sus intenciones son que te vayas.Medio esquivas sus ataques.Solo pierdes 10 de salud",
       Bruster: "Bruster, al ser un mago, opta por mantener una distancia segura. Utiliza su habilidad en la magia para analizar las criaturas y su entorno antes de tomar cualquier acción. Puede intentar lanzar un hechizo de detección o protección para evaluar la amenaza.Evalua que no hay peligro ninguno.Las criaturas no se mueven.Puedes llevarte tesoro por valor de 10 monedas",
       Krista: "Krista, como sacerdotisa, se acerca con compasión y curiosidad. Puede utilizar sus habilidades sagradas para comunicarse con las criaturas místicas, ofrecer ayuda si están heridas o necesitan algo, y tratar de entender la naturaleza de su custodia.la bondad de Krista es recompensada.20 de oro",
-      Furtur: "Furtur, siendo un guerrero experimentado, se acerca con cautela y preparado para el combate. Observa detenidamente a las criaturas y evalúa sus intenciones. Si percibe una amenaza, está listo para desenvainar su espada y enfrentarse a ellas en combate.Hay amenaza pero ya es tarde para pelear, casi consigues esquivar los ataques pero pierdes 10 de salud.",
+      Furtur: "Furtur, siendo un guerrero experimentado, se acerca con cautela. Observa detenidamente a las criaturas y evalúa sus intenciones.Son agresivo, pero ya es tarde para pelear, casi consigues esquivar los ataques pero pierdes 10 de salud.",
       Darion: "Darion, como pícaro astuto, se acerca furtivamente,. Utiliza su destreza para observar a las criaturas y evalúa la situación,aunque decides acercarte, las criaturas empiezan a atacarte y te ves obligado a retirarte -20 de salud",
     },
     //CONSECUENCIA 2------------------------------
@@ -242,7 +242,7 @@ export const secuelas = [
       Lirena: -10,
       Bruster: 0,
       Krista: 0,
-      Furtur: -20,
+      Furtur: -10,
       Darion: -20,
     },
     {
@@ -434,5 +434,181 @@ export const secuelas = [
       Darion: 0,
     },
   ],
+},
+// --------------SECUELA 4-----------------
+{
+  consecuencias: [
+    //CONSECUENCIA 1------------------------------
+    {
+      Lirena: "Lirena, cuando ya se lo está llevando, tropieza con una trampa oculta. Al activarla, sufre un pequeño contratiempo y pierde 20 puntos de salud.",
+      Bruster: "Bruster, con su aguda inteligencia, entrega el libro antiguo lleno de hechizos raros. A cambio de su descubrimiento, recibe recompensas místicas y es recompensado con 20 monedas de oro.",
+      Krista: "Krista,para sacar el libro se encuentra con un enigma que la desafía mentalmente. Aunque resuelve el enigma, el esfuerzo le causa  agotamiento, perdiendo 10 puntos de salud.",
+      Furtur: "Al sacar el libro unas trampas laterales le aplastan la mano.Pierde 30 de salud",
+      Darion: "Darion, con su astucia característica, encuentra una pequeña caja fuerte oculta detrás del libro. Logra abrirla y descubre monedas de oro en su interior, ganando así 10 monedas.",
+    },
+    //CONSECUENCIA 2------------------------------
+    {
+      Lirena: "Lirena, liderando la iniciativa y mostrando su compromiso con el reino, enfrenta algunos desafíos físicos durante la salida de la biblioteca. Pierde 10 puntos de salud como resultado de su desgaste.",
+      Bruster: "Bruster, ayuda  entregando el libro, obtiene reconocimiento por su pericia. Gana 10 monedas de oro como recompensa por sus contribuciones.",
+      Krista: "Al aplicar sus conocimientos sanadores para ayudar en la epidemia, Krista recibe donaciones agradecidas de los ciudadanos. Gana 20 monedas de oro como recompensa por sus esfuerzos benevolentes.",
+      Furtur: "Furtur, participando activamente en la lucha contra la epidemia, se enfrenta a riesgos físicos considerables. Pierde 20 puntos de salud debido a su valiente esfuerzo en la batalla contra la enfermedad.",
+      Darion: "La pandemia empeora,todos culpan a Darion.-30 de salud en una pelea callejera.",
+    },
+    //CONSECUENCIA 3------------------------------
+    {
+      Lirena: "Lirena, líder comprometida con la justicia, guarda el libro con la intención de venderlo al mejor postor. Pierde 20 puntos de salud debido al desgaste emocional.",
+      Bruster: "Bruster, cauteloso y equilibrado, elige guardar el libro para venderlo más tarde. Pierde 10 puntos de salud como resultado de complicaciones inesperadas.",
+      Krista: "La descubren vendiendo el libro y es castigada duramente por traición.-30 de salud",
+      Furtur: "Enfocado en su propio beneficio, guarda el libro con la intención de venderlo al mejor postor. Gana 10 monedas de oro por su decisión.",
+      Darion: "Darion, astuto y enfocado en su propio beneficio, guarda el libro con la intención de venderlo al mejor postor. Gana 20 monedas de oro por su decisión.",
+    },
+  ],
+  salud: [
+    {
+      Lirena: -20,
+      Bruster: 0,
+      Krista: -10,
+      Furtur: -30,
+      Darion: 0,
+    },
+    {
+      Lirena: -10,
+      Bruster: 0,
+      Krista: 0,
+      Furtur: -20,
+      Darion: -30,
+    },
+    {
+      Lirena: -20,
+      Bruster: -10,
+      Krista: -30,
+      Furtur: 0,
+      Darion: 0,
+    },
+  ],
+  oro: [
+    {
+      Lirena: 0,
+      Bruster: 20,
+      Krista: 0,
+      Furtur: 0,
+      Darion: 10,
+    },
+    {
+      Lirena: 0,
+      Bruster: 10,
+      Krista: 20,
+      Furtur: 0,
+      Darion: 0,
+    },
+    {
+      Lirena: 0,
+      Bruster: 0,
+      Krista: 0,
+      Furtur: 10,
+      Darion: 20,
+    },
+  ],
+},// --------------SECUELA 5-----------------
+{
+  consecuencias: [
+    //CONSECUENCIA 1------------------------------
+    {
+      Lirena: "",
+      Bruster: "",
+      Krista: "",
+      Furtur: "",
+      Darion: "",
+    },
+    //CONSECUENCIA 2------------------------------
+    {
+      Lirena: "",
+      Bruster: "",
+      Krista: "",
+      Furtur: "",
+      Darion: "",
+    },
+    //CONSECUENCIA 3------------------------------
+    {
+      Lirena: "",
+      Bruster: "",
+      Krista: "",
+      Furtur: "",
+      Darion: "",
+    },
+],
+  salud: [
+    {
+      Lirena: -20,
+      Bruster: 0,
+      Krista: -10,
+      Furtur: -30,
+      Darion: 0,
+    },
+    {
+      Lirena: -10,
+      Bruster: 0,
+      Krista: 0,
+      Furtur: -20,
+      Darion: -30,
+    },
+    {
+      Lirena: -20,
+      Bruster: -10,
+      Krista: -30,
+      Furtur: 0,
+      Darion: 0,
+    },
+  ],
+  oro: [
+    {
+      Lirena: 0,
+      Bruster: 20,
+      Krista: 0,
+      Furtur: 0,
+      Darion: 10,
+    },
+    {
+      Lirena: 0,
+      Bruster: 10,
+      Krista: 20,
+      Furtur: 0,
+      Darion: 0,
+    },
+    {
+      Lirena: 0,
+      Bruster: 0,
+      Krista: 0,
+      Furtur: 10,
+      Darion: 20,
+    },
+  ],
 }
 ];
+
+// consecuencias: [
+//   //CONSECUENCIA 1------------------------------
+//   {
+//     Lirena: "",
+//     Bruster: "",
+//     Krista: "",
+//     Furtur: "",
+//     Darion: "",
+//   },
+//   //CONSECUENCIA 2------------------------------
+//   {
+//     Lirena: "",
+//     Bruster: "",
+//     Krista: "",
+//     Furtur: "",
+//     Darion: "",
+//   },
+//   //CONSECUENCIA 3------------------------------
+//   {
+//     Lirena: "",
+//     Bruster: "",
+//     Krista: "",
+//     Furtur: "",
+//     Darion: "",
+//   },
+// ],

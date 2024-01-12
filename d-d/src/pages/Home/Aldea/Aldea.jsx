@@ -47,6 +47,9 @@ export const Aldea = () => {
                 El objetivo es llegar al final con la mayor cantidad de oro
                 posible
               </li>
+              <li>
+                Solo hay 3 opciones en cada ronda,a veces, tendrás que elegir el mal menor
+              </li>
               </ul>
               
               <button onClick={() => handleStart()}>Empezar!</button>
