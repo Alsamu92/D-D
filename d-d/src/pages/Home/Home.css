@@ -13,6 +13,9 @@
   
     height: 80vh;
   }
+  .divJuego h2{
+    color: black;
+  }
   @media screen and (max-height: 800px) {
     .divJuego {
       margin-top: 200px;
@@ -36,14 +39,14 @@ a {
 }
 
 .contenedorJuego h2 {
-    color: #FFF; /* Cambié el color del texto a blanco para mejorar la visibilidad */
+    color: #FFF; 
     font-size: 24px;
     margin-bottom: 20px;
-    text-align: center; /* Centra el texto */
+    text-align: center; 
 }
 
 .enlaceAventura {
-    display: block; /* Hace que el enlace ocupe todo el ancho del contenedor */
+    display: block; 
 }
 
 .cajonAventura {
