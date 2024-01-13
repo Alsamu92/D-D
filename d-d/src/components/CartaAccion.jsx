@@ -2,6 +2,7 @@ import { useState } from "react";
 import { acciones, secuelas } from "../services/acciones";
 import "./CartaAccion.css";
 import { BarraJugador } from "./BarraJugador/BarraJugador";
+import { Link } from 'react-router-dom';
 export const CartaAccion = ({ miPj }) => {
   const [consecuencia, setConsecuencia] = useState();
   const [accion, setAccion] = useState(0);
@@ -18,11 +19,23 @@ export const CartaAccion = ({ miPj }) => {
   if (miPj.oro < 0) miPj.oro = 0;
   return (
     <>
-      {miPj.salud > 0 ? (
+    {accion >= acciones.length ? (
+      <>
+      <div className="cartaConsecuencia">
+    
+        <p>Has ganado!</p>
+        <p>{miPj.name} ha conseguido salir con {miPj.oro} monedas de oro.</p>
+      </div>
+      <Link className="botonConsecuencias"to="/">
+      <button >Inicio</button>
+    </Link>
+    </>
+    ) : 
+      miPj.salud > 0 ? (
         !consecuencia ? (
           <div className="cartaAccion">
             <p>{acciones[accion].accion}</p>
-        
+
             {acciones[accion].opcion.map((op, index) => (
               <button
                 key={op.accion}
@@ -42,12 +55,16 @@ export const CartaAccion = ({ miPj }) => {
             <div className="cartaConsecuencia">
               <p>{consecuencia}</p>
               <img
-                src={secuelas[accion].oro[indice][miPj.name]==0?"https://res.cloudinary.com/djfkchzyq/image/upload/v1705064810/dtxkqyzkbslt7o9zo4cq.jpg" :"https://res.cloudinary.com/djfkchzyq/image/upload/v1705020121/u9aeomvdxatmm8llt22o.jpg"}
+                src={
+                  secuelas[accion].oro[indice][miPj.name] == 0
+                    ? "https://res.cloudinary.com/djfkchzyq/image/upload/v1705064810/dtxkqyzkbslt7o9zo4cq.jpg"
+                    : "https://res.cloudinary.com/djfkchzyq/image/upload/v1705020121/u9aeomvdxatmm8llt22o.jpg"
+                }
                 alt=""
               />
             </div>
             <button
-            className="botonConsecuencias"
+              className="botonConsecuencias"
               onClick={() => {
                 handleAccion(accion);
 
@@ -66,10 +83,23 @@ export const CartaAccion = ({ miPj }) => {
             </button>
           </>
         )
-      ) : (
-        <div>Has perdido</div>
-      )}
-      <BarraJugador miPj={miPj} />
+      ) : (<>
+        <div className="cartaConsecuencia">
+          <h2>DERROTA</h2>
+          <p>
+            {miPj.name} no ha conseguido superar todas las pruebas, las{" "}
+            {miPj.oro} monedas que habías juntado yacen ahora en el suelo con{" "}
+            {miPj.name} y no sirven para nada
+           
+          </p>
+          <img src="https://res.cloudinary.com/djfkchzyq/image/upload/v1705064810/dtxkqyzkbslt7o9zo4cq.jpg" alt="" />
+         
+        </div>
+        <Link className="botonConsecuencias"to="/">
+        <button >Inicio</button>
+      </Link>
+        </>)}
+      <BarraJugador acciones={acciones} accion={accion} miPj={miPj} />
     </>
   );
 };

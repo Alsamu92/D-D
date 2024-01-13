@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./BarraJugador.css";
 
-export const BarraJugador = ({miPj }) => {
+export const BarraJugador = ({miPj,acciones,accion }) => {
   
   useEffect(() => {
 
@@ -18,6 +18,7 @@ export const BarraJugador = ({miPj }) => {
         <div>
           <p><strong>Salud</strong>:{miPj.salud} PS</p>
           <p><strong>Oro</strong>:{miPj.oro} monedas</p>
+          <p><strong>Superadas:</strong>{accion}/{acciones.length}</p>
         </div>
         <div className="stats">
           <h2>  Estadísticas</h2>

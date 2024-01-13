@@ -18,6 +18,8 @@ export const Aldea = () => {
     useConfirmacionPj(setPjConfirmed, person);
   };
   const handleStart = () => {
+    pjConfirmed.oro=0
+    pjConfirmed.salud=100
     setStart(true);
   };
   useEffect(() => setGaleriaItems(persSeleccionables), []);

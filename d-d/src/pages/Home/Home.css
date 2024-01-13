@@ -18,4 +18,34 @@
     
     }
   }
+  .contenedorJuego {
+    background-color: #573F2E; /* Color de fondo que simula la madera */
+    padding: 20px;
+    border: 2px solid #8B4513; /* Color del borde que simula la madera oscura */
+    border-radius: 10px;
+    width: 300px; /* Ajusta el ancho según tus necesidades */
+}
+a{
+  text-decoration: none;
+}
+
+h2 {
+    color: black}
+
+
+
+.cajonAventura {
+    background-color: #8B4513; 
+    color: #FFD700; 
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    cursor: pointer; 
+}
+
+.cajonAventura.cerrado {
+    background-color: #A0522D; 
+    color: #DAA520; 
+
+}
   

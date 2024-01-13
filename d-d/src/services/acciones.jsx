@@ -51,86 +51,86 @@ export const acciones = [
       "Guardarse el libro para venderlo al mejor postor."
     ]
   },
-  // --------------ACCION 5-----------------
-  {
-    accion: "Defendiendo tu ciudad de un ejercito enemigo te das cuenta que la batallaestá perdida.Un druida te ofrece adoptar la forma de un Dios animal",
-    accionMasInfo: "¿Qué vas a hacer?",
-    opcion: [
-      "Grizxy:el oso ",
-      "Trux:el buho",
-      "Frul:el buey"
-    ]
-  },
-  // --------------ACCION 6-----------------
-  {
-    accion: "Durante una misión de reconocimiento, el personaje descubre un campo de refugiados en peligro. Al llegar, se da cuenta de que están siendo amenazados por un grupo de saqueadores.",
-    accionMasInfo: "¿Qué vas a hacer?",
-    opcion: [
-      "Utilizar habilidades sigilosas para desarmar a los saqueadores y liberar a los refugiados.",
-      "Enfrentar a los saqueadores en combate directo para proteger a los refugiados.",
-      "Buscar ayuda externa y coordinar un esfuerzo conjunto para garantizar la seguridad de los refugiados."
-    ]
-  },
-  // --------------ACCION 7-----------------
-  {
-    accion: "Explorando una ciudad en ruinas, el personaje descubre que un grupo de habitantes locales está siendo perseguido injustamente por las autoridades.",
-    accionMasInfo: "¿Qué vas a hacer?",
-    opcion: [
-      "Ayudar sigilosamente a los perseguidos a evadir a las autoridades y encontrar refugio.",
-      "Enfrentar a las autoridades en combate directo para proteger a los habitantes locales.",
-      "Buscar evidencia y testimonios para exponer la injusticia y buscar una solución legal."
-    ]
-  },
-  // --------------ACCION 8-----------------
-  {
-    accion: "En una reunión política, el personaje descubre un plan para desencadenar un conflicto injusto. Al llegar, se da cuenta de que los conspiradores están bien conectados y tienen recursos significativos.",
-    accionMasInfo: "¿Qué vas a hacer?",
-    opcion: [
-      "Utilizar tácticas sigilosas para obtener pruebas sin ser detectado y exponer el plan.",
-      "Enfrentar a los conspiradores en combate directo para detener la conspiración de inmediato.",
-      "Buscar aliados y apoyo político para desmantelar la conspiración de manera justa y legal."
-    ]
-  },
-  // --------------ACCION 9-----------------
-  {
-    accion: "Durante una travesía en un bosque encantado, el personaje descubre que seres mágicos están siendo cazados injustamente por cazadores furtivos.",
-    accionMasInfo: "¿Qué vas a hacer?",
-    opcion: [
-      "Utilizar habilidades mágicas sigilosas para ayudar a los seres mágicos a escapar sin ser vistos.",
-      "Enfrentar a los cazadores furtivos en combate directo para proteger a los seres mágicos.",
-      "Buscar la intervención de autoridades mágicas y buscar una solución justa para los seres mágicos."
-    ]
-  },
-  // --------------ACCION 10-----------------
-  {
-    accion: "El personaje descubre un antiguo artefacto que tiene el poder de causar daño masivo si cae en manos equivocadas. Al llegar, se da cuenta de que hay facciones opuestas que buscan apoderarse de él.",
-    accionMasInfo: "¿Qué vas a hacer?",
-    opcion: [
-      "Utilizar tácticas sigilosas para tomar el artefacto antes de que las facciones se den cuenta.",
-      "Enfrentar a las facciones en combate directo para proteger el artefacto.",
-      "Investigar la historia del artefacto y buscar una solución diplomática para evitar conflictos."
-    ]
-  },
-  // --------------ACCION 11-----------------
-  {
-    accion: "En una ciudad corrupta, el personaje descubre que un líder criminal está explotando a la población local. Al llegar, se da cuenta de que el líder tiene una milicia bien armada.",
-    accionMasInfo: "¿Qué vas a hacer?",
-    opcion: [
-      "Infiltrarse sigilosamente para desmantelar la operación criminal sin ser detectado.",
-      "Enfrentar a la milicia en combate directo para liberar a la población.",
-      "Reunir pruebas irrefutables y buscar la intervención de la justicia para derrotar al líder criminal."
-    ]
-  },
-  // --------------ACCION 12-----------------
-  {
-    accion: "Durante una peregrinación, el personaje descubre que un grupo de fanáticos está a punto de cometer un acto de violencia en nombre de sus creencias. Al llegar, se da cuenta de que están dispuestos a todo para lograr su objetivo.",
-    accionMasInfo: "¿Qué vas a hacer?",
-    opcion: [
-      "Utilizar tácticas sigilosas para desactivar la amenaza sin que los fanáticos se den cuenta.",
-      "Enfrentar a los fanáticos en combate directo para detenerlos antes de que sea demasiado tarde.",
-      "Buscar líderes religiosos moderados y tratar de disuadir a los fanáticos de forma pacífica."
-    ]
-  },
+  // // --------------ACCION 5-----------------
+  // {
+  //   accion: "Defendiendo tu ciudad de un ejercito enemigo te das cuenta que la batallaestá perdida.Un druida te ofrece adoptar la forma de un Dios animal",
+  //   accionMasInfo: "¿Qué vas a hacer?",
+  //   opcion: [
+  //     "Grizxy:el oso ",
+  //     "Trux:el buho",
+  //     "Frul:el buey"
+  //   ]
+  // },
+  // // --------------ACCION 6-----------------
+  // {
+  //   accion: "Durante una misión de reconocimiento, el personaje descubre un campo de refugiados en peligro. Al llegar, se da cuenta de que están siendo amenazados por un grupo de saqueadores.",
+  //   accionMasInfo: "¿Qué vas a hacer?",
+  //   opcion: [
+  //     "Utilizar habilidades sigilosas para desarmar a los saqueadores y liberar a los refugiados.",
+  //     "Enfrentar a los saqueadores en combate directo para proteger a los refugiados.",
+  //     "Buscar ayuda externa y coordinar un esfuerzo conjunto para garantizar la seguridad de los refugiados."
+  //   ]
+  // },
+  // // --------------ACCION 7-----------------
+  // {
+  //   accion: "Explorando una ciudad en ruinas, el personaje descubre que un grupo de habitantes locales está siendo perseguido injustamente por las autoridades.",
+  //   accionMasInfo: "¿Qué vas a hacer?",
+  //   opcion: [
+  //     "Ayudar sigilosamente a los perseguidos a evadir a las autoridades y encontrar refugio.",
+  //     "Enfrentar a las autoridades en combate directo para proteger a los habitantes locales.",
+  //     "Buscar evidencia y testimonios para exponer la injusticia y buscar una solución legal."
+  //   ]
+  // },
+  // // --------------ACCION 8-----------------
+  // {
+  //   accion: "En una reunión política, el personaje descubre un plan para desencadenar un conflicto injusto. Al llegar, se da cuenta de que los conspiradores están bien conectados y tienen recursos significativos.",
+  //   accionMasInfo: "¿Qué vas a hacer?",
+  //   opcion: [
+  //     "Utilizar tácticas sigilosas para obtener pruebas sin ser detectado y exponer el plan.",
+  //     "Enfrentar a los conspiradores en combate directo para detener la conspiración de inmediato.",
+  //     "Buscar aliados y apoyo político para desmantelar la conspiración de manera justa y legal."
+  //   ]
+  // },
+  // // --------------ACCION 9-----------------
+  // {
+  //   accion: "Durante una travesía en un bosque encantado, el personaje descubre que seres mágicos están siendo cazados injustamente por cazadores furtivos.",
+  //   accionMasInfo: "¿Qué vas a hacer?",
+  //   opcion: [
+  //     "Utilizar habilidades mágicas sigilosas para ayudar a los seres mágicos a escapar sin ser vistos.",
+  //     "Enfrentar a los cazadores furtivos en combate directo para proteger a los seres mágicos.",
+  //     "Buscar la intervención de autoridades mágicas y buscar una solución justa para los seres mágicos."
+  //   ]
+  // },
+  // // --------------ACCION 10-----------------
+  // {
+  //   accion: "El personaje descubre un antiguo artefacto que tiene el poder de causar daño masivo si cae en manos equivocadas. Al llegar, se da cuenta de que hay facciones opuestas que buscan apoderarse de él.",
+  //   accionMasInfo: "¿Qué vas a hacer?",
+  //   opcion: [
+  //     "Utilizar tácticas sigilosas para tomar el artefacto antes de que las facciones se den cuenta.",
+  //     "Enfrentar a las facciones en combate directo para proteger el artefacto.",
+  //     "Investigar la historia del artefacto y buscar una solución diplomática para evitar conflictos."
+  //   ]
+  // },
+  // // --------------ACCION 11-----------------
+  // {
+  //   accion: "En una ciudad corrupta, el personaje descubre que un líder criminal está explotando a la población local. Al llegar, se da cuenta de que el líder tiene una milicia bien armada.",
+  //   accionMasInfo: "¿Qué vas a hacer?",
+  //   opcion: [
+  //     "Infiltrarse sigilosamente para desmantelar la operación criminal sin ser detectado.",
+  //     "Enfrentar a la milicia en combate directo para liberar a la población.",
+  //     "Reunir pruebas irrefutables y buscar la intervención de la justicia para derrotar al líder criminal."
+  //   ]
+  // },
+  // // --------------ACCION 12-----------------
+  // {
+  //   accion: "Durante una peregrinación, el personaje descubre que un grupo de fanáticos está a punto de cometer un acto de violencia en nombre de sus creencias. Al llegar, se da cuenta de que están dispuestos a todo para lograr su objetivo.",
+  //   accionMasInfo: "¿Qué vas a hacer?",
+  //   opcion: [
+  //     "Utilizar tácticas sigilosas para desactivar la amenaza sin que los fanáticos se den cuenta.",
+  //     "Enfrentar a los fanáticos en combate directo para detenerlos antes de que sea demasiado tarde.",
+  //     "Buscar líderes religiosos moderados y tratar de disuadir a los fanáticos de forma pacífica."
+  //   ]
+  // },
 ];
 
 export const secuelas = [
@@ -272,7 +272,7 @@ export const secuelas = [
       Lirena: 20,
       Bruster: 0,
       Krista: 10,
-      Furtur: 20,
+      Furtur: 0,
       Darion: 0,
     },
     {
