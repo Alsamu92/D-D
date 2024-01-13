@@ -1,0 +1,21 @@
+.footer {
+    background-color: #573F2E;
+    color: #FFF;
+    padding: 20px;
+    text-align: center;
+   margin-top: 50px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-family:cursive; 
+}
+
+.footer-logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+@media screen and (max-height: 800px) {
+    .footer{
+      margin-top: 170px;
+    
+    }}

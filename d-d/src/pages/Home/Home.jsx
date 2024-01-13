@@ -6,7 +6,7 @@ export const Home = () => {
   const{tamanoPantalla}=useSize()
 
   return (
-   <div className="contedeorJuego">
+   <div className="contenedorJuego">
     <h2>Selecciona tu aventura</h2>
     <Link to="/Aldea">
     <h3 className="cajonAventura">Desafío de eleccion</h3>

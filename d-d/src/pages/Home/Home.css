@@ -3,49 +3,67 @@
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
-    margin-top: 100px;
+    margin-top: 50px;
     position: absolute;
     width: 60vw;
     min-width: 370px;
     max-width: 600px;
     min-height: 735px;
+    
   
     height: 80vh;
   }
   @media screen and (max-height: 800px) {
     .divJuego {
-      margin-top: 300px;
+      margin-top: 200px;
     
     }
   }
   .contenedorJuego {
-    background-color: #573F2E; /* Color de fondo que simula la madera */
-    padding: 20px;
-    border: 2px solid #8B4513; /* Color del borde que simula la madera oscura */
-    border-radius: 10px;
-    width: 300px; /* Ajusta el ancho según tus necesidades */
+    background-color: #573F2E;
+    padding: 30px; 
+    border: 3px solid #8B4513;
+    border-radius: 15px;
+    width: 70vw;
+    max-width: 900px;
+    height: 700px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); 
+    margin: 20px auto; 
 }
-a{
-  text-decoration: none;
+
+a {
+    text-decoration: none;
 }
 
-h2 {
-    color: black}
+.contenedorJuego h2 {
+    color: #FFF; /* Cambié el color del texto a blanco para mejorar la visibilidad */
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center; /* Centra el texto */
+}
 
-
+.enlaceAventura {
+    display: block; /* Hace que el enlace ocupe todo el ancho del contenedor */
+}
 
 .cajonAventura {
-    background-color: #8B4513; 
-    color: #FFD700; 
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    cursor: pointer; 
+    background-color: #8B4513;
+    color: #FFD700;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.cajonAventura:hover {
+    background-color: #6e3e2d;
 }
 
 .cajonAventura.cerrado {
-    background-color: #A0522D; 
-    color: #DAA520; 
-
+    background-color: #A0522D;
+    color: #DAA520;
+    cursor: not-allowed;
+    opacity: 0.7;
 }
-  

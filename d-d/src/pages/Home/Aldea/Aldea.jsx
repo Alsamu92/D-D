@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./Aldea.css";
 import { usePaginacion } from "../../../hooks/usePaginacion";
-import { CardPersonajeRev } from "../../../components/Footer/CardPersonajeRev/CardPersonajeRev";
 import { persSeleccionables } from "../../../services/services";
 import { CardPersonaje } from "../../../components/CardPersonaje/CardPersonaje";
 import { useConfirmacionPj } from "../../../hooks/useConfirmacionPj";
-import { BarraJugador } from "../../../components/BarraJugador/BarraJugador";
 import { CartaAccion } from "./../../../components/CartaAccion";
 
 export const Aldea = () => {
@@ -18,8 +16,8 @@ export const Aldea = () => {
     useConfirmacionPj(setPjConfirmed, person);
   };
   const handleStart = () => {
-    pjConfirmed.oro=0
-    pjConfirmed.salud=100
+    pjConfirmed.oro = 0;
+    pjConfirmed.salud = 100;
     setStart(true);
   };
   useEffect(() => setGaleriaItems(persSeleccionables), []);
@@ -38,22 +36,23 @@ export const Aldea = () => {
               />
               <ul className="textInstrucciones">
                 <li>Sobrevive todo lo que puedas.</li>
-              <li>
-                {" "}
-                Los puntos de tu personaje en la acción que elijas decidirá el
-                éxito.
-              </li>
-              <li>Puntos bajos restará salud</li>
-              <li>Puntos altos dará oro</li>
-              <li>
-                El objetivo es llegar al final con la mayor cantidad de oro
-                posible
-              </li>
-              <li>
-                Solo hay 3 opciones en cada ronda,a veces, tendrás que elegir el mal menor
-              </li>
+                <li>
+                  {" "}
+                  Los puntos de tu personaje en la acción que elijas decidirá el
+                  éxito.
+                </li>
+                <li>Puntos bajos restará salud</li>
+                <li>Puntos altos dará oro</li>
+                <li>
+                  El objetivo es llegar al final con la mayor cantidad de oro
+                  posible
+                </li>
+                <li>
+                  Solo hay 3 opciones en cada ronda,a veces, tendrás que elegir
+                  el mal menor
+                </li>
               </ul>
-              
+
               <button onClick={() => handleStart()}>Empezar!</button>
             </div>
           </div>
