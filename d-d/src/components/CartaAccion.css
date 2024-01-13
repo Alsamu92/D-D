@@ -1,5 +1,5 @@
 .cartaAccion {
-  min-height: 34vh;
+  height: 310px;
   position: relative;
   background: linear-gradient(to right, #d2b48c, #b8860b); 
   top: 12%;
@@ -52,7 +52,7 @@
 }
 
 .cartaConsecuencia {
- height: 34vh;
+ height: 310px;
   position: relative;
   background: linear-gradient(to right, #d2b48c, #b8860b); 
   top: 12%;
