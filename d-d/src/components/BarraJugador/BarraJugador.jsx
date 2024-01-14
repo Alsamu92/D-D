@@ -15,7 +15,7 @@ export const BarraJugador = ({miPj,acciones,accion }) => {
           <img src={miPj.img} alt={miPj.name} />
           <h3>{miPj.name}</h3>
         </div>
-        <div>
+        <div className="medioDiv">
           <p><strong>Salud</strong>:{miPj.salud} PS</p>
           <p><strong>Oro</strong>:{miPj.oro} monedas</p>
           <p><strong>Superadas:</strong>{accion}/{acciones.length}</p>
