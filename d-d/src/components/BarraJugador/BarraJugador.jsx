@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
 import "./BarraJugador.css";
+import { useAuth } from "../../context/authContext";
 
 export const BarraJugador = ({miPj,acciones,accion }) => {
-  
+  const{allUser}=useAuth()
   useEffect(() => {
-
+console.log(allUser)
     console.log("miPj has changed:", miPj);
   }, [miPj]);
 
@@ -13,7 +14,7 @@ export const BarraJugador = ({miPj,acciones,accion }) => {
       <div className="divRol">
         <div className="perfil">
           <img src={miPj.img} alt={miPj.name} />
-          <h3>{miPj.name}</h3>
+          <h3>{allUser.data.username}</h3>
         </div>
         <div className="medioDiv">
           <p><strong>Salud</strong>:{miPj.salud} PS</p>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import"./Header.css"
 
-import { NavLink } from 'react-router-dom';
+
 import { useSize } from '../../context/sizeContext';
 export const Header = () => {
   const{tamanoPantalla}=useSize()

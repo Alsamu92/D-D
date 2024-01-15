@@ -1,9 +1,13 @@
 import React from "react";
 import "./Home.css";
 import { Link } from "react-router-dom";
-import { useSize } from "../../context/sizeContext";
 export const Home = () => {
-  const{tamanoPantalla}=useSize()
+    const completados = ["Bruster", "Lirena", "Krista", "Furtur", "Darion"];
+    const desbloqueado = completados.includes("Bruster") &&
+                         completados.includes("Lirena") &&
+                         completados.includes("Krista") &&
+                         completados.includes("Furtur") &&
+                         completados.includes("Darion");
 
   return (
    <div className="contenedorJuego">
@@ -12,9 +16,9 @@ export const Home = () => {
     <h3 className="cajonAventura">Desafío de eleccion</h3>
     </Link>
     
-    <h3 className="cajonAventura"><span className="material-symbols-outlined">
+    {!desbloqueado?<h3 className="cajonAventura"><span className="material-symbols-outlined">
 lock
-</span></h3>
+</span></h3>:<h3 className="cajonAventura">Puedes pasar</h3>}
     <h3 className="cajonAventura"><span className="material-symbols-outlined">
 lock
 </span></h3>

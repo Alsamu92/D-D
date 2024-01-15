@@ -1,0 +1,229 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;900&family=Work+Sans:wght@600&display=swap');
+
+.allForm {
+  font-family: 'Lato', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+   
+  }
+
+  .formTitle{
+    padding: 20px;
+    gap: 1rem;
+    margin-bottom: 10px;
+    border-radius: 10px 10px 0px 0px;
+    width: 100%;
+    
+  }
+  .form{
+    display: flex;
+    flex-direction: column;
+    min-width: 350px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+flex-direction: column;
+    width: 40vw;
+    
+  }
+
+  .formMain {
+    background-color: var(--color-form) ;
+    border-radius: 8px;
+    -webkit-box-shadow: 1px 1px 6px 6px rgba(224,224,224,0.43);
+    -moz-box-shadow: 1px 1px 6px 6px rgba(224,224,224,0.43);
+    box-shadow: 1px 1px 6px 6px rgba(224,224,224,0.43);
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 30px 0 20px 0 ;
+    padding: 10px 10px 30px 10px;
+    text-align: center;
+    flex-direction: column;
+    width: 50vw;
+    min-width: 350px;
+  }
+  .titleFormH1{
+
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    color: var(--color-boton-motogp);
+    margin: 1rem;
+  }
+  .formGroup {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 20vw;
+    margin: 5px;
+    
+  }
+
+  .inputPlaceHolderForm{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 0 1rem 0;
+  }
+
+  .customPlaceholder{
+
+    font-size: 20px;
+    font-weight: 400;
+  }
+  
+  .radioMUI{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .inputForm {
+    width: 20vw;
+    padding: 10px;
+    margin: 0 0 15px 0;
+    border: var(--border-form);
+    border-radius: 4px;
+    min-width: 250px;
+
+  }
+
+  
+  .interest input[type="radio"] {
+    display: none;
+    margin: 20px;
+    
+  }
+  .interest{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+ 
+  }
+  .preferredfoot input{
+    display: none;
+   
+  }
+  .preferredfoot {
+    margin:30px ;
+   
+  }
+
+  /* Estilo cuando el botón de interés está seleccionado */
+  .interest input[type="radio"]:checked + .labelRadio {
+    background-color:var(--color-boton-motogp);
+    color: #fff;
+    font-weight: 600;
+    border: 2px solid #9c1644;
+  }
+
+
+  .gender {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .gender input[type="radio"] {
+    display: none;
+  }
+
+  .labelRadio {
+    cursor: pointer;
+    padding: 10px 8px;
+    border: 1px solid #ccc;
+    background-color: var(--color-h2);
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    margin: 4px;
+    width: 12vw;
+    max-width: 120px;
+    min-width: 100px;
+    border: 1px solid white;
+    
+    text-align: center;
+    
+  }
+ 
+  
+  /* Estilo cuando el botón está seleccionado */
+  .gender input[type="radio"]:checked + .labelRadio,.interested input[type="radio"]:checked + .labelRadio {
+    background-color:var(--color-boton);
+    color: #fff;
+    border: 1px solid #2f7a67;
+  }
+  .preferredfoot input[type="radio"]:checked + .labelRadio,.interested input[type="radio"]:checked + .labelRadio {
+    background-color:var(--color-boton);
+    color: #fff;
+    border: 1px solid #2f7a67;
+  }
+  
+ 
+  .btn {
+    padding: 10px 20px;
+    color:var(--color-texto-boton);
+  
+    border: none;
+    min-width: 200px;
+    font-weight: bolder;
+    font-size: 20px;
+    border-radius: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 20px 0;
+  }
+  
+  .btn:focus{
+    transform: scale(0.97);
+  }
+  
+  .btnNotsent{
+  background-color: var(--color-boton);
+  }
+  
+  .btnSent{
+  background-color: var(--color-botonSend);
+  }
+  
+  .btn:disabled {
+    cursor: not-allowed;
+    background-color: var(--color-boton);
+  }
+  
+  .bottomText {
+    margin-top: 20px;
+    color: var(--color-text-boton);
+  }
+  
+  .anchorCustom {
+    color: var(--color-enlace);
+
+  }
+  
+  .terms{
+    margin: 0 0 1rem 0;
+  }
+
+  @media (max-width: 500px) {
+    .formMain {
+      width: 80vw;
+      min-width: 100%;
+    }
+
+    .profileSettingsContainerDiv.profileSettingsFormDiv {
+      margin-bottom: 0;
+  }
+
+    .allForm {
+      margin-bottom: 1rem;
+    }
+  }
