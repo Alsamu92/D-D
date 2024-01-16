@@ -47,7 +47,6 @@ export const Register = () => {
   if (okRegister) {
    if (!localStorage.getItem("user")) {
      useAutoLogin(allUser);
-     console.log(res)
     } else {
       return <Navigate to="/" />;
   }

@@ -4,15 +4,14 @@ import { autoLoginUser } from "../services/user.service";
 
 export const useAutoLogin = async (allUser) => {
     console.log(allUser)
-const {login} = useAuth(); //lo traigo asi porque me gusta mas desde el mismo componente equipo
+const {login} = useAuth(); 
   try {
     const customFormData = {
      username: allUser?.data?.username,
       password: allUser?.data?.password
     };
 
-//ex Vamos a recibir toda la info del usuario por allUser, que se
-//ex settea en el register, y no pasa por el
+
 
     const sentAutoLoginData = await autoLoginUser(customFormData);
     if (sentAutoLoginData?.status == 200) {
