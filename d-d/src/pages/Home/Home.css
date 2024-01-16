@@ -3,14 +3,13 @@
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
-    margin-top: 50px;
+    margin-top: 150px;
     position: absolute;
     width: 60vw;
     min-width: 370px;
+    z-index: -1;
     max-width: 600px;
     min-height: 735px;
-    
-  
     height: 80vh;
   }
   .divJuego h2{
@@ -29,7 +28,7 @@
     border-radius: 15px;
     width: 70vw;
     max-width: 900px;
-    height: 700px;
+    height: 400px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); 
     margin: 20px auto; 
 }
@@ -75,87 +74,58 @@ a {
 */
 .medalla{
   width: 40px;
-  border: 1px solid rgba(128, 128, 128, 0.512);
-  height: 20px;
-  border-radius: 10px;
+border-radius: 50%;
+  height: 30px;
+
 }
-.medApagada{
+.medApagada {
   width: 40px;
-  border: 1px solid rgba(128, 128, 128, 0.614);
-  height: 20px;
-  border-radius: 10px;
+  height: 30px;
+ 
+  
+  filter: grayscale(100%);
 }
 .lirena {
-  background-color: #e74c3c; /* Rojo */
-  box-shadow: 0 0 10px 5px rgba(231, 76, 60, 0.7); /* Efecto de brillo rojo */
+  background-color: #e74c3c; 
+  box-shadow: 0 0 10px 5px rgba(231, 76, 60, 0.7); 
 }
 
-.lirena.medApagada {
-  background-color: #f2dede; /* Rojo claro */
-  box-shadow: none;
-}
+
 
 .bruster {
-  background-color: #3498db; /* Azul */
-  box-shadow: 0 0 10px 5px rgba(52, 152, 219, 0.7); /* Efecto de brillo azul */
+  background-color: #3498db; 
+  box-shadow: 0 0 10px 5px rgba(52, 152, 219, 0.7);
 }
 
-.bruster.medApagada {
-  background-color: #ecf0f1; /* Azul claro */
-  box-shadow: none;
-}
 
-/* Repite para otras gemas... */
 
-.lirena {
-  background-color: #e74c3c; /* Rojo */
-  box-shadow: 0 0 10px 5px rgba(231, 76, 60, 0.7); /* Efecto de brillo rojo */
-}
 
-.lirena.medApagada {
-  background-color: #f2dede; /* Rojo claro */
-  box-shadow: none;
-}
 
-.bruster {
-  background-color: #3498db; /* Azul */
-  box-shadow: 0 0 10px 5px rgba(52, 152, 219, 0.7); /* Efecto de brillo azul */
-}
 
-.bruster.medApagada {
-  background-color: #ecf0f1; /* Azul claro */
-  box-shadow: none;
-}
+
+
+
 
 .krista {
-  background-color: #2ecc71; /* Verde */
-  box-shadow: 0 0 10px 5px rgba(46, 204, 113, 0.7); /* Efecto de brillo verde */
+  background-color: #2ecc71; 
+  box-shadow: 0 0 10px 5px rgba(46, 204, 113, 0.7); 
 }
 
-.krista.medApagada {
-  background-color: #d0e9c6; /* Verde claro */
-  box-shadow: none;
-}
+
 
 .furtur {
-  background-color: #f39c12; /* Amarillo */
-  box-shadow: 0 0 10px 5px rgba(243, 156, 18, 0.7); /* Efecto de brillo amarillo */
+  background-color: #f39c12; 
+  box-shadow: 0 0 10px 5px rgba(243, 156, 18, 0.7); 
 }
 
-.furtur.medApagada {
-  background-color: #f9ebae; /* Amarillo claro */
-  box-shadow: none;
-}
+
 
 .darion {
-  background-color: #8e44ad; /* Morado */
-  box-shadow: 0 0 10px 5px rgba(142, 68, 173, 0.7); /* Efecto de brillo morado */
+  background-color: #8e44ad;
+  box-shadow: 0 0 10px 5px rgba(142, 68, 173, 0.7); 
 }
 
-.darion.medApagada {
-  background-color: #e1d2f4; /* Morado claro */
-  box-shadow: none;
-}
+
 
 .contenedorMedallas {
   display: flex;

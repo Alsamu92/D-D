@@ -18,19 +18,19 @@ export const useErrorRegister = (res, setRegisterOk, setRes) => {
 
     Swal.fire({
       icon: "success",
-      title: 'Register succesful',
-      text: 'Please, verify your account',
+      title: 'Registro completo',
+      text: 'A conseguir medallas!',
       showConfirmButton: false,
       timer: 1500,
     });
     setRes({});}
   //! ------------------- 409: user ya registrado
 
-  if (res?.response?.status === 409) {
+  if (res?.response?.status === 404) {
     Swal.fire({
       icon: "error",
-      title: "Invalid email",
-      text: "Please, enter a valid email",
+      title: "Usuario ya registrado",
+      text: "Prueba a elegir otro nombre",
       showConfirmButton: false,
       timer: 1500,
     });

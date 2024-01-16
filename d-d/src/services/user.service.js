@@ -58,5 +58,12 @@ export const getUserById = async (userId) => {
     .then((res) => res)
     .catch((error) => error);
 };
+//! -------------------> Poner medalla
+export const ponerMedalla = async (medalla) => {
+  const APIGeneral = extraConfig();
+  return APIGeneral.patch(`/usuario/medalla/${medalla}`)
+    .then((res) => res)
+    .catch((error) => error);
+};
 
 

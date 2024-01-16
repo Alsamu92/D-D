@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useAuth } from "../../context/authContext";
 import { getUserByName } from "../../services/user.service";
 export const Home = () => {
+  
    const[adquiridas,setAdquiridas]=useState([])
   const { user } = useAuth();
   const sacarUser=async()=>{
@@ -41,8 +42,8 @@ export const Home = () => {
             <h3>Has desbloqueado este juego</h3>
             <div className="contenedorMedallas">
             <div
-            className={`${"lirena"} ${
-              adquiridas.includes("Lirena") ? "medalla" : "medApagada"
+            className={` ${
+              adquiridas.includes("Lirena") ? "medalla lirena" : "medApagada"
             }`}
           >
             
@@ -58,17 +59,17 @@ export const Home = () => {
         <div className="cajonAventura">
             <h3>Gana con todos para desbloquear</h3>
             <div className="contenedorMedallas">
-            <div
-            className={`${"lirena"} ${
-              adquiridas.includes("Lirena") ? "medalla" : "medApagada"
+            <img src="https://res.cloudinary.com/djfkchzyq/image/upload/v1705420698/tytl5prduts1mcrmhz5w.png"
+            className={` ${
+              adquiridas.includes("Lirena") ? "medalla lirena" : "medApagada"
             }`}
           >
             
-          </div>
-          <div className={`${"bruster"} ${adquiridas.includes("Bruster") ? 'medalla' : 'medApagada'}`}></div>
-          <div className={`${"krista"} ${adquiridas.includes("Krista") ? 'medalla' : 'medApagada'}`}></div>
-          <div className={`${"furtur"} ${adquiridas.includes("Furtur") ? 'medalla' : 'medApagada'}`}></div>
-          <div className={`${"darion"} ${adquiridas.includes("Darion") ? 'medalla' : 'medApagada'}`}></div>
+          </img>
+          <img src="https://res.cloudinary.com/djfkchzyq/image/upload/v1705420698/tytl5prduts1mcrmhz5w.png" className={` ${adquiridas.includes("Bruster") ? 'medalla bruster' : 'medApagada'}`}></img>
+          <img src="https://res.cloudinary.com/djfkchzyq/image/upload/v1705420698/tytl5prduts1mcrmhz5w.png" className={` ${adquiridas.includes("Krista") ? 'medalla krista' : 'medApagada'}`}></img>
+          <img src="https://res.cloudinary.com/djfkchzyq/image/upload/v1705420698/tytl5prduts1mcrmhz5w.png" className={` ${adquiridas.includes("Furtur") ? 'medalla furtur' : 'medApagada'}`}></img>
+          <img src="https://res.cloudinary.com/djfkchzyq/image/upload/v1705420698/tytl5prduts1mcrmhz5w.png" className={` ${adquiridas.includes("Darion") ? 'medalla darion' : 'medApagada'}`}></img>
             </div>
          
         </div>

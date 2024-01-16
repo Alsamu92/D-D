@@ -16,30 +16,30 @@ export const useErrorLogin = (res, setRes, login, setSuccessfulLogin) => {
     
         Swal.fire({
           icon: "success",
-          title: "Welcome back to the sports paradise.",
-          text: "Succesfully logged in.",
+          title: "Bienvenido de nuevo!",
+          text: "",
           showConfirmButton: false,
           timer: 1500,
         });
       }
     
     
-      if (res?.response?.data?.includes("User not found")) {
+      if (res?.response?.data?.includes("usuario no registrado")) {
         setRes(() => ({}));
         Swal.fire({
           icon: "error",
-          title: "Sorry!",
-          text: "This user is not registered! Try making an account, it's super easy!",
+          title: "Ups!",
+          text: "Usuario no registrado",
           showConfirmButton: false,
           timer: 3500,
         });
       }
     
     
-      if (res?.response?.data?.includes("password is incorrect (does not match)")) {
+      if (res?.response?.data?.includes("La contraseña no coincide")) {
         Swal.fire({
           icon: "error",
-          title: "Wrong password",
+          title: "Contraseña incorrecta",
           showConfirmButton: false,
           timer: 1500,
         });

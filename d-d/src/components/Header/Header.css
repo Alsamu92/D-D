@@ -1,29 +1,38 @@
-header {
-    background-color: #8B4513;
+
+
+.headerDesktop{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    height: 10vh;
     width: 100%;
-    border-bottom: 2px solid #000;
+    height:10vh ;
+    min-height:100px ;
+   background-color: rgb(241, 117, 117);
+   
 }
 
-header h1 {
+.navUno{
     display: flex;
-    justify-content: center;
+    height: 10vh;
+   
+    justify-content: flex-end;
     align-items: center;
-    color: #FFD700;
-    font-family: 'Goudy Old Style', 'Palatino Linotype', serif;
-    font-size: 2.5rem;
-    text-shadow: 2px 2px 4px #000;
-}
-@media only screen and (max-width: 600px) {
-    header h1 {
-        font-size: 1.8rem;
-    }
-}
-body{
-    background: rgb(97, 81, 52);
   
-
+    color: white;
 }
+
+.about{
+    display: flex;
+    gap: 2vw;
+}
+
+
+
+
+.mainNav{
+    display: flex;
+    gap: 2vw;
+    
+}
+
+

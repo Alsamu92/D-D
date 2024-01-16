@@ -1,13 +1,21 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { acciones, secuelas } from "../services/acciones";
 import "./CartaAccion.css";
 import { BarraJugador } from "./BarraJugador/BarraJugador";
 import { Link } from 'react-router-dom';
+import { ponerMedalla } from "../services/user.service";
 export const CartaAccion = ({ miPj }) => {
   const [consecuencia, setConsecuencia] = useState();
+  const [recogida, setRecogida] = useState(false);
   const [accion, setAccion] = useState(0);
   const [indice, setIndice] = useState();
-  console.log(accion);
+const handleMedalla=async()=>{
+  const medalla=await ponerMedalla(miPj.name)
+  setRecogida(true);
+}
+useEffect(()=>{
+  setRecogida(false);
+},[])
   const handleAccion = (num) => {
     num++;
     setAccion(num);
@@ -25,6 +33,13 @@ export const CartaAccion = ({ miPj }) => {
     
         <p>Has ganado!</p>
         <p>{miPj.name} ha conseguido salir con {miPj.oro} monedas de oro.</p>
+        <p>Recoge la medalla de {miPj.name}</p>
+        <button
+        onClick={handleMedalla}
+        disabled={recogida} 
+      >
+        {recogida ? 'Recogida!' : 'Recoger'}
+      </button>
       </div>
       <Link className="botonConsecuencias"to="/">
       <button >Inicio</button>

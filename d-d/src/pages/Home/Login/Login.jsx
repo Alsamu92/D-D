@@ -27,6 +27,7 @@ export const Login = () => {
 
   useEffect(() => {
     useErrorLogin(res, setRes, login, setSuccessfulLogin);
+   
   }, [res]);
 
   useEffect(() => {
@@ -82,9 +83,9 @@ export const Login = () => {
       
         </form>
         <div className="footerForm">
-          <p className="parrafoLogin">
-            Are you not registered? <Link to="/register">Register Here</Link>
-          </p>
+          <a className="parrafoLogin">
+            No estás registrado? <Link to="/register">Regístrate aquí</Link>
+          </a>
         </div>
       </div>
       </div>
