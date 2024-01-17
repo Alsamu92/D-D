@@ -8,8 +8,9 @@ export const Home = () => {
    const[adquiridas,setAdquiridas]=useState([])
   const { user } = useAuth();
   const sacarUser=async()=>{
-     const usuarioActual=await getUserByName(user.username) 
-   setAdquiridas(usuarioActual.data?.medallas)
+    if(user){const usuarioActual=await getUserByName(user.username) 
+   setAdquiridas(usuarioActual?.data?.medallas)}
+     
   }
   useEffect(()=>{
     sacarUser()
@@ -66,10 +67,10 @@ export const Home = () => {
           >
             
           </img>
-          <img src="https://res.cloudinary.com/djfkchzyq/image/upload/v1705420698/tytl5prduts1mcrmhz5w.png" className={` ${adquiridas.includes("Bruster") ? 'medalla bruster' : 'medApagada'}`}></img>
-          <img src="https://res.cloudinary.com/djfkchzyq/image/upload/v1705420698/tytl5prduts1mcrmhz5w.png" className={` ${adquiridas.includes("Krista") ? 'medalla krista' : 'medApagada'}`}></img>
-          <img src="https://res.cloudinary.com/djfkchzyq/image/upload/v1705420698/tytl5prduts1mcrmhz5w.png" className={` ${adquiridas.includes("Furtur") ? 'medalla furtur' : 'medApagada'}`}></img>
-          <img src="https://res.cloudinary.com/djfkchzyq/image/upload/v1705420698/tytl5prduts1mcrmhz5w.png" className={` ${adquiridas.includes("Darion") ? 'medalla darion' : 'medApagada'}`}></img>
+          <img src="https://res.cloudinary.com/djfkchzyq/image/upload/v1705444187/p3lzvvpmzevmzfw4yl7u.png" className={` ${adquiridas.includes("Bruster") ? 'medalla bruster' : 'medApagada'}`}></img>
+          <img src="https://res.cloudinary.com/djfkchzyq/image/upload/v1705444187/ymenfwpypqa0bo3uqmhx.png" className={` ${adquiridas.includes("Krista") ? 'medalla krista' : 'medApagada'}`}></img>
+          <img src="https://res.cloudinary.com/djfkchzyq/image/upload/v1705444187/ex3pvdt6amspm2bxqpt9.png" className={` ${adquiridas.includes("Furtur") ? 'medalla furtur' : 'medApagada'}`}></img>
+          <img src="https://res.cloudinary.com/djfkchzyq/image/upload/v1705444187/yyme20utgvc9g4zfxdct.png" className={` ${adquiridas.includes("Darion") ? 'medalla darion' : 'medApagada'}`}></img>
             </div>
          
         </div>

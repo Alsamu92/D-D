@@ -3,16 +3,30 @@ import { acciones, secuelas } from "../services/acciones";
 import "./CartaAccion.css";
 import { BarraJugador } from "./BarraJugador/BarraJugador";
 import { Link } from 'react-router-dom';
-import { ponerMedalla } from "../services/user.service";
+import { getUserByName, ponerMedalla } from "../services/user.service";
+import { medallasPersonajes } from "../services/services";
+import { useAuth } from "../context/authContext";
 export const CartaAccion = ({ miPj }) => {
   const [consecuencia, setConsecuencia] = useState();
   const [recogida, setRecogida] = useState(false);
   const [accion, setAccion] = useState(0);
   const [indice, setIndice] = useState();
+  const [usuarioActual, setUsuarioActual] = useState();
 const handleMedalla=async()=>{
   const medalla=await ponerMedalla(miPj.name)
   setRecogida(true);
 }
+const{user}=useAuth()
+const sacarUser=async()=>{
+  const usuario=await getUserByName(user.username) 
+  setUsuarioActual(usuario)
+
+}
+useEffect(()=>{
+ sacarUser()
+
+},[])
+const misMedallas=medallasPersonajes
 useEffect(()=>{
   setRecogida(false);
 },[])
@@ -20,6 +34,7 @@ useEffect(()=>{
     num++;
     setAccion(num);
   };
+
   const actualizarRecursos = (oro, salud) => {
     miPj.oro += oro;
     miPj.salud += salud;
@@ -33,13 +48,18 @@ useEffect(()=>{
     
         <p>Has ganado!</p>
         <p>{miPj.name} ha conseguido salir con {miPj.oro} monedas de oro.</p>
+       {!usuarioActual?.data?.medallas.includes(miPj.name)?<>
         <p>Recoge la medalla de {miPj.name}</p>
-        <button
+        <img src={misMedallas[miPj.name]}
         onClick={handleMedalla}
+        className={recogida ? 'medApagada' : 'medalla'}
         disabled={recogida} 
+        style={{ width: '75px', cursor: 'pointer', minWidth: 'none' }}
       >
-        {recogida ? 'Recogida!' : 'Recoger'}
-      </button>
+       
+      </img>
+       </>:<p>Ya tienes esta medalla</p>
+       } 
       </div>
       <Link className="botonConsecuencias"to="/">
       <button >Inicio</button>
@@ -69,7 +89,7 @@ useEffect(()=>{
           <>
             <div className="cartaConsecuencia">
               <p>{consecuencia}</p>
-              <img
+              <img className="imgResolucion"
                 src={
                   secuelas[accion].oro[indice][miPj.name] == 0
                     ? "https://res.cloudinary.com/djfkchzyq/image/upload/v1705064810/dtxkqyzkbslt7o9zo4cq.jpg"

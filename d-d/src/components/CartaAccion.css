@@ -83,7 +83,7 @@
   font-weight: 700;
 }
 
-.cartaConsecuencia img {
+.imgResolucion{
   min-width: 300px;
   z-index: -1;
   width: 90%;
@@ -131,3 +131,4 @@
     
   }
 }
+

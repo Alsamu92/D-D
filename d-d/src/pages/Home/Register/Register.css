@@ -27,17 +27,15 @@
   justify-content: space-around;
   height: 60vh;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.455);
   text-align: center;
   min-height: 500px;
 }
 
-.formTitle {
-  margin-bottom: 20px;
-}
+
 
 .titleFormH1 {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 .form {
@@ -47,6 +45,10 @@
 
 .inputPlaceHolderForm {
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .customPlaceholder {
@@ -68,7 +70,7 @@
 
 .btnContainer {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 

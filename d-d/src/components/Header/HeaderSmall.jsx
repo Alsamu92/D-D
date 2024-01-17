@@ -51,20 +51,20 @@ menu
             <span className="material-symbols-outlined">
 badge
 </span>
-<NavLink to={"/"} onClick={()=>setShowMenu(false)} >
+<NavLink to={"/login"} onClick={()=>setShowMenu(false)} >
              Inicia sesión
               </NavLink>
             </figure>
             <figure className="figureNav">
               <span className="material-symbols-outlined">edit_note</span>
-              <NavLink to={"/"} onClick={()=>setShowMenu(false)} >
+              <NavLink to={"/records"} onClick={()=>setShowMenu(false)} >
              Récords
               </NavLink>
             </figure>
             
             <figure className="figureNav">
               <span className="material-symbols-outlined">diamond</span>
-              <NavLink to={"/tratamientos"} onClick={()=>setShowMenu(false)}>
+              <NavLink to={""} onClick={()=>setShowMenu(false)}>
            Sobre la página
               </NavLink>
             </figure>

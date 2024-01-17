@@ -2,7 +2,7 @@ import "./CardPersonaje.css";
 export const CardPersonaje = ({ confirmed, selected }) => {
   return (
     <>
-      <figure onClick={selected} className="figurePers" key={selected.name}>
+      <figure  className="figurePers" key={selected.name}>
         <img src={selected.img} alt={selected.name} />
         <h2>
           {selected.name} {selected.surname}

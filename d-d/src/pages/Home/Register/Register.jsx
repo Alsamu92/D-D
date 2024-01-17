@@ -94,12 +94,13 @@ export const Register = () => {
               {send ? "Loading..." : "Registro"}
             </button>
 
-            <div className="loginForm">
+            
+          </div>
+          <div className="loginForm">
               <p className="loginParagraph">
                 Ya registrado? <Link to="/login">Entra</Link>
               </p>
             </div>
-          </div>
         </form>
       </div>
     </div>

@@ -72,3 +72,15 @@ export const persSeleccionables = [
     justicia:1,
     },
   ];
+
+  export const medallasPersonajes={
+  Lirena:"https://res.cloudinary.com/djfkchzyq/image/upload/v1705420698/tytl5prduts1mcrmhz5w.png",
+   Bruster:"https://res.cloudinary.com/djfkchzyq/image/upload/v1705444187/p3lzvvpmzevmzfw4yl7u.png" ,
+Krista:"https://res.cloudinary.com/djfkchzyq/image/upload/v1705444187/ymenfwpypqa0bo3uqmhx.png" ,
+Furtur:"https://res.cloudinary.com/djfkchzyq/image/upload/v1705444187/ex3pvdt6amspm2bxqpt9.png" ,
+Darion:"https://res.cloudinary.com/djfkchzyq/image/upload/v1705444187/yyme20utgvc9g4zfxdct.png",
+
+
+
+ 
+  }

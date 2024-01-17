@@ -1,136 +1,154 @@
 .divJuego {
-    background-image: url("https://res.cloudinary.com/djfkchzyq/image/upload/v1704990401/xih3t7f9nqbsq0rfmlxc.jpg");
-    background-size: 100% 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-top: 150px;
-    position: absolute;
-    width: 60vw;
-    min-width: 370px;
-    z-index: -1;
-    max-width: 600px;
-    min-height: 735px;
-    height: 80vh;
+  background-image: url("https://res.cloudinary.com/djfkchzyq/image/upload/v1704990401/xih3t7f9nqbsq0rfmlxc.jpg");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 150px;
+  position: absolute;
+  width: 60vw;
+  min-width: 370px;
+  z-index: -1;
+  max-width: 600px;
+  min-height: 735px;
+  height: 80vh;
+}
+.divJuego h2 {
+  color: black;
+}
+@media screen and (max-height: 800px) {
+  .divJuego {
+    margin-top: 200px;
   }
-  .divJuego h2{
-    color: black;
-  }
-  @media screen and (max-height: 800px) {
-    .divJuego {
-      margin-top: 200px;
-    
-    }
-  }
-  .contenedorJuego {
-    background-color: #573F2E;
-    padding: 30px; 
-    border: 3px solid #8B4513;
-    border-radius: 15px;
-    width: 70vw;
-    max-width: 900px;
-    height: 400px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); 
-    margin: 20px auto; 
+}
+.contenedorJuego {
+ 
+  background-color: rgb(255, 198, 0);
+  padding: 30px;
+  border: 3px solid rgb(255, 158, 27);
+  border-radius: 15px;
+  width: 70vw;
+  max-width: 900px;
+  height: 400px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  margin: 20px auto;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .contenedorJuego h2 {
-    color: #FFF; 
-    font-size: 24px;
-    margin-bottom: 20px;
-    text-align: center; 
+  color: #fff;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .enlaceAventura {
-    display: block; 
+  display: block;
 }
 
 .cajonAventura {
-    background-color: #8B4513;
-    color: #FFD700;
-    padding: 15px;
-    margin: 15px 0;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    text-align: center;
+  background-color: white;
+  color: rgb(255, 158, 27);
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+.cajonAventura h3 {
+  color: rgb(255, 158, 27);
+}
+.cajonAventura h3:hover {
+  color: white;
 }
 
 .cajonAventura:hover {
-    background-color: #6e3e2d;
+  background-color: rgb(255, 158, 27);
+  color: white;
 }
 
 .cajonAventura.cerrado {
-    background-color: #A0522D;
-    color: #DAA520;
-    cursor: not-allowed;
-    opacity: 0.7;
+  background-color: #a0522d;
+  color: #daa520;
+  cursor: not-allowed;
+  opacity: 0.7;
 }
 
 /*-----------------------MEDALLAS
 */
-.medalla{
+.medalla {
   width: 40px;
-border-radius: 50%;
+  border-radius: 50%;
   height: 30px;
-
+  animation: palpitacion 2s ease-in-out infinite, destellos 2s linear infinite;
 }
 .medApagada {
   width: 40px;
   height: 30px;
- 
-  
+
   filter: grayscale(100%);
 }
 .lirena {
-  background-color: #e74c3c; 
-  box-shadow: 0 0 10px 5px rgba(231, 76, 60, 0.7); 
+  background-color: #e74c3c;
+  box-shadow: 0 0 10px 5px rgba(231, 76, 60, 0.7);
 }
 
-
-
 .bruster {
-  background-color: #3498db; 
+  background-color: #3498db;
   box-shadow: 0 0 10px 5px rgba(52, 152, 219, 0.7);
 }
 
-
-
-
-
-
-
-
-
-
 .krista {
-  background-color: #2ecc71; 
-  box-shadow: 0 0 10px 5px rgba(46, 204, 113, 0.7); 
+  background-color: #2ecc71;
+  box-shadow: 0 0 10px 5px rgba(46, 204, 113, 0.7);
 }
-
-
 
 .furtur {
-  background-color: #f39c12; 
-  box-shadow: 0 0 10px 5px rgba(243, 156, 18, 0.7); 
+  background-color: #f39c12;
+  box-shadow: 0 0 10px 5px rgba(243, 156, 18, 0.7);
 }
-
-
 
 .darion {
   background-color: #8e44ad;
-  box-shadow: 0 0 10px 5px rgba(142, 68, 173, 0.7); 
+  box-shadow: 0 0 10px 5px rgba(204, 119, 241, 0.7);
 }
-
-
 
 .contenedorMedallas {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  gap: 2px;
   align-items: center;
   padding: 20px;
-  background-color: #b8babb;
+  background-color: #0c232f;
+  border-radius: 5px;
 }
+
+@keyframes palpitacion {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.09);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* @keyframes destellos {
+  0% {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  50% {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+} */
