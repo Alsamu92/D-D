@@ -11,7 +11,7 @@ box-sizing: border-box;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --miColor: rgb(11, 81, 140);
+ 
 }
 body{
   margin: 0;

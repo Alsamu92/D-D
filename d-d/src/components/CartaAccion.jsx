@@ -6,20 +6,51 @@ import { Link } from 'react-router-dom';
 import { getUserByName, ponerMedalla } from "../services/user.service";
 import { medallasPersonajes } from "../services/services";
 import { useAuth } from "../context/authContext";
+import { useForm } from "react-hook-form";
+import { registerRecord } from "../services/record.service";
 export const CartaAccion = ({ miPj }) => {
   const [consecuencia, setConsecuencia] = useState();
   const [recogida, setRecogida] = useState(false);
   const [accion, setAccion] = useState(0);
   const [indice, setIndice] = useState();
   const [usuarioActual, setUsuarioActual] = useState();
+  const { register, handleSubmit } = useForm();
+  const [res, setRes] = useState({});
+  const [send, setSend] = useState(false);
+  const [okCreate, setOkCreate] = useState(false);
+  const formSubmit = async (formData) => {
+
+    const customFormData = {
+      ...formData,oro:miPj.oro,salud:miPj.salud,personaje:miPj.name
+    };
+
+    setSend(true);
+    setRes(await registerRecord(customFormData));
+   
+    
+  
+};
 const handleMedalla=async()=>{
   const medalla=await ponerMedalla(miPj.name)
   setRecogida(true);
 }
+
 const{user}=useAuth()
 const sacarUser=async()=>{
   const usuario=await getUserByName(user.username) 
   setUsuarioActual(usuario)
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
 useEffect(()=>{
@@ -58,7 +89,13 @@ useEffect(()=>{
       >
        
       </img>
-       </>:<p>Ya tienes esta medalla</p>
+      <form onSubmit={handleSubmit(formSubmit)}>
+        <button type="submit">Publicar Récord</button>
+      </form>
+      
+       </>: <form onSubmit={handleSubmit(formSubmit)}>
+        <button type="submit">Publicar Récord</button>
+      </form>
        } 
       </div>
       <Link className="botonConsecuencias"to="/">

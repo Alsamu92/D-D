@@ -1,0 +1,30 @@
+.tablaRecords {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+   .headerRecords {
+    background-color: #ef9e1c;
+    color: #fff;
+    width: 90%;
+  }
+  
+   .headerRecords td {
+    padding: 15px 0px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+   .contenedorRecord {
+    background-color: #ecf0f1;
+    
+  }
+  
+  .contenedorRecord td {
+    padding: 15px 0px;
+    border-bottom: 1px solid #bdc3c7;
+  }
+   
