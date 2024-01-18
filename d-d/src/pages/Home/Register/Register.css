@@ -1,7 +1,7 @@
 .allForm {
   display: flex;
   position: absolute;
-  top: 30%;
+  top: 25%;
   justify-content: center;
   align-items: center;
   height: 50vh;

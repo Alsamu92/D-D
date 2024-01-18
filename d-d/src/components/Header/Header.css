@@ -1,4 +1,6 @@
-
+.logo{
+    height: 10vh;
+}
 
 .headerDesktop{
     display: flex;
@@ -7,18 +9,33 @@
     width: 100%;
     height:10vh ;
     min-height:100px ;
-   background-color: rgb(241, 117, 117);
+   background-color: rgb(255, 255, 255);
+   color:rgb(255, 158, 27) ;
+   border-bottom: 5px solid rgb(255, 158, 27) ;;
    
 }
 
 .navUno{
     display: flex;
     height: 10vh;
-   
+
     justify-content: flex-end;
     align-items: center;
   
     color: white;
+}
+.navUno li{
+    color:rgb(255, 158, 27) ;
+    list-style: none;
+    font-weight: 700;
+    padding: 20px;
+    border-radius: 10px;
+}
+.navUno li:hover{
+    background-color:rgb(255, 158, 27) ;
+    color: white;
+    list-style: none;
+    font-weight: 700;
 }
 
 .about{
@@ -32,6 +49,7 @@
 .mainNav{
     display: flex;
     gap: 2vw;
+    
     
 }
 

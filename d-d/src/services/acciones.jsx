@@ -341,7 +341,7 @@ export const secuelas = [
       Bruster: 0,
       Krista: 0,
       Furtur: 20,
-      Darion: 20,
+      Darion: 0,
     },
     {
       Lirena: 0,

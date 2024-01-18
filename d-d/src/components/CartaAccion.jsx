@@ -2,12 +2,13 @@ import { useEffect, useState } from "react";
 import { acciones, secuelas } from "../services/acciones";
 import "./CartaAccion.css";
 import { BarraJugador } from "./BarraJugador/BarraJugador";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import { getUserByName, ponerMedalla } from "../services/user.service";
 import { medallasPersonajes } from "../services/services";
 import { useAuth } from "../context/authContext";
 import { useForm } from "react-hook-form";
 import { registerRecord } from "../services/record.service";
+import Swal from "sweetalert2"
 export const CartaAccion = ({ miPj }) => {
   const [consecuencia, setConsecuencia] = useState();
   const [recogida, setRecogida] = useState(false);
@@ -19,48 +20,40 @@ export const CartaAccion = ({ miPj }) => {
   const [send, setSend] = useState(false);
   const [okCreate, setOkCreate] = useState(false);
   const formSubmit = async (formData) => {
-
     const customFormData = {
-      ...formData,oro:miPj.oro,salud:miPj.salud,personaje:miPj.name
+      ...formData,
+      oro: miPj.oro,
+      salud: miPj.salud,
+      personaje: miPj.name,
     };
 
     setSend(true);
     setRes(await registerRecord(customFormData));
-   
-    
-  
-};
-const handleMedalla=async()=>{
-  const medalla=await ponerMedalla(miPj.name)
-  setRecogida(true);
-}
+    Swal.fire({
+      icon: "success",
+      title: 'Record guardado',
+      text: 'Solo aparecerá el top 5',
+      showConfirmButton: false,
+      timer: 1500,
+    });
+  };
+  const handleMedalla = async () => {
+    const medalla = await ponerMedalla(miPj.name);
+    setRecogida(true);
+  };
 
-const{user}=useAuth()
-const sacarUser=async()=>{
-  const usuario=await getUserByName(user.username) 
-  setUsuarioActual(usuario)
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
-useEffect(()=>{
- sacarUser()
-
-},[])
-const misMedallas=medallasPersonajes
-useEffect(()=>{
-  setRecogida(false);
-},[])
+  const { user } = useAuth();
+  const sacarUser = async () => {
+    const usuario = await getUserByName(user.username);
+    setUsuarioActual(usuario);
+  };
+  useEffect(() => {
+    sacarUser();
+  }, []);
+  const misMedallas = medallasPersonajes;
+  useEffect(() => {
+    setRecogida(false);
+  }, []);
   const handleAccion = (num) => {
     num++;
     setAccion(num);
@@ -73,37 +66,38 @@ useEffect(()=>{
   if (miPj.oro < 0) miPj.oro = 0;
   return (
     <>
-    {accion >= acciones.length ? (
-      <>
-      <div className="cartaConsecuencia">
-    
-        <p>Has ganado!</p>
-        <p>{miPj.name} ha conseguido salir con {miPj.oro} monedas de oro.</p>
-       {!usuarioActual?.data?.medallas.includes(miPj.name)?<>
-        <p>Recoge la medalla de {miPj.name}</p>
-        <img src={misMedallas[miPj.name]}
-        onClick={handleMedalla}
-        className={recogida ? 'medApagada' : 'medalla'}
-        disabled={recogida} 
-        style={{ width: '75px', cursor: 'pointer', minWidth: 'none' }}
-      >
-       
-      </img>
-      <form onSubmit={handleSubmit(formSubmit)}>
-        <button type="submit">Publicar Récord</button>
-      </form>
-      
-       </>: <form onSubmit={handleSubmit(formSubmit)}>
-        <button type="submit">Publicar Récord</button>
-      </form>
-       } 
-      </div>
-      <Link className="botonConsecuencias"to="/">
-      <button >Inicio</button>
-    </Link>
-    </>
-    ) : 
-      miPj.salud > 0 ? (
+      {accion >= acciones.length ? (
+        <>
+          <div className="cartaConsecuencia">
+            <p>Has ganado!</p>
+            <p>
+              {miPj.name} ha conseguido salir con {miPj.oro} monedas de oro.
+            </p>
+            {!usuarioActual?.data?.medallas.includes(miPj.name) ? (
+              <>
+                <p>Recoge la medalla de {miPj.name}</p>
+                <img
+                  src={misMedallas[miPj.name]}
+                  onClick={handleMedalla}
+                  className={recogida ? "medApagada" : "medalla"}
+                  disabled={recogida}
+                  style={{ width: "75px", cursor: "pointer", minWidth: "none" }}
+                ></img>
+                <form onSubmit={handleSubmit(formSubmit)}>
+                  <button disabled={send} type="submit">Publicar Récord</button>
+                </form>
+              </>
+            ) : (
+              <form onSubmit={handleSubmit(formSubmit)}>
+                <button disabled={send}type="submit">Publicar Récord</button>
+              </form>
+            )}
+          </div>
+          <Link className="botonConsecuencias" to="/">
+            <button>Inicio</button>
+          </Link>
+        </>
+      ) : miPj.salud > 0 ? (
         !consecuencia ? (
           <div className="cartaAccion">
             <p>{acciones[accion].accion}</p>
@@ -126,7 +120,8 @@ useEffect(()=>{
           <>
             <div className="cartaConsecuencia">
               <p>{consecuencia}</p>
-              <img className="imgResolucion"
+              <img
+                className="imgResolucion"
                 src={
                   secuelas[accion].oro[indice][miPj.name] == 0
                     ? "https://res.cloudinary.com/djfkchzyq/image/upload/v1705064810/dtxkqyzkbslt7o9zo4cq.jpg"
@@ -155,22 +150,25 @@ useEffect(()=>{
             </button>
           </>
         )
-      ) : (<>
-        <div className="cartaConsecuencia">
-          <h2>DERROTA</h2>
-          <p>
-            {miPj.name} no ha conseguido superar todas las pruebas, las{" "}
-            {miPj.oro} monedas que habías juntado yacen ahora en el suelo con{" "}
-            {miPj.name} y no sirven para nada
-           
-          </p>
-          <img src="https://res.cloudinary.com/djfkchzyq/image/upload/v1705064810/dtxkqyzkbslt7o9zo4cq.jpg" alt="" />
-         
-        </div>
-        <Link className="botonConsecuencias"to="/">
-        <button >Inicio</button>
-      </Link>
-        </>)}
+      ) : (
+        <>
+          <div className="cartaConsecuencia">
+            <h2>DERROTA</h2>
+            <p>
+              {miPj.name} no ha conseguido superar todas las pruebas, las{" "}
+              {miPj.oro} monedas que habías juntado yacen ahora en el suelo con{" "}
+              {miPj.name} y no sirven para nada
+            </p>
+            <img
+              src="https://res.cloudinary.com/djfkchzyq/image/upload/v1705064810/dtxkqyzkbslt7o9zo4cq.jpg"
+              alt=""
+            />
+          </div>
+          <Link className="botonConsecuencias" to="/">
+            <button>Inicio</button>
+          </Link>
+        </>
+      )}
       <BarraJugador acciones={acciones} accion={accion} miPj={miPj} />
     </>
   );

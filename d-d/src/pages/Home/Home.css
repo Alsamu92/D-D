@@ -89,7 +89,7 @@ a {
   width: 40px;
   height: 30px;
 
-  filter: grayscale(100%);
+  filter: grayscale(100%) brightness(0);
 }
 .lirena {
   background-color: #e74c3c;
