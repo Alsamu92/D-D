@@ -1,13 +1,14 @@
 .footer {
-    background-color: rgb(255, 158, 27);
+    background-color: hsl(3, 17%, 20%);
     color: #FFF;
   
     text-align: center;
-   margin-top: 50px;
+
+
     bottom: 0;
     left: 0;
     width: 100%;
-    font-family:cursive; 
+
 }
 
 .footer-logo {

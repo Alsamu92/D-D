@@ -18,7 +18,10 @@ export const HeaderSmall = () => {
 menu
 </span></button>
 
-        <img className="logoPeque" src="https://res.cloudinary.com/djfkchzyq/image/upload/v1705417704/gwbmkxsebsuwjavw8o0j.png" alt="Logo " />
+<div className='logoTit'>
+       <img className='logo' src="https://res.cloudinary.com/djfkchzyq/image/upload/v1705694107/wtnl9l3iplvjrz3f6jmy.png" alt="Logo página" />
+       <h2 className='tituloHeader'>Aventuras Dracómicas</h2>
+    </div>
         {user!=null?<img onClick={logout}className="logout" src="https://res.cloudinary.com/djfkchzyq/image/upload/v1703151861/xd8jzyzk0uc1bakfrun1.png" alt="Cerrar sesión" />:<div></div>}
 
       </div>

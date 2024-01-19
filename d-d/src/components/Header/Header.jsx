@@ -10,7 +10,11 @@ export const Header = () => {
 
   return (<>
   {tamanoPantalla > 768 ?<header className='headerDesktop'>
-    <img className='logo' src="https://res.cloudinary.com/djfkchzyq/image/upload/v1705417704/gwbmkxsebsuwjavw8o0j.png" alt="Logo página" />
+    <div className='logoTit'>
+       <img className='logo' src="https://res.cloudinary.com/djfkchzyq/image/upload/v1705694107/wtnl9l3iplvjrz3f6jmy.png" alt="Logo página" />
+       <h2 className='tituloHeader'>Aventuras Dracómicas</h2>
+    </div>
+   
         <nav className="navUno">
             <ul className='about'>
              

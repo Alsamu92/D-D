@@ -1,23 +1,41 @@
 .logo{
     height: 10vh;
 }
+@font-face {
+    font-family: 'fuentemed';
+    src: url('../fonts/Angel\ wish.otf') format('truetype');
+  
+  }
+  .logoTit{
+    display: flex;
+    align-items: center;
+    margin-left: 3%;
+  }
+  .tituloHeader{
+    color: white ;
+    font-family: 'Cinzel', serif;
+
+  }
 
 .headerDesktop{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    
     align-items: center;
     width: 100%;
-    height:10vh ;
-    min-height:100px ;
-   background-color: rgb(255, 255, 255);
+    height:7vh ;
+    min-height:00px ;
+  background-color: rgb(61, 44, 43);
    color:rgb(255, 158, 27) ;
-   border-bottom: 5px solid rgb(255, 158, 27) ;;
+   font-family: 'fuentemed', sans-serif;
+
+
    
 }
 
 .navUno{
     display: flex;
-    height: 10vh;
+    height: 5vh;
 
     justify-content: flex-end;
     align-items: center;
@@ -25,14 +43,15 @@
     color: white;
 }
 .navUno li{
-    color:rgb(255, 158, 27) ;
+    color: white;
     list-style: none;
+    font-size: 18px;
     font-weight: 700;
-    padding: 20px;
+    padding: 12px;
     border-radius: 10px;
 }
 .navUno li:hover{
-    background-color:rgb(255, 158, 27) ;
+    background-color: rgba(68, 60, 59, 0.858);
     color: white;
     list-style: none;
     font-weight: 700;
@@ -40,7 +59,10 @@
 
 .about{
     display: flex;
-    gap: 2vw;
+    justify-content: center;
+    gap: 3vw;
+    width: 60vw;
+  
 }
 
 
