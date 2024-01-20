@@ -17,6 +17,7 @@ box-sizing: border-box;
 body{
   margin: 0;
 padding: 0;
+height: 100vh;
 position: relative;
 min-height: 100%;
 z-index: -4;
@@ -41,7 +42,7 @@ padding: 0;
   ;
 }
 main{
-  min-height: 100vh;
+height: 89vh;
 
   z-index: -2;
   position: relative;
@@ -53,5 +54,10 @@ background-size: cover;
 
 
   
+}
+@media screen and (max-width: 800px) {
+main{
+  min-height: 130vh;
+}
 }
 

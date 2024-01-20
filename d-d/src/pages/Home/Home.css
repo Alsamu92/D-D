@@ -10,7 +10,7 @@
   z-index: -1;
   max-width: 600px;
   min-height: 735px;
-  height: 80vh;
+  height: 70vh;
 }
 .divJuego h2 {
   color: black;
@@ -28,6 +28,7 @@
   .allForm{
     margin-top: 30px;
   }
+
 
 }
 
@@ -69,8 +70,8 @@ a {
 }
 
 .cajonAventura {
-  background-color: white;
-  color: rgb(78, 71, 62);
+  background-color: rgba(115, 26, 26, 0.733);
+  color: rgb(228, 228, 228);
   padding: 15px;
   width: 300px;
   margin: 15px 0;
@@ -80,14 +81,14 @@ a {
   text-align: center;
 }
 .cajonAventura h3 {
-  color: rgb(255, 158, 27);
+  color: rgb(255, 251, 247);
 }
-.cajonAventura h3:hover {
+.cajonAventura :hover {
   color: white;
 }
 
 .cajonAventura:hover {
-  background-color: rgb(255, 158, 27);
+  background-color: rgb(99, 12, 9);
   color: white;
 }
 
@@ -96,6 +97,21 @@ a {
   color: #daa520;
   cursor: not-allowed;
   opacity: 0.7;
+}
+@media screen and (max-width: 800px) {
+  .contenedorJuego{
+    justify-content: center;
+    align-items: center;
+  }
+  .contenedorJuego p{
+   width: 350px;
+  }
+  .contenedorJuego h2{
+    margin-top: 20px;
+   font-size: 45px;
+  }
+
+
 }
 
 /*-----------------------MEDALLAS
@@ -161,15 +177,3 @@ a {
     opacity: 1;
   }
 }
-
-/* @keyframes destellos {
-  0% {
-    background-color: rgba(255, 255, 255, 0.8);
-  }
-  50% {
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-  100% {
-    background-color: rgba(255, 255, 255, 0.8);
-  }
-} */

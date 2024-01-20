@@ -50,6 +50,10 @@ position: relative;
     width: 100%;
    
 }
+.logoTit h2{
+  margin: 0;
+
+}
 .smallUno{
   background-color: rgb(61, 44, 43);
     height: 7.5vh;
