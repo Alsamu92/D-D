@@ -1,14 +1,31 @@
+.contenedorRecords{
+  background-image: url("https://res.cloudinary.com/djfkchzyq/image/upload/v1705701869/coemlnsgc8us0ocno8rt.png");
+
+ width: 800px;
+
+height: 1000px;
+display: flex;
+justify-content: center;
+align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* position: absolute;
+  top: 5%; */
+}
 .tablaRecords {
-    width: 100%;
+    width: 60%;
+    color: white;
     border-collapse: collapse;
     margin-top: 20px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: -20%;
   }
   
    .headerRecords {
-    background-color: #ef9e1c;
-    color: #fff;
+    background-color: #ef9e1c00;
+    color: #ffffff00;
     width: 90%;
   }
   
@@ -19,13 +36,13 @@
   }
   
    .contenedorRecord {
-    background-color: #ecf0f1;
+    background-color: #ecf0f100;
     
   }
   
   .contenedorRecord td {
     padding: 15px 0px;
-    color: black;
+    color: white;
     border-bottom: 1px solid #bdc3c7;
   }
    

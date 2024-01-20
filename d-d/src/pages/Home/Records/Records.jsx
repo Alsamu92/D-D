@@ -17,7 +17,7 @@ useEffect(()=>{
 
 
     return (
-       <div className='contenedorJuego'>
+       <div className='contenedorRecords'>
         <table className='tablaRecords'>
         
         <thead className='headerRecords'>

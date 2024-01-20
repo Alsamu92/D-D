@@ -1,3 +1,4 @@
+
 :root {
   line-height: 1.5;
   font-weight: 400;
@@ -17,6 +18,7 @@ body{
   margin: 0;
 padding: 0;
 position: relative;
+min-height: 100%;
 z-index: -4;
 box-sizing: border-box;
 background-color: white;
@@ -29,6 +31,10 @@ p, h3{
 #root{
   position: relative;
 margin: 0;
+background-image: url("https://res.cloudinary.com/djfkchzyq/image/upload/v1705696467/bcecynmsnl2znxlve2bp.jpg");
+background-size:300% ;
+background-position:-20% 200%;
+height: 100vh;
 padding: 0;
   z-index: -3;
   font-family: 'Montserrat', sans-serif;

@@ -3,8 +3,8 @@
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
-  margin-top: 150px;
-  position: absolute;
+  
+  position:relative;
   width: 60vw;
   min-width: 370px;
   z-index: -1;
@@ -15,22 +15,41 @@
 .divJuego h2 {
   color: black;
 }
-@media screen and (max-height: 800px) {
+@media screen and (max-width: 800px) {
   .divJuego {
-    margin-top: 200px;
+    margin-top: 300px;
+  
   }
+  .divJuego {
+    margin-top: 100px;
+    margin-bottom: 50px;
+  
+  }
+  .allForm{
+    margin-top: 30px;
+  }
+
 }
+
 .contenedorJuego {
  
-  background-color: rgb(255, 198, 0);
+  background-color: rgba(8, 8, 8, 0.3);
   padding: 30px;
-  border: 3px solid rgb(255, 158, 27);
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
+  border: 3px solid rgba(255, 156, 27, 0);
   border-radius: 15px;
-  width: 70vw;
-  max-width: 900px;
-  height: 400px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  width: 100vw;
+
+ 
+
   margin: 20px auto;
+}
+.contenedorJuego p{
+  width: 600px;
+  color: white;
 }
 
 a {
@@ -39,8 +58,9 @@ a {
 
 .contenedorJuego h2 {
   color: #fff;
-  font-size: 24px;
-  margin-bottom: 20px;
+  font-size: 64px;
+ margin: 0;
+ padding: 0;
   text-align: center;
 }
 
@@ -50,8 +70,9 @@ a {
 
 .cajonAventura {
   background-color: white;
-  color: rgb(255, 158, 27);
+  color: rgb(78, 71, 62);
   padding: 15px;
+  width: 300px;
   margin: 15px 0;
   border-radius: 8px;
   cursor: pointer;

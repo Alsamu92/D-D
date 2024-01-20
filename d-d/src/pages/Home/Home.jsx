@@ -26,6 +26,10 @@ export const Home = () => {
   return (
     <div className="contenedorJuego">
       <h2>Selecciona tu aventura</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quam impedit exercitationem, perferendis neque in magni sunt excepturi nobis assumenda praesentium, illo repellendus possimus maiores pariatur necessitatibus nisi odio iure.
+      </p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quam impedit exercitationem, perferendis neque in magni sunt excepturi nobis assumenda praesentium, illo repellendus possimus maiores pariatur necessitatibus nisi odio iure.
+      </p>
       <Link to="/Aldea">
         <h3 className="cajonAventura">Desafío de eleccion</h3>
       </Link>

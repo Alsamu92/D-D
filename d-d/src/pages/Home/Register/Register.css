@@ -9,7 +9,7 @@
 }
 
 .register {
-  background-color: rgb(255, 158, 27);
+  background-color: rgb(19, 44, 22);
   color: white;
   width: 80%;
   max-width: 400px;
@@ -20,7 +20,7 @@
 }
 
 .formMain {
-  background-color: rgb(255, 198, 0);
+  background-color: rgb(18, 62, 16);
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -29,7 +29,7 @@
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.455);
   text-align: center;
-  min-height: 500px;
+  /* min-height: 500px; */
 }
 
 
