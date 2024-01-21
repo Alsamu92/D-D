@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { acciones, secuelas } from "../services/acciones";
 import "./CartaAccion.css";
 import { BarraJugador } from "./BarraJugador/BarraJugador";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { getUserByName, ponerMedalla } from "../services/user.service";
 import { medallasPersonajes } from "../services/services";
 import { useAuth } from "../context/authContext";
@@ -73,7 +73,7 @@ export const CartaAccion = ({ miPj }) => {
             <p>
               {miPj.name} ha conseguido salir con {miPj.oro} monedas de oro.
             </p>
-            {!usuarioActual?.data?.medallas.includes(miPj.name) ? (
+            {(!usuarioActual?.data?.medallas.includes(miPj.name)&&usuarioActual!=null) ? (
               <>
                 <p>Recoge la medalla de {miPj.name}</p>
                 <img
@@ -88,9 +88,14 @@ export const CartaAccion = ({ miPj }) => {
                 </form>
               </>
             ) : (
+              user?
               <form onSubmit={handleSubmit(formSubmit)}>
+               
                 <button disabled={send}type="submit">Publicar Récord</button>
-              </form>
+              </form>:
+              <NavLink to="/login">
+                <button>Inicia sesión para guardar tus récords</button>
+              </NavLink>
             )}
           </div>
           <Link className="botonConsecuencias" to="/">
