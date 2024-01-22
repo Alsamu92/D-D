@@ -8,17 +8,21 @@ import { medallasPersonajes } from "../services/services";
 import { useAuth } from "../context/authContext";
 import { useForm } from "react-hook-form";
 import { registerRecord } from "../services/record.service";
-import Swal from "sweetalert2"
+import Swal from "sweetalert2";
 export const CartaAccion = ({ miPj }) => {
   const [consecuencia, setConsecuencia] = useState();
+  const [resImage, setResImage] = useState();
   const [recogida, setRecogida] = useState(false);
   const [accion, setAccion] = useState(0);
   const [indice, setIndice] = useState();
   const [usuarioActual, setUsuarioActual] = useState();
   const { register, handleSubmit } = useForm();
   const [res, setRes] = useState({});
+  const[dado,setDado]=useState()
   const [send, setSend] = useState(false);
   const [okCreate, setOkCreate] = useState(false);
+  let lanzarDado = () =>{setDado(Math.ceil(Math.random() * 6)) 
+ }
   const formSubmit = async (formData) => {
     const customFormData = {
       ...formData,
@@ -31,8 +35,8 @@ export const CartaAccion = ({ miPj }) => {
     setRes(await registerRecord(customFormData));
     Swal.fire({
       icon: "success",
-      title: 'Record guardado',
-      text: 'Solo aparecerá el top 5',
+      title: "Record guardado",
+      text: "Solo aparecerá el top 5",
       showConfirmButton: false,
       timer: 1500,
     });
@@ -73,7 +77,8 @@ export const CartaAccion = ({ miPj }) => {
             <p>
               {miPj.name} ha conseguido salir con {miPj.oro} monedas de oro.
             </p>
-            {(!usuarioActual?.data?.medallas.includes(miPj.name)&&usuarioActual!=null) ? (
+            {!usuarioActual?.data?.medallas.includes(miPj.name) &&
+            usuarioActual != null ? (
               <>
                 <p>Recoge la medalla de {miPj.name}</p>
                 <img
@@ -84,15 +89,18 @@ export const CartaAccion = ({ miPj }) => {
                   style={{ width: "75px", cursor: "pointer", minWidth: "none" }}
                 ></img>
                 <form onSubmit={handleSubmit(formSubmit)}>
-                  <button disabled={send} type="submit">Publicar Récord</button>
+                  <button disabled={send} type="submit">
+                    Publicar Récord
+                  </button>
                 </form>
               </>
-            ) : (
-              user?
+            ) : user ? (
               <form onSubmit={handleSubmit(formSubmit)}>
-               
-                <button disabled={send}type="submit">Publicar Récord</button>
-              </form>:
+                <button disabled={send} type="submit">
+                  Publicar Récord
+                </button>
+              </form>
+            ) : (
               <NavLink to="/login">
                 <button>Inicia sesión para guardar tus récords</button>
               </NavLink>
@@ -104,33 +112,69 @@ export const CartaAccion = ({ miPj }) => {
         </>
       ) : miPj.salud > 0 ? (
         !consecuencia ? (
-          <div className="cartaAccion">
-            <p>{acciones[accion].accion}</p>
+          <>
+            <h2>
+              Prueba {accion + 1}/{acciones.length}
+            </h2>
+            <div className="cartaAccion">
+              <p>{acciones[accion].accion}</p>
 
-            {acciones[accion].opcion.map((op, index) => (
-              <button
-                key={op.accion}
-                onClick={() => {
-                  setConsecuencia(
-                    secuelas[accion].consecuencias[index][miPj.name]
-                  );
-                  setIndice(index);
-                }}
-              >
-                {op}
-              </button>
-            ))}
-          </div>
+              {acciones[accion].opcion.map((op, index) => (
+                <button
+                  key={op.accion}
+                  onClick={() => {
+                    const brm = miPj[acciones[accion].habilidad[index]]+(dado);
+                    console.log("brm",brm)
+                    console.log(dado)
+                    switch (brm) {
+                      case 2:
+                      case 3:
+                      case 4:
+                        setConsecuencia(
+                          secuelas[accion].consecuencias[index].mala
+                        );
+                        setResImage("mala")
+                        break;
+                      case 5:
+                      case 6:
+                      case 7:
+                      case 8:
+                        setConsecuencia(
+                          secuelas[accion].consecuencias[index].regular
+                        );
+                        setResImage("regular")
+                        break;
+                      case 9:
+                      case 10:
+                      case 11:
+                        setConsecuencia(
+                          secuelas[accion].consecuencias[index].buena
+                        );
+                        setResImage("buena")
+                        break;
+                      default:
+                        console.log("Número no reconocido");
+                    }
+
+                    setIndice(index);
+                  }}
+                >
+                  {op}
+                </button>
+              ))}
+            </div>
+          </>
         ) : (
           <>
             <div className="cartaConsecuencia">
               <p>{consecuencia}</p>
+       
               <img
                 className="imgResolucion"
                 src={
-                  secuelas[accion].oro[indice][miPj.name] == 0
-                    ? "https://res.cloudinary.com/djfkchzyq/image/upload/v1705064810/dtxkqyzkbslt7o9zo4cq.jpg"
-                    : "https://res.cloudinary.com/djfkchzyq/image/upload/v1705020121/u9aeomvdxatmm8llt22o.jpg"
+                  resImage =="mala"
+                    ? secuelas[accion].imagenes[0]?.mala
+                    :resImage=="buena"?secuelas[accion].imagenes[0].buena:secuelas[accion].imagenes[0].regular
                 }
                 alt=""
               />
@@ -141,14 +185,15 @@ export const CartaAccion = ({ miPj }) => {
                 handleAccion(accion);
 
                 actualizarRecursos(
-                  secuelas[accion].oro
-                    ? secuelas[accion].oro[indice][miPj.name]
+                 resImage=="buena"
+                    ? 20
                     : 0,
-                  secuelas[accion].salud
-                    ? secuelas[accion].salud[indice][miPj.name]
+                  resImage=="mala"
+                    ? -30
                     : 0
                 );
                 setConsecuencia(null);
+               
               }}
             >
               Siguiente
@@ -174,7 +219,8 @@ export const CartaAccion = ({ miPj }) => {
           </Link>
         </>
       )}
-      <BarraJugador acciones={acciones} accion={accion} miPj={miPj} />
+      
+      <BarraJugador dado={dado}acciones={acciones} accion={accion} miPj={miPj} />
     </>
   );
 };

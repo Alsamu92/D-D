@@ -17,11 +17,11 @@ export const Home = () => {
   }, []);
 
   const medallas =
-    adquiridas.includes("Bruster") &&
-    adquiridas.includes("Lirena") &&
-    adquiridas.includes("Krista") &&
-    adquiridas.includes("Furtur") &&
-    adquiridas.includes("Darion");
+    adquiridas?.includes("Bruster") &&
+    adquiridas?.includes("Lirena") &&
+    adquiridas?.includes("Krista") &&
+    adquiridas?.includes("Furtur") &&
+    adquiridas?.includes("Darion");
 
   return (
     <div className="contenedorJuego">

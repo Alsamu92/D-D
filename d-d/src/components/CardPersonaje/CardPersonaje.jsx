@@ -13,7 +13,7 @@ export const CardPersonaje = ({ confirmed, selected }) => {
       <div className="cardStats">
         <h2> Estadísticas</h2>
         <p>
-          <strong>Combate</strong>:{selected.combate}
+          <strong>Fuerza</strong>:{selected.fuerza}
         </p>
         <p>
           <strong>Sabiduría</strong>:{selected.sabiduria}
@@ -22,10 +22,10 @@ export const CardPersonaje = ({ confirmed, selected }) => {
           <strong>Sigilo</strong>:{selected.sigilo}
         </p>
         <p>
-          <strong>Ayuda</strong>:{selected.ayuda}
+          <strong>Carisma</strong>:{selected.carisma}
         </p>
         <p>
-          <strong>Justicia</strong>:{selected.justicia}
+          <strong>Destreza</strong>:{selected.destreza}
         </p>
       </div>
      </div>

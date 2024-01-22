@@ -2,7 +2,7 @@
   height: 310px;
   position: relative;
   background: linear-gradient(to right, #d2b48c, #b8860b); 
-  top: 12%;
+  top: -8.2%;
   color: #1a1a1a; 
   width: 80%;
   display: flex;
@@ -19,6 +19,12 @@
 .cartaAccion p {
   margin-top: 0;
   text-align: center;
+}
+.divPreguntas h2 {
+  margin-top: 0;
+  text-align: center;
+  position: relative;
+  top: 5.3%;
 }
 
 .cartaAccion button {
