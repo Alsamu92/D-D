@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "./BarraJugador.css";
 import { useAuth } from "../../context/authContext";
 
-export const BarraJugador = ({miPj,dado }) => {
+export const BarraJugador = ({miPj,dado,consec }) => {
   const{allUser}=useAuth()
   useEffect(() => {
 
@@ -19,7 +19,8 @@ export const BarraJugador = ({miPj,dado }) => {
         <div className="medioDiv">
           <p><strong>Salud</strong>:{miPj.salud}</p>
           <p><strong>Oro</strong>:{miPj.oro}</p>
-          <div>{dado}</div>
+          {consec&& <div className="dice rolling">{dado}</div>}
+         
         
         </div>
         <div className="stats">

@@ -18,11 +18,14 @@ export const CartaAccion = ({ miPj }) => {
   const [usuarioActual, setUsuarioActual] = useState();
   const { register, handleSubmit } = useForm();
   const [res, setRes] = useState({});
-  const[dado,setDado]=useState()
+  const[dado,setDado]=useState(Math.ceil(Math.random() * 6))
   const [send, setSend] = useState(false);
-  const [okCreate, setOkCreate] = useState(false);
-  let lanzarDado = () =>{setDado(Math.ceil(Math.random() * 6)) 
- }
+
+  const lanzarDado = () => {
+    const nuevoNumero = Math.ceil(Math.random() * 6);
+    setDado(nuevoNumero);
+   
+  };
   const formSubmit = async (formData) => {
     const customFormData = {
       ...formData,
@@ -122,28 +125,33 @@ export const CartaAccion = ({ miPj }) => {
               {acciones[accion].opcion.map((op, index) => (
                 <button
                   key={op.accion}
+               
                   onClick={() => {
-                    const brm = miPj[acciones[accion].habilidad[index]]+(dado);
-                    console.log("brm",brm)
-                    console.log(dado)
+             
+                    const brm = miPj[acciones[accion].habilidad[index]]+dado;
+               
+                    console.log(brm)
+                   
                     switch (brm) {
                       case 2:
                       case 3:
-                      case 4:
+                      case 4: 
+                      case 5:
                         setConsecuencia(
                           secuelas[accion].consecuencias[index].mala
                         );
                         setResImage("mala")
                         break;
-                      case 5:
+                     
                       case 6:
                       case 7:
-                      case 8:
+                     
                         setConsecuencia(
                           secuelas[accion].consecuencias[index].regular
                         );
                         setResImage("regular")
                         break;
+                        case 8:
                       case 9:
                       case 10:
                       case 11:
@@ -186,13 +194,15 @@ export const CartaAccion = ({ miPj }) => {
 
                 actualizarRecursos(
                  resImage=="buena"
-                    ? 20
-                    : 0,
+                    ? 10+dado
+                    :resImage=="regular"?dado: 0,
                   resImage=="mala"
-                    ? -30
+                    ? -30:resImage=="regular"?
+                    -10
                     : 0
                 );
                 setConsecuencia(null);
+             lanzarDado()
                
               }}
             >
@@ -220,7 +230,7 @@ export const CartaAccion = ({ miPj }) => {
         </>
       )}
       
-      <BarraJugador dado={dado}acciones={acciones} accion={accion} miPj={miPj} />
+      <BarraJugador consec={consecuencia?true:false}dado={dado}acciones={acciones} accion={accion} miPj={miPj} />
     </>
   );
 };
