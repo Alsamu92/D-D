@@ -33,24 +33,74 @@ export const acciones = [
   },
   // --------------ACCION 3-----------------
   {
-    accion: "El personaje descubre un complot para envenenar un manantial crucial para la supervivencia del pueblo. Al llegar al lugar, se encuentra con guardias que protegen la fuente que le sobornan para que mantenga la boca cerrada.",
+    accion: "Es importante que la persona a la que se le prestará la capa sea de fiar. Van a pedir reportes a los reinos cercanos de los participantes que siguen en pie. Hay cosas que no deberían saber.",
     habilidad:["destreza","sigilo","fuerza"],
     opcion: [
-      "Negarte y tratar de de sacarles más información",
-      "Aceptar el soborno",
-      "Enfrentamiento físico"
+      "Dar el cambiazo cuando lleguen los informes.",
+      "Asaltar a los mensajeros por los caminos.",
+      "Amenazar al que gestiona el pase de ronda."
     ]
   },
   // --------------ACCION 4-----------------
   {
-    accion: "Explorando una antigua biblioteca, el personaje descubre un libro misterioso que contiene información crucial para  el reino.",
+    accion: "Todos los que quedaís ya habeís demostrado ser muy dignos pero quedan las pruebas mas duras. Una justa a caballo será una prueba de resistencia, valor y temple.",
     habilidad:["sabiduria","carisma","destreza"],
     opcion: [
-      "LLevarlo a la biblioteca para que lo estudien y mejoren infraestructura.",
-      "Levarlo a los hospitales para solucionar una epidemia.",
-      "Guardarse el libro para venderlo al mejor postor."
+      "Reconoces un caballo que ganó en tu ciudad.Elegirlo.",
+      "Presumir mucho de tus habilidades para intimidar.",
+      "Usar una técnica compleja pero muy eficaz."
     ]
   },
+  // // --------------ACCION 5-----------------
+  // {
+  //   accion: "Todos los que quedaís ya habeís demostrado ser muy dignos pero quedan las pruebas mas duras. Una justa a caballo será una prueba de resistencia, valor y temple.",
+  //   habilidad:["sabiduria","carisma","destreza"],
+  //   opcion: [
+  //     "Reconoces un caballo que ganó en tu ciudad.Elegirlo.",
+  //     "Presumir mucho de tus habilidades para intimidar.",
+  //     "Usar una técnica compleja pero muy eficaz."
+  //   ]
+  // },
+  // // --------------ACCION 6-----------------
+  // {
+  //   accion: "Todos los que quedaís ya habeís demostrado ser muy dignos pero quedan las pruebas mas duras. Una justa a caballo será una prueba de resistencia, valor y temple.",
+  //   habilidad:["sabiduria","carisma","destreza"],
+  //   opcion: [
+  //     "Reconoces un caballo que ganó en tu ciudad.Elegirlo.",
+  //     "Presumir mucho de tus habilidades para intimidar.",
+  //     "Usar una técnica compleja pero muy eficaz."
+  //   ]
+  // },
+  // // --------------ACCION 7-----------------
+  // {
+  //   accion: "Todos los que quedaís ya habeís demostrado ser muy dignos pero quedan las pruebas mas duras. Una justa a caballo será una prueba de resistencia, valor y temple.",
+  //   habilidad:["sabiduria","carisma","destreza"],
+  //   opcion: [
+  //     "Reconoces un caballo que ganó en tu ciudad.Elegirlo.",
+  //     "Presumir mucho de tus habilidades para intimidar.",
+  //     "Usar una técnica compleja pero muy eficaz."
+  //   ]
+  // },
+  // // --------------ACCION 8-----------------
+  // {
+  //   accion: "Todos los que quedaís ya habeís demostrado ser muy dignos pero quedan las pruebas mas duras. Una justa a caballo será una prueba de resistencia, valor y temple.",
+  //   habilidad:["sabiduria","carisma","destreza"],
+  //   opcion: [
+  //     "Reconoces un caballo que ganó en tu ciudad.Elegirlo.",
+  //     "Presumir mucho de tus habilidades para intimidar.",
+  //     "Usar una técnica compleja pero muy eficaz."
+  //   ]
+  // },
+  // // --------------ACCION 9-----------------
+  // {
+  //   accion: "Todos los que quedaís ya habeís demostrado ser muy dignos pero quedan las pruebas mas duras. Una justa a caballo será una prueba de resistencia, valor y temple.",
+  //   habilidad:["sabiduria","carisma","destreza"],
+  //   opcion: [
+  //     "Reconoces un caballo que ganó en tu ciudad.Elegirlo.",
+  //     "Presumir mucho de tus habilidades para intimidar.",
+  //     "Usar una técnica compleja pero muy eficaz."
+  //   ]
+  // },
 
 ];
 
@@ -134,7 +184,7 @@ export const secuelas = [
      },
   ],
   imagenes:[
-    { buena:"https://res.cloudinary.com/djfkchzyq/image/upload/v1705978502/soluciones/k6mzwvabfgxihrfk279w.jpg",
+    { buena:"https://res.cloudinary.com/djfkchzyq/image/upload/v1706012544/soluciones/aehttlnqesab4jisfdyz.avif",
      regular:"https://res.cloudinary.com/djfkchzyq/image/upload/v1705978503/soluciones/tuv88xd8vgf2cpg7f5wf.png",
      mala:"https://res.cloudinary.com/djfkchzyq/image/upload/v1705978614/soluciones/uz5t3eonu5qwhvoklysk.jpg"}
    ]
@@ -145,45 +195,55 @@ export const secuelas = [
   consecuencias: [
     //CONSECUENCIA 1------------------------------
     {
-     buena:"Lo superas1",
-     regular:"medio1",
-     mala:"Pierdes1"
+     buena:"Ha requerido de toda tu destreza pero, en una visita la sala de expedientes, consigues cambiar los papeles rápidamente con un juego de manos. Aprovechas y que descalifiquen al que te cae mal.",
+     regular:"Creías que iba a ser más fácil. Por los pelos consigues quitar tu expediente, aunque no consigues colocar el del mejor oponente.",
+     mala:"Te sudan las manos y todo el mundo se da cuenta de lo que intentabas hacer. Parece que has dañado con el sudor muchos expedientes. Rezemos porque no supieran quién eres. "
     },
     //CONSECUENCIA 2------------------------------
     {
-      buena:"Lo superas2",
-      regular:"medio2",
-      mala:"Pierdes2"
+      buena:"Coser y cantar! Destruyes el tuyo y el de algunos adversarios menores para no incriminarte, pero dejas el de los grandes rivales (un poco modificados)",
+      regular:"Estaba bastante protegido. Consigues quitar el tuyo y un puñado más. Esperemos que nadie te haya visto.",
+      mala:"Te sorprenden haciendo los cambios!. No recuerdas bien si has completado la tarea, esperemos que si."
      },
     //CONSECUENCIA 3------------------------------
     {
-      buena:"Lo superas3",
-      regular:"medio3",
-      mala:"Pierdses3"
+      buena:"Una vez superados sus guardias el hombre que va a dar el reporte sobre ti cambia de opinión y destruye el informe. Puedes jurar que estará callado.",
+      regular:"No ha sido tu mejor pelea pero superas a los guardias. Te cuesta trabajo forzar al hombre a destruir el informe pero al final cede.Esperemos que no hable.",
+      mala:"Los guardias del hombre te dan una paliza. Habrá que esperar que no sepan quién eres o el informe crecerá. Ahora que lo piensas tampoco era tan grave lo que ponía."
      },
   ],
+  imagenes:[
+    { buena:"https://res.cloudinary.com/djfkchzyq/image/upload/v1706012861/soluciones/n2y1qjbdqa5tih26znro.jpg",
+     regular:"https://res.cloudinary.com/djfkchzyq/image/upload/v1706012863/soluciones/i38wgxmtuqjpaxgbu4ws.png",
+     mala:"https://res.cloudinary.com/djfkchzyq/image/upload/v1706012863/soluciones/i38wgxmtuqjpaxgbu4ws.png"}
+   ]
 },
 // --------------SECUELA 4-----------------
 { consecuencias: [
   //CONSECUENCIA 1------------------------------
   {
-   buena:"Lo superas1",
-   regular:"medio1",
-   mala:"Pierdes1"
+   buena:"No hay duda de que es Rayo! Te hace casi todo el trabajo. Pasas con facilidad.",
+   regular:"Trueno ha vivido días mejores pero sigue siendo buen caballo. Te ayuda bastante en la justa.",
+   mala:"Claramente es Relámpago pero está mas cascado de los que esperabas. Pasas de milagro, con muchas heridas."
   },
   //CONSECUENCIA 2------------------------------
   {
-    buena:"Lo superas2",
-    regular:"medio2",
-    mala:"Pierdes2"
+    buena:"Nadie quiere enfrentarse a ti, al que al final le toca se le cae la lanza al suelo y lo derribas rápidamente.",
+    regular:"Tu rival no sale muy confiado. Aprovechas la duda para derribarlo. No ha sido fácil.",
+    mala:"Haces bastante el ridículo. Aún tocándote contra el oponente más débil te llevas varios golpes fuertes."
    },
   //CONSECUENCIA 3------------------------------
   {
-    buena:"Lo superas3",
-    regular:"medio3",
-    mala:"Pierdsses3"
+    buena:"Lo que aprendiste hace tanto tiempo sigue en tu cabeza. La posición del cuerpo, el arma y dominio del caballo es impecable. Ganas fácil.",
+    regular:"Las primeras rondas no van muy bien porque no recuerdas exactamente pero al final con un poco de suerte derribas al oponente.",
+    mala:"Te centras tanto en recordar las posturas y técnicas que pierdes todas las rondas. El oponente se desmaya por el calor."
    },
 ],
+imagenes:[
+  { buena:"https://res.cloudinary.com/djfkchzyq/image/upload/v1706012546/soluciones/mp7empojsnlffwmoofzb.jpg",
+   regular:"https://res.cloudinary.com/djfkchzyq/image/upload/v1706012545/soluciones/u9n9tytzlqye7wp8g7xn.jpg",
+   mala:"https://res.cloudinary.com/djfkchzyq/image/upload/v1706012545/soluciones/u9n9tytzlqye7wp8g7xn.jpg"}
+ ]
  
 }
 ];

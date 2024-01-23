@@ -129,40 +129,18 @@ export const CartaAccion = ({ miPj }) => {
                   onClick={() => {
              
                     const brm = miPj[acciones[accion].habilidad[index]]+dado;
-               
-                    console.log(brm)
-                   
-                    switch (brm) {
-                      case 2:
-                      case 3:
-                      case 4: 
-                      case 5:
-                        setConsecuencia(
-                          secuelas[accion].consecuencias[index].mala
-                        );
-                        setResImage("mala")
-                        break;
-                     
-                      case 6:
-                      case 7:
-                     
-                        setConsecuencia(
-                          secuelas[accion].consecuencias[index].regular
-                        );
-                        setResImage("regular")
-                        break;
-                        case 8:
-                      case 9:
-                      case 10:
-                      case 11:
-                        setConsecuencia(
-                          secuelas[accion].consecuencias[index].buena
-                        );
-                        setResImage("buena")
-                        break;
-                      default:
-                        console.log("Número no reconocido");
+                    if (brm < 5 ||dado==1) {
+                      setConsecuencia(secuelas[accion].consecuencias[index].mala);
+                      setResImage("mala");
+                    } else if (brm >= 5 && brm < 8) {
+                      setConsecuencia(secuelas[accion].consecuencias[index].regular);
+                      setResImage("regular");
+                    } 
+                    else {
+                      setConsecuencia(secuelas[accion].consecuencias[index].buena);
+                      setResImage("buena");
                     }
+              
 
                     setIndice(index);
                   }}
