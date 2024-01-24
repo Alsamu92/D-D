@@ -35,17 +35,15 @@ export const Aldea = () => {
                 alt="imagen control"
               />
               <ul className="textInstrucciones">
-                <li>Sobrevive todo lo que puedas.</li>
+                <li>Elige las mejores opciones</li>
                 <li>
                   {" "}
-                  Los puntos de tu personaje en la acción que elijas decidirá el
-                  éxito.
+                  Los puntos de tu personaje en la acción más el <strong>DADO</strong> será el resultado
                 </li>
-                <li>Puntos bajos restará salud</li>
-                <li>Puntos altos dará oro</li>
+                <li>Menos de 5 restará salud</li>
+                <li>Más de 7 dará oro</li>
                 <li>
-                  El objetivo es llegar al final con la mayor cantidad de oro
-                  posible
+                 5, 6 y 7 quitan salud y dan oro basado en tu dado
                 </li>
                 <li>
                   Solo hay 3 opciones en cada ronda,a veces, tendrás que elegir

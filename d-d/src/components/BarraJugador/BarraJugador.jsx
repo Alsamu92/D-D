@@ -11,14 +11,18 @@ export const BarraJugador = ({miPj,dado,consec }) => {
 
   return (
     <>
+    <div className="cantidades">
+    <p><strong>Salud</strong>:{miPj.salud}</p>
+          <p><strong>Oro</strong>:{miPj.oro}</p>
+    </div>
       <div className="divRol">
         <div className="perfil">
           <img src={miPj.img} alt={miPj.name} />
           <h3>{allUser.data.username}</h3>
+          
         </div>
         <div className="medioDiv">
-          <p><strong>Salud</strong>:{miPj.salud}</p>
-          <p><strong>Oro</strong>:{miPj.oro}</p>
+       
           {consec&& <div className="dice rolling">{dado}</div>}
          
         

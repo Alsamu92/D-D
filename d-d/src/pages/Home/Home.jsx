@@ -31,6 +31,7 @@ export const Home = () => {
       </p>
       <p>El reino de Nulthis ha organizado un torneo para seleccionar las personas que llevarás a cabo la tarea de derrotar a Carxes y librar asi a los habitantes a una vida fuera de su tiranía.A cambio podrán quedarse con todo el tesoro, con la condición que devuelvan las capas.
       </p>
+      <p>Clasifica a los 5 personajes y desbloquea el asalto al dragón</p>
       <p>Elige las opciones que más te beneficien, gana una plaza y conviértete en leyenda.</p>
       </div>
      

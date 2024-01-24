@@ -175,8 +175,8 @@ export const CartaAccion = ({ miPj }) => {
                     ? 10+dado
                     :resImage=="regular"?dado: 0,
                   resImage=="mala"
-                    ? -30:resImage=="regular"?
-                    -10
+                    ? (-30+dado):resImage=="regular"?
+                    (-10+dado)
                     : 0
                 );
                 setConsecuencia(null);
@@ -195,9 +195,9 @@ export const CartaAccion = ({ miPj }) => {
             <p>
               {miPj.name} no ha conseguido superar todas las pruebas, las{" "}
               {miPj.oro} monedas que habías juntado yacen ahora en el suelo con{" "}
-              {miPj.name} y no sirven para nada
+            
             </p>
-            <img
+            <img className="imgResolucion"
               src="https://res.cloudinary.com/djfkchzyq/image/upload/v1705064810/dtxkqyzkbslt7o9zo4cq.jpg"
               alt=""
             />

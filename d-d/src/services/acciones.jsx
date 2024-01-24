@@ -51,56 +51,56 @@ export const acciones = [
       "Usar una técnica compleja pero muy eficaz."
     ]
   },
-  // // --------------ACCION 5-----------------
-  // {
-  //   accion: "Todos los que quedaís ya habeís demostrado ser muy dignos pero quedan las pruebas mas duras. Una justa a caballo será una prueba de resistencia, valor y temple.",
-  //   habilidad:["sabiduria","carisma","destreza"],
-  //   opcion: [
-  //     "Reconoces un caballo que ganó en tu ciudad.Elegirlo.",
-  //     "Presumir mucho de tus habilidades para intimidar.",
-  //     "Usar una técnica compleja pero muy eficaz."
-  //   ]
-  // },
-  // // --------------ACCION 6-----------------
-  // {
-  //   accion: "Todos los que quedaís ya habeís demostrado ser muy dignos pero quedan las pruebas mas duras. Una justa a caballo será una prueba de resistencia, valor y temple.",
-  //   habilidad:["sabiduria","carisma","destreza"],
-  //   opcion: [
-  //     "Reconoces un caballo que ganó en tu ciudad.Elegirlo.",
-  //     "Presumir mucho de tus habilidades para intimidar.",
-  //     "Usar una técnica compleja pero muy eficaz."
-  //   ]
-  // },
-  // // --------------ACCION 7-----------------
-  // {
-  //   accion: "Todos los que quedaís ya habeís demostrado ser muy dignos pero quedan las pruebas mas duras. Una justa a caballo será una prueba de resistencia, valor y temple.",
-  //   habilidad:["sabiduria","carisma","destreza"],
-  //   opcion: [
-  //     "Reconoces un caballo que ganó en tu ciudad.Elegirlo.",
-  //     "Presumir mucho de tus habilidades para intimidar.",
-  //     "Usar una técnica compleja pero muy eficaz."
-  //   ]
-  // },
-  // // --------------ACCION 8-----------------
-  // {
-  //   accion: "Todos los que quedaís ya habeís demostrado ser muy dignos pero quedan las pruebas mas duras. Una justa a caballo será una prueba de resistencia, valor y temple.",
-  //   habilidad:["sabiduria","carisma","destreza"],
-  //   opcion: [
-  //     "Reconoces un caballo que ganó en tu ciudad.Elegirlo.",
-  //     "Presumir mucho de tus habilidades para intimidar.",
-  //     "Usar una técnica compleja pero muy eficaz."
-  //   ]
-  // },
-  // // --------------ACCION 9-----------------
-  // {
-  //   accion: "Todos los que quedaís ya habeís demostrado ser muy dignos pero quedan las pruebas mas duras. Una justa a caballo será una prueba de resistencia, valor y temple.",
-  //   habilidad:["sabiduria","carisma","destreza"],
-  //   opcion: [
-  //     "Reconoces un caballo que ganó en tu ciudad.Elegirlo.",
-  //     "Presumir mucho de tus habilidades para intimidar.",
-  //     "Usar una técnica compleja pero muy eficaz."
-  //   ]
-  // },
+  // --------------ACCION 5-----------------
+  {
+    accion: "Parece que teneís lo que hay que tener para la siguiente prueba. Una manada de jabalíes tremendamente grandes está destrozando las cosechas de calabazas. Cazad uno, si podeís.",
+    habilidad:["sigilo","fuerza","sabiduria"],
+    opcion: [
+      "Emboscarlos en una plantación de calabazas.",
+      "Echarte al monte a por ellos.",
+      "Elaborar un brebaje rastreador y matarlos después."
+    ]
+  },
+  // --------------ACCION 6-----------------
+  {
+    accion: "Quedaís muy pocos participantes. El dragon vive en una montaña congelada. Sobrevivid una noche en ella y quizá esteís preparados para escalarla cuando llegue el momento.",
+    habilidad:["carisma","destreza","sigilo"],
+    opcion: [
+      "Conseguir información de los posibles refugios de la zona.",
+      "Construir un refugio con materiales de por allí.",
+      "Robar el refugio al primero que veas."
+    ]
+  },
+  // --------------ACCION 7-----------------
+  {
+    accion: "Los aletadracos no son tan fieros como los dragones pero comparten una cosa, se puede hablar con ellos. Si consigues hablar con uno seguramente puedas comunicarte bien con un dragón. Prueba, no hablan casi con nadie.",
+    habilidad:["fuerza","sabiduria","carisma"],
+    opcion: [
+      "Agarrar al pez por las aletas hasta que diga algo.",
+      "Presionar ligeramente las agallas y tirar de la cola.",
+      "Darle conversación hasta que conteste algo."
+    ]
+  },
+  // --------------ACCION 8-----------------
+  {
+    accion: "La prueba final es un duelo a muerte contra otro participante. Mala suerte, te ha tocado 'El Hachas', no es conocido por su delicadeza.",
+    habilidad:["destreza","sigilo","fuerza"],
+    opcion: [
+      "Parece pesado, intentas cansarlo corriendo sin que te toque.",
+      "Despistarlo y ocultarte para darle un golpe maestro.",
+      "Luchar sin miedo."
+    ]
+  },
+  // --------------ACCION 9-----------------
+  {
+    accion: "Ya os van a hacer entregas de vuestras capas anti-dragones, pero una muchedumbre furiosa, compuesta por los descartados, asalta el palacio.Detenlos, rápido.",
+    habilidad:["sabiduria","carisma","destreza"],
+    opcion: [
+      "Has calculado que la lámpara podría caerles encima, con un poco de ayuda",
+      "Los persuades y los intentas convencer de que paren.",
+      "Tiras de la alfombra para que tropiecen."
+    ]
+  },
 
 ];
 
@@ -110,7 +110,7 @@ export const secuelas = [
     consecuencias: [
       //CONSECUENCIA 1------------------------------
       {
-       buena:"La crrera ha sido un paseo, ese guerrero conoce el bosque como la palma de su mano.En los últimos metros, sin que nadie te vea, le haces la zancadilla y le adelantas ganando la prueba y unos puntos.",
+       buena:"La carrera ha sido un paseo, ese guerrero conoce el bosque como la palma de su mano.En los últimos metros, sin que nadie te vea, le haces la zancadilla y le adelantas ganando la prueba y unos puntos.",
        regular:"El plan no ha ido nada mal, consigues seguirle pero no hay quien le adelante. Pasas la prueba sin pena ni gloria.",
        mala:"¡No hay quien le siga!Le has perdido y apenas consigues acabar la carrera. Esperas que las heridas te dejen continuar"
       },
@@ -243,6 +243,63 @@ imagenes:[
   { buena:"https://res.cloudinary.com/djfkchzyq/image/upload/v1706012546/soluciones/mp7empojsnlffwmoofzb.jpg",
    regular:"https://res.cloudinary.com/djfkchzyq/image/upload/v1706012545/soluciones/u9n9tytzlqye7wp8g7xn.jpg",
    mala:"https://res.cloudinary.com/djfkchzyq/image/upload/v1706012545/soluciones/u9n9tytzlqye7wp8g7xn.jpg"}
+ ]
+ 
+},
+// --------------SECUELA 5-----------------
+{ consecuencias: [
+  //CONSECUENCIA 1------------------------------
+  {
+   buena:"Están tan concentrados comiendo que no te ven. Distingues a Orlok, su lider. Será suficiente para alimentar a medio reino.",
+   regular:"Solo han bajado algunos de los más pequeños pero te sirve para pasar la prueba, y defender las calabazas.",
+   mala:"Un jabalí tan pequeño que casi parece uno normal te embiste duro. Al menos consigues su cabeza."
+  },
+  //CONSECUENCIA 2------------------------------
+  {
+    buena:"Tu gran fortaleza y dotes de rastreador hacen que llegues a su guarida. Allí está Orlok, su lider. Buena pieza te llevas.",
+    regular:"Cuando después de mucho esfuerzo llegas a la guarida solo hay algunos de los más pequeños. Al menos te sirve.",
+    mala:"Pensabas que sería fácil pero no logras encontrar la guarida. Te encuentras uno muy pequeño de casualidad. Te lo llevas, no sin daños."
+   },
+  //CONSECUENCIA 3------------------------------
+  {
+    buena:"Cuando alguien ingiere este brebaje ves un hilo azul que te lleva hasta donde esté. En su guarida consigues matar a su líder, Orlok.",
+    regular:"Deberías ver un hilo azul que te lleve hasta ellos, pero no funciona del todo bien. Consigues llegar a duras penas y matar uno normalito.",
+    mala:"No ha funcionado en absoluto. Por suerte a uno le ha sentado mal y deja un rastro de excrementos que puedes seguir. Te le encuentras muerto a medio camino. Cuenta poco pero algo es algo."
+   },
+],
+imagenes:[
+  { buena:"https://res.cloudinary.com/djfkchzyq/image/upload/v1706037873/si1a7wa8ha3o1ywd8mda.avif",
+  regular:"https://res.cloudinary.com/djfkchzyq/image/upload/v1706037873/k0anzb5lktcm0sty2oar.jpg",
+  mala:"https://res.cloudinary.com/djfkchzyq/image/upload/v1706037873/r5ksmztl85din6qaizit.jpg"}
+ ]
+ 
+}
+,
+// --------------SECUELA 6-----------------
+{ consecuencias: [
+  //CONSECUENCIA 1------------------------------
+  {
+   buena:"Están tan concentrados comiendo que no te ven. Distingues a Orlok, su lider. Será suficiente para alimentar a medio reino.",
+   regular:"Solo han bajado algunos de los más pequeños pero te sirve para pasar la prueba, y defender las calabazas.",
+   mala:"Un jabalí tan pequeño que casi parece uno normal te embiste duro. Al menos consigues su cabeza."
+  },
+  //CONSECUENCIA 2------------------------------
+  {
+    buena:"Tu gran fortaleza y dotes de rastreador hacen que llegues a su guarida. Allí está Orlok, su lider. Buena pieza te llevas.",
+    regular:"Cuando después de mucho esfuerzo llegas a la guarida solo hay algunos de los más pequeños. Al menos te sirve.",
+    mala:"Pensabas que sería fácil pero no logras encontrar la guarida. Te encuentras uno muy pequeño de casualidad. Te lo llevas, no sin daños."
+   },
+  //CONSECUENCIA 3------------------------------
+  {
+    buena:"Cuando alguien ingiere este brebaje ves un hilo azul que te lleva hasta donde esté. En su guarida consigues matar a su líder, Orlok.",
+    regular:"Deberías ver un hilo azul que te lleve hasta ellos, pero no funciona del todo bien. Consigues llegar a duras penas y matar uno normalito.",
+    mala:"No ha funcionado en absoluto. Por suerte a uno le ha sentado mal y deja un rastro de excrementos que puedes seguir. Te le encuentras muerto a medio camino. Cuenta poco pero algo es algo."
+   },
+],
+imagenes:[
+  { buena:"https://res.cloudinary.com/djfkchzyq/image/upload/v1706037873/si1a7wa8ha3o1ywd8mda.avif",
+   regular:"https://res.cloudinary.com/djfkchzyq/image/upload/v1706037873/k0anzb5lktcm0sty2oar.jpg",
+   mala:"https://res.cloudinary.com/djfkchzyq/image/upload/v1706037873/r5ksmztl85din6qaizit.jpg"}
  ]
  
 }
