@@ -93,7 +93,7 @@ export const acciones = [
   },
   // --------------ACCION 9-----------------
   {
-    accion: "Ya os van a hacer entregas de vuestras capas anti-dragones, pero una muchedumbre furiosa, compuesta por los descartados, asalta el palacio.Detenlos, rápido.",
+    accion: "Ya os van a hacer entregas de vuestras capas anti-dragones, pero una muchedumbre furiosa, compuesta por los descartados, asalta el palacio. Detenlos, rápido.",
     habilidad:["sabiduria","carisma","destreza"],
     opcion: [
       "Has calculado que la lámpara podría caerles encima, con un poco de ayuda",
@@ -279,27 +279,111 @@ imagenes:[
 { consecuencias: [
   //CONSECUENCIA 1------------------------------
   {
-   buena:"Están tan concentrados comiendo que no te ven. Distingues a Orlok, su lider. Será suficiente para alimentar a medio reino.",
-   regular:"Solo han bajado algunos de los más pequeños pero te sirve para pasar la prueba, y defender las calabazas.",
-   mala:"Un jabalí tan pequeño que casi parece uno normal te embiste duro. Al menos consigues su cabeza."
+   buena:"El dueño de la granja de calabazas está encantado de ayudarte y te da las indicaciones del mejor refugio posible. Pasas muy buena noche.",
+   regular:"Un granjero te dice que si le ayudas en la granja te lo dirá. Después de todo el día trabajando te da las indicaciones. Pasas una noche regular pero vives.",
+   mala:"Nadie te quiere ayudar porque serían trampas. Casi sin tiempo ya te metes en una cueva, consigues matar al oso de dentro pero sales con daños."
   },
   //CONSECUENCIA 2------------------------------
   {
-    buena:"Tu gran fortaleza y dotes de rastreador hacen que llegues a su guarida. Allí está Orlok, su lider. Buena pieza te llevas.",
-    regular:"Cuando después de mucho esfuerzo llegas a la guarida solo hay algunos de los más pequeños. Al menos te sirve.",
-    mala:"Pensabas que sería fácil pero no logras encontrar la guarida. Te encuentras uno muy pequeño de casualidad. Te lo llevas, no sin daños."
+    buena:"Eres muy hábil y te cuesta poco contruir un refugio muy competente. Duermes del tirón.",
+    regular:"Para el tiempo que has tenido no está mal, pero se mete mucho frío. Sobrevives pero ha sido duro.",
+    mala:"Has olvidado todas las lecciones de 'BricoCastillo' pasas una noche muy muy dura. "
    },
   //CONSECUENCIA 3------------------------------
   {
-    buena:"Cuando alguien ingiere este brebaje ves un hilo azul que te lleva hasta donde esté. En su guarida consigues matar a su líder, Orlok.",
-    regular:"Deberías ver un hilo azul que te lleve hasta ellos, pero no funciona del todo bien. Consigues llegar a duras penas y matar uno normalito.",
-    mala:"No ha funcionado en absoluto. Por suerte a uno le ha sentado mal y deja un rastro de excrementos que puedes seguir. Te le encuentras muerto a medio camino. Cuenta poco pero algo es algo."
+    buena:"Tienes localizado a uno que destaca en todas las pruebas, esta no es la excepción. Le das un porrazo y te quedas con su refugio. Ley del más fuerte.",
+    regular:"Cuando vas a asaltarle se da la vuelta y te dice que ya sabía que estabas allí. Después de una pelea te quedas el refugio pero estás herido.",
+    mala:"El hombre al que se lo ibas a robar te descubre y tienes que huir. Duermes bajo roble cercano, casi te congelas. penoso."
    },
 ],
 imagenes:[
-  { buena:"https://res.cloudinary.com/djfkchzyq/image/upload/v1706037873/si1a7wa8ha3o1ywd8mda.avif",
-   regular:"https://res.cloudinary.com/djfkchzyq/image/upload/v1706037873/k0anzb5lktcm0sty2oar.jpg",
-   mala:"https://res.cloudinary.com/djfkchzyq/image/upload/v1706037873/r5ksmztl85din6qaizit.jpg"}
+  { buena:"https://res.cloudinary.com/djfkchzyq/image/upload/v1706119040/soluciones/ey7sacbsaa396tkdeh0m.jpg",
+   regular:"https://res.cloudinary.com/djfkchzyq/image/upload/v1706119041/soluciones/gzv9smccjf1rpmd7n1hu.jpg",
+   mala:"https://res.cloudinary.com/djfkchzyq/image/upload/v1706119040/soluciones/xto0myfetomv5qelu3gk.jpg"}
+ ]
+ 
+},
+// --------------SECUELA 7-----------------
+{ consecuencias: [
+  //CONSECUENCIA 1------------------------------
+  {
+   buena:"Eres muy intimidante a los ojos del pez parlante! Asombras a todos, no lo habían oido hablar asi en años.",
+   regular:"No sabes si quería decir algo o era una queja, pero parece que cuenta. Te haces daño en las manos.",
+   mala:"Claramente no ha hablado pero el que lo iba a juzgar tenía tantas ganas de oirle que cree que sí. Lamentable."
+  },
+  //CONSECUENCIA 2------------------------------
+  {
+    buena:"Recordabas haberlo leído en un viejo libro. Al pez le agrada y habla contigo. Asombroso.",
+    regular:"Sabes que esa era la técnica correcta pero hay algo que falta, alguna palabra dice pero poca cosa.",
+    mala:"El pez te mira con cara de ¿Qué estás haciendo?. El organizador lo da por bueno porque cree haber oido algo."
+   },
+  //CONSECUENCIA 3------------------------------
+  {
+    buena:"El pez está muy contento de poder hablar con alguien interesante. Hasta puede que hayas hecho un amigo.",
+    regular:"Te habla solo para que te calles, que pesadez. Aún así cuenta. ¿Cómo imaginar que esto te serviría alguna vez?",
+    mala:"No quiere decir nada de nada. Hablas tú muy bajito, ojalá cuele. Te duele pasar tanta vergüenza."
+   },
+],
+imagenes:[
+  { buena:"https://res.cloudinary.com/djfkchzyq/image/upload/v1706113178/soluciones/w5jw7lluiro2cs6ldqxc.jpg",
+   regular:"https://res.cloudinary.com/djfkchzyq/image/upload/v1706113178/soluciones/w5jw7lluiro2cs6ldqxc.jpg",
+   mala:"https://res.cloudinary.com/djfkchzyq/image/upload/v1706113178/soluciones/w5jw7lluiro2cs6ldqxc.jpg"}
+ ]
+ 
+},
+// --------------SECUELA 8-----------------
+{ consecuencias: [
+  //CONSECUENCIA 1------------------------------
+  {
+   buena:"Un par de saltos un lado al otro y tarda poco en agotarse de tanto blandir ese hacha gigante. Lo rematas con facilidad.",
+   regular:"Después de un largo combate y varios cortes, consigues eliminarlo con bastantes dificultades. Bastante digno el combate.",
+   mala:"Ya no puedes más, parece que te has agotado antes que él, pero cuando te va a dar el hachazo final tropieza y puedes finalizar tú el combate. Penoso"
+  },
+  //CONSECUENCIA 2------------------------------
+  {
+    buena:"El viento te favorece, levanta mucho polvo y dificulta que te vea. Cuando se asienta el polvo El Hachas está con un puñal en el pecho.",
+    regular:"Hay poco margen para esconderse pero es suficiente para ganar el combate, auque te has llevado un hachazo bastante feo.",
+    mala:"¿Dónde pretendes escondete a plena luz del día y en una superficie plana sin objetos? Menos mal que le da un golpe de calor."
+   },
+  //CONSECUENCIA 3------------------------------
+  {
+    buena:"Una pelea como las de antes. Todos te aclaman cuando después de un duro combate te haces con la victoria con un golpe majestuoso.",
+    regular:"Te has sobrestimado, el combate es muy ajustado y por poco no lo cuentas. Ganas pero la gente duda de tí.",
+    mala:"Tu peor combate en años, por suerte su mujer lo saluda y se distrae. Tu aprovechas pero todos te abuchean. Nada merecida la victoria."
+   },
+],
+imagenes:[
+  { buena:"https://res.cloudinary.com/djfkchzyq/image/upload/v1706113177/soluciones/hs1dt7grfchki3xlzpqp.jpg",
+   regular:"https://res.cloudinary.com/djfkchzyq/image/upload/v1706113148/soluciones/o9mttohcjlmwjxxbehrw.png",
+   mala:"https://res.cloudinary.com/djfkchzyq/image/upload/v1706113177/soluciones/equc9ukdtm0ivl2fa8ir.jpg"}
+ ]
+ 
+},
+// --------------SECUELA 9-----------------
+{ consecuencias: [
+  //CONSECUENCIA 1------------------------------
+  {
+   buena:"El cáculo está hecho a la perfección, la lámpara no deja ni uno vivo. Tienes la capa y su respeto.",
+   regular:"No cae exactamente dónde querías pero elimina a la gran mayoría. Los guardias de palacio hacen el resto. Te has cortado con los cristales.",
+   mala:"Te cae a ti encima. La gente piensa si deberían darte la capa. ¿Cambiarán de opninión?"
+  },
+  //CONSECUENCIA 2------------------------------
+  {
+    buena:"Tus argumentos y tu sonrisa son más que suficientes para que se calmen y se vayan, también haces que no los castiguen.",
+    regular:"Uno te da un puñetazo pero acaban marchándose. Podría haber sido peor.",
+    mala:"Pasan todos por encima de ti y tienen que ser detenidos por los otros cuatro campeones. Parece que te va a costar qeu tus nuevos compañeros confíen en tí."
+   },
+  //CONSECUENCIA 3------------------------------
+  {
+    buena:"Es un truco que aprendiste con un mantel, pero funciona igual. En un hábil tirón todos caen y son reducidos por la guardia.",
+    regular:"No se caen todos pero al menos es una buena distracción para que los pueda reducir la guardia. Te duele la muñeca, deberías haber calentado antes.",
+    mala:"La alfombra se rompe y el Rey te mira muy mal. Nadie se ha caido y tus compañeros se han encargado de la tarea mientas hacías el ridículo."
+   },
+],
+imagenes:[
+  { buena:"https://res.cloudinary.com/djfkchzyq/image/upload/v1706113177/soluciones/hs1dt7grfchki3xlzpqp.jpg",
+   regular:"https://res.cloudinary.com/djfkchzyq/image/upload/v1706113148/soluciones/o9mttohcjlmwjxxbehrw.png",
+   mala:"https://res.cloudinary.com/djfkchzyq/image/upload/v1706113177/soluciones/equc9ukdtm0ivl2fa8ir.jpg"}
  ]
  
 }

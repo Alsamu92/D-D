@@ -1,7 +1,7 @@
 .cartaAccion {
   height: 310px;
   position: relative;
-  background: linear-gradient(to right, #d2b48c, #b8860b); 
+  background: linear-gradient(to right, #d2b48c, #c69c33); 
   top: -3%;
   color: #1a1a1a; 
   width: 80%;
@@ -61,7 +61,7 @@
 .cartaConsecuencia {
  height: 310px;
   position: relative;
-  background: linear-gradient(to right, #d2b48c, #b8860b); 
+  background: linear-gradient(to right, #d2b48c, #deb651); 
   top: 12%;
   color: #1a1a1a; 
   width: 80%;
@@ -121,7 +121,7 @@
 
 .botonConsecuencias {
   position: relative;
-  top: 38.5%;
+  top: 37.5%;
   left: 34%;
   background-color: rgba(255, 0, 0, 0); 
   border: 2px solid #8b4513; 
@@ -136,15 +136,6 @@
 }
 
 
-.botonConsecuencias:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 50%;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), transparent); 
-}
 
 @media screen and (max-width: 768px) {
   .elegirButton {
@@ -153,7 +144,7 @@
 
   .botonConsecuencias {
       font-size: 15px;
-      top: 39%;
+      top: 37.5%;
     
   }
 }

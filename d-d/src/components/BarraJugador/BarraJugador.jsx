@@ -12,8 +12,8 @@ export const BarraJugador = ({miPj,dado,consec }) => {
   return (
     <>
     <div className="cantidades">
-    <p><strong>Salud</strong>:{miPj.salud}</p>
-          <p><strong>Oro</strong>:{miPj.oro}</p>
+    <p><strong>Aguante</strong>:{miPj.salud}</p>
+          <p><strong>Experiencia</strong>:{miPj.oro}</p>
     </div>
       <div className="divRol">
         <div className="perfil">

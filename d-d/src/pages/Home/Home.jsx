@@ -36,7 +36,7 @@ export const Home = () => {
       </div>
      
       <Link to="/Aldea">
-        <h3 className="cajonAventura">Desafío de eleccion</h3>
+        <h3 className="cajonAventura">Torneo del dragón</h3>
       </Link>
 
       {user == null ? (
@@ -44,43 +44,12 @@ export const Home = () => {
           <span className="material-symbols-outlined">lock</span>
         </h3>
       ) : medallas ? (
-        <div className="cajonAventura">
-          <h3>Has completado el desafío</h3>
-          <div className="contenedorMedallas">
-          <img
-              src="https://res.cloudinary.com/djfkchzyq/image/upload/v1705420698/tytl5prduts1mcrmhz5w.png"
-              className={` ${
-                adquiridas?.includes("Lirena") ? "medalla lirena" : "medApagada"
-              }`}
-            ></img>
-            <img
-              src="https://res.cloudinary.com/djfkchzyq/image/upload/v1705444187/p3lzvvpmzevmzfw4yl7u.png"
-              className={` ${
-                adquiridas?.includes("Bruster")
-                  ? "medalla bruster"
-                  : "medApagada"
-              }`}
-            ></img>
-            <img
-              src="https://res.cloudinary.com/djfkchzyq/image/upload/v1705444187/ymenfwpypqa0bo3uqmhx.png"
-              className={` ${
-                adquiridas?.includes("Krista") ? "medalla krista" : "medApagada"
-              }`}
-            ></img>
-            <img
-              src="https://res.cloudinary.com/djfkchzyq/image/upload/v1705444187/ex3pvdt6amspm2bxqpt9.png"
-              className={` ${
-                adquiridas?.includes("Furtur") ? "medalla furtur" : "medApagada"
-              }`}
-            ></img>
-            <img
-              src="https://res.cloudinary.com/djfkchzyq/image/upload/v1705444187/yyme20utgvc9g4zfxdct.png"
-              className={` ${
-                adquiridas?.includes("Darion") ? "medalla darion" : "medApagada"
-              }`}
-            ></img>
-          </div>
-        </div>
+     
+        <Link to="/Dragon">
+        <h3 className="cajonAventura">Derrota a Carxes</h3>
+      </Link>
+          
+    
       ) : (
         <div className="cajonAventura">
           <h3>Gana con todos para completar</h3>

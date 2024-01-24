@@ -20,6 +20,9 @@ export const CartaAccion = ({ miPj }) => {
   const [res, setRes] = useState({});
   const[dado,setDado]=useState(Math.ceil(Math.random() * 6))
   const [send, setSend] = useState(false);
+  const borderStyle = resImage === "buena" ? "4px solid green" : 
+                   resImage === "regular" ? "4px solid orange" : 
+                   resImage === "mala" ? "4px solid red" : "4px solid black";
 
   const lanzarDado = () => {
     const nuevoNumero = Math.ceil(Math.random() * 6);
@@ -152,11 +155,13 @@ export const CartaAccion = ({ miPj }) => {
           </>
         ) : (
           <>
-            <div className="cartaConsecuencia">
-              <p>{consecuencia}</p>
        
-              <img
+            <div className="cartaConsecuencia" style={{ border: borderStyle }}>
+              <p>{consecuencia}</p>
+   
+              <img 
                 className="imgResolucion"
+               
                 src={
                   resImage =="mala"
                     ? secuelas[accion].imagenes[0]?.mala
@@ -193,8 +198,8 @@ export const CartaAccion = ({ miPj }) => {
           <div className="cartaConsecuencia">
             <h2>DERROTA</h2>
             <p>
-              {miPj.name} no ha conseguido superar todas las pruebas, las{" "}
-              {miPj.oro} monedas que habías juntado yacen ahora en el suelo con{" "}
+              {miPj.name} ha muerto poco después de la última prueba.
+             
             
             </p>
             <img className="imgResolucion"

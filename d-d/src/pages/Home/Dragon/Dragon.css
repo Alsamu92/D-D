@@ -1,0 +1,14 @@
+.dragon{
+    min-height:100% ;
+    width: 100%;
+    background-image: url("https://res.cloudinary.com/djfkchzyq/image/upload/v1705696468/yayr3uquyovsakopantv.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dragon h1{
+    color: white;
+    font-size: 30px;
+}

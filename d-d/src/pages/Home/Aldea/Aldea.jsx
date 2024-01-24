@@ -35,18 +35,18 @@ export const Aldea = () => {
                 alt="imagen control"
               />
               <ul className="textInstrucciones">
-                <li>Elige las mejores opciones</li>
+                <li>Si el aguante llega a 0 no podrás seguir.</li>
                 <li>
                   {" "}
                   Los puntos de tu personaje en la acción más el <strong>DADO</strong> será el resultado
                 </li>
-                <li>Menos de 5 restará salud</li>
-                <li>Más de 7 dará oro</li>
+                <li>Menos de 5 restará aguante</li>
+                <li>Más de 7 dará experiencia</li>
                 <li>
-                 5, 6 y 7 quitan salud y dan oro basado en tu dado
+                 5, 6 y 7 quitan salud y dan experiencia basado en tu dado
                 </li>
                 <li>
-                  Solo hay 3 opciones en cada ronda,a veces, tendrás que elegir
+                  A veces, tendrás que elegir
                   el mal menor
                 </li>
               </ul>
