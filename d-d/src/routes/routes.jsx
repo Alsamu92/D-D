@@ -6,6 +6,7 @@ import { Register } from './../pages/Home/Register/Register';
 import { Login } from "../pages/Home/Login/Login";
 import { Records } from "../pages/Home/Records/Records";
 import { Dragon } from "../pages/Home/Dragon/Dragon";
+import { Perfil } from "../pages/Home/Perfil/Perfil";
 
 export const router = createBrowserRouter([
     
@@ -25,6 +26,9 @@ export const router = createBrowserRouter([
     element:<Records/>},
         {path:"/Dragon",
     element:<Dragon/>},
+   
+        {path:"/Perfil",
+    element:<Perfil/>},
    
     ]
 }

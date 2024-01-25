@@ -14,6 +14,9 @@ box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
  
 }
+a{
+  text-decoration: none !important;
+}
 body{
   margin: 0;
 padding: 0;

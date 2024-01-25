@@ -96,14 +96,14 @@ export const CartaAccion = ({ miPj }) => {
                 ></img>
                 <form onSubmit={handleSubmit(formSubmit)}>
                   <button disabled={send} type="submit">
-                    Publicar Récord
+                    Guarda la partida.
                   </button>
                 </form>
               </>
             ) : user ? (
               <form onSubmit={handleSubmit(formSubmit)}>
                 <button disabled={send} type="submit">
-                  Publicar Récord
+                  Guarda la partida.
                 </button>
               </form>
             ) : (

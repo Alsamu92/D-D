@@ -65,5 +65,12 @@ export const ponerMedalla = async (medalla) => {
     .then((res) => res)
     .catch((error) => error);
 };
+//! -------------------> AplicarExp
+export const aplicarExp = async (formData) => {
+  const APIGeneral = extraConfig();
+  return APIGeneral.patch(`/usuario/actualizar`,formData)
+    .then((res) => res)
+    .catch((error) => error);
+};
 
 
