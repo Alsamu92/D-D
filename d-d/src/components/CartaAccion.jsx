@@ -112,7 +112,7 @@ getExp(miPj.oro)
             {!usuarioActual?.data?.medallas.includes(miPj.name) &&
             usuarioActual != null ? (
               <>
-                <p>Recoge la medalla de {miPj.name}</p>
+                <p className="enfasis">Click en la medalla de {miPj.name}</p>
                 <img
                   src={misMedallas[miPj.name]}
                   onClick={handleMedalla}
@@ -121,7 +121,7 @@ getExp(miPj.oro)
                   style={{ width: "75px", cursor: "pointer", minWidth: "none" }}
                 ></img>
                 <form onSubmit={handleSubmit(formSubmit)}>
-                  <button disabled={send} type="submit">
+                  <button  className={send ? "puntosoff" : "puntos"} disabled={send} type="submit">
                     Recoge tus puntos.
                   </button>
                 </form>
@@ -139,7 +139,7 @@ getExp(miPj.oro)
             )}
           </div>
           <Link className="botonConsecuencias" to="/">
-            <button>Inicio</button>
+            <button disabled={!send}>Inicio</button>
           </Link>
         </>
       ) : miPj.salud > 0 ? (

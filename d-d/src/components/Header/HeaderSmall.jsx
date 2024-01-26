@@ -59,6 +59,14 @@ export const HeaderSmall = () => {
                 Inicio
               </NavLink>
             </figure>
+            <figure className="figureNav">
+            <span class="material-symbols-outlined">
+swords
+</span>
+              <NavLink to={"/Aldea"} onClick={() => setShowMenu(false)}>
+                Torneo del dragón
+              </NavLink>
+            </figure>
             {!user ? 
               <>
                 <figure className="figureNav">

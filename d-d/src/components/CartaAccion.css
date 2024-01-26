@@ -15,6 +15,32 @@
   padding: 2px; 
 
 }
+.enfasis{
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: white;
+  background-color: rgb(71, 49, 30);
+  border-radius: 5px;
+  padding: 0 10px;
+  font-size: 18px;
+
+}
+.puntos{
+  padding: 5px;
+  margin-top: 10px;
+  border-radius: 5px;
+  background-color: rgb(65, 158, 65);
+  color: white;
+  font-weight: 700;
+}
+.puntosoff{
+  padding: 5px;
+  margin-top: 10px;
+  border-radius: 5px;
+  background-color: rgb(176, 183, 176);
+  color: rgb(67, 51, 51);
+  font-weight: 700;
+}
 
 .cartaAccion p {
   margin-top: 0;
