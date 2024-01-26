@@ -23,11 +23,11 @@ export const Perfil = () => {
     const miExp = await getUserByName(user.username);
     setCadaPj(miExp);
     setMiExperienciaDisponible(miExp?.data?.experiencia);
-    setLirena(miExp.data.lirena);
-    setBruster(miExp.data.bruster);
-    setKrista(miExp.data.krista);
-    setFurtur(miExp.data.furtur);
-    setDarion(miExp.data.darion);
+    setLirena(miExp?.data.lirena);
+    setBruster(miExp?.data.bruster);
+    setKrista(miExp?.data.krista);
+    setFurtur(miExp?.data.furtur);
+    setDarion(miExp?.data.darion);
   };
 
   useEffect(() => {
@@ -119,7 +119,10 @@ export const Perfil = () => {
     }
   };
   useEffect(() => {
-    if (res?.status == 200) {
+    if (res?.data.patchUser.experiencia!=res?.data.updateUser.experiencia) {
+      console.log(res?.data.patchUser.experiencia)
+      console.log(res?.data.updateUser.experiencia)
+      console.log(res?.data?.patchUser?.experiencia!=res?.data?.updateUser?.experiencia)
       Swal.fire({
         icon: "success",
         title: "Experiencia aplicada.",
@@ -245,6 +248,7 @@ export const Perfil = () => {
             <h2>
               Puntos por asignar<strong> {miExperienciaDisponible}</strong>
             </h2>{" "}
+            <h4>Desplaza el cursor para introducir la cantidad deseada.</h4>
           </div>
           <div className="miPerfil">
             <div className="cajonesPerfil">
