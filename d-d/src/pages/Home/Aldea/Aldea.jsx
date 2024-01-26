@@ -5,24 +5,35 @@ import { persSeleccionables } from "../../../services/services";
 import { CardPersonaje } from "../../../components/CardPersonaje/CardPersonaje";
 import { useConfirmacionPj } from "../../../hooks/useConfirmacionPj";
 import { CartaAccion } from "./../../../components/CartaAccion";
-
+import { useAuth } from "../../../context/authContext";
+import { getUserByName } from "../../../services/user.service";
 export const Aldea = () => {
   const [pjConfirmed, setPjConfirmed] = useState(null);
-
+const{user}=useAuth()
   const [start, setStart] = useState(null);
+  const [miPersonaje, setMiPersonaje] = useState(null);
   const { setGaleriaItems, dataPag, ComponentPaginacion } = usePaginacion();
-
+  const traerMiExp = async () => {
+    const miExp = await getUserByName(user.username);
+    setMiPersonaje(miExp?.data);
+ 
+   
+  };
+  useEffect(()=>{setPjConfirmed(null)},[])
   const handleConfirmedClick = (person) => {
     useConfirmacionPj(setPjConfirmed, person);
   };
+
   const handleStart = () => {
     pjConfirmed.oro = 0;
-    pjConfirmed.salud = 100;
+    pjConfirmed.salud =miPersonaje[enMinus]>49?120:100 ;
     setStart(true);
   };
   useEffect(() => setGaleriaItems(persSeleccionables), []);
+  useEffect(() =>{ traerMiExp()}, []);
 
-  console.log();
+ const enMinus=(pjConfirmed?.name.toLowerCase());
+  
   return (
     <>
       {pjConfirmed ? (
@@ -58,7 +69,7 @@ export const Aldea = () => {
           <>
             <div className="divJuego">
               <div className="divPreguntas">
-                <CartaAccion miPj={pjConfirmed} />
+                <CartaAccion miPj={pjConfirmed} nivelDos={miPersonaje[enMinus]>49 } />
               </div>
             </div>
           </>

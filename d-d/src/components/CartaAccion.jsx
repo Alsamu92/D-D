@@ -9,7 +9,7 @@ import { useAuth } from "../context/authContext";
 import { useForm } from "react-hook-form";
 import { registerRecord } from "../services/record.service";
 import Swal from "sweetalert2";
-export const CartaAccion = ({ miPj }) => {
+export const CartaAccion = ({ miPj,nivelDos }) => {
   const [consecuencia, setConsecuencia] = useState();
   const [resImage, setResImage] = useState();
   const [recogida, setRecogida] = useState(false);
@@ -20,6 +20,18 @@ export const CartaAccion = ({ miPj }) => {
   const [res, setRes] = useState({});
   const [dado, setDado] = useState(Math.ceil(Math.random() * 6));
   const [send, setSend] = useState(false);
+  useEffect(() => {
+    if (nivelDos) {
+
+      const propiedades = ['fuerza', 'sabiduria', 'carisma', 'sigilo', 'destreza'];
+
+ const propiedadElegida = propiedades[Math.floor(Math.random() * propiedades.length)];
+ miPj[propiedadElegida] +=1
+      console.log(`${propiedadElegida} aumentado`);
+    }
+  }, [])
+
+ 
   const borderStyle =
     resImage === "buena"
       ? "4px solid green"
@@ -28,13 +40,12 @@ export const CartaAccion = ({ miPj }) => {
       : resImage === "mala"
       ? "4px solid red"
       : "4px solid black";
-
   const lanzarDado = () => {
     const nuevoNumero = Math.ceil(Math.random() * 6);
     setDado(nuevoNumero);
   };
   const getExp = async (exper) => {
-    console.log("mi oro",exper)
+ 
     const respuesta = await aplicarExp({ experiencia:+exper });
     setRes(respuesta);
   };
@@ -55,8 +66,8 @@ getExp(miPj.oro)
     setRes(await registerRecord(customFormData));
     Swal.fire({
       icon: "success",
-      title: "Record guardado",
-      text: "Solo aparecerá el top 5",
+      title: "Experiencia obtenida y partida guardada.",
+      text: "Puedes usar tu experiencia en tu perfil.",
       showConfirmButton: false,
       timer: 1500,
     });
