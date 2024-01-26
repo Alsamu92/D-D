@@ -9,7 +9,7 @@ export const Perfil = () => {
   const [activo, setActivo] = useState();
   const[cadaPj,setCadaPj]=useState()
   const[res,setRes]=useState()
-
+const[selectedPersonaje,setSelectedPersonaje]=useState()
   const [lirena, setLirena] = useState();
   const [bruster, setBruster] = useState();
   const [krista, setKrista] = useState();
@@ -29,6 +29,7 @@ export const Perfil = () => {
     setDarion(miExp.data.darion)
   
    }
+  
    useEffect(() => {
 
      traerMiExp()
@@ -61,7 +62,7 @@ export const Perfil = () => {
  
   const darExp = (e,name) => {
     
-    console.log(name)
+
     switch (name.toLowerCase()) {
       case 'lirena':
       setLirena(e.target.value),
@@ -108,7 +109,7 @@ export const Perfil = () => {
         setRes(respuesta)
         break;
       case 'darion':
-        respuesta=await aplicarExp( { experiencia:-((darion-cadaPj?.data.darionr)), darion:darion })
+        respuesta=await aplicarExp( { experiencia:-((darion-cadaPj?.data.darion)), darion:darion })
         setRes(respuesta)
         break;
       default:
@@ -176,41 +177,60 @@ const expANivel = (expEnNum) => {
     ? 3
     : 4;
 };
+
   useEffect(() => {
    expANivel()
   }, [miExperienciaDisponible]);
-  return (
+  return (<div className="todoPerfil">
+    <h2>Puntos por asignar {miExperienciaDisponible}</h2>
     <div className="miPerfil">
-       <h2>{miExperienciaDisponible}</h2>
+      
       <div className="cajonesPerfil">
       {persSeleccionables.map((pers)=>(
-<figure key={pers.name} className="cajonPjPerfil">
-  <h3>{pers.name}</h3>
-  <img src={pers.img} alt="" />
-  <div>
-        <input
-          type="range"
-          min="0"
-          max="200"
-          step="1"
-          value={handleEstadoName(pers.name)}
-          onChange={(e) => darExp(e,pers.name)}
-        />
-      <button onClick={() => getExp(pers.name.toLocaleLowerCase())}>
-  Cambiar
-</button>
-        <p> {handleEstadoName(pers.name)}</p>
+        <div className="algo">
+<figure onClick={()=>setSelectedPersonaje(pers)} key={pers.name} className={`${pers.name} cajonPjPerfil`}>
 
-        <h3>{expANivel(cadaPj?.data[pers.name.toLowerCase()])}</h3>
-      </div>
+  <img src={pers.img} alt=""  />
+  
+        
+        <p> {handleEstadoName(pers.name)}</p> 
+
+        <h3>Nivel {expANivel(cadaPj?.data[pers.name.toLowerCase()])}</h3>
+      
 </figure>
+ <div className="cajonExperiencia">
+ <input
+  type="range"
+  min="0"
+  max="200"
+  step="1"
+  value={handleEstadoName(pers.name)}
+  onChange={(e) => darExp(e, pers.name)}
+  style={{
+    width: '100%',
+    height: '10px',
+    margin: '5px 0',
+    background: `linear-gradient(to right, white, brown)`,
+    outline: 'none',
+    WebkitAppearance: 'none', 
+  }}
+/>
+        <h3 className="expPorPj">{handleEstadoName(pers.name)}/200</h3>
+     <button onClick={() => getExp(pers.name.toLocaleLowerCase())}>
+  Dar Exp
+</button>
+
+ </div>
+ </div>
       ))}
+     
       </div>
      
    
      
      
  
+    </div>
     </div>
   );
 };

@@ -3,7 +3,7 @@ import { acciones, secuelas } from "../services/acciones";
 import "./CartaAccion.css";
 import { BarraJugador } from "./BarraJugador/BarraJugador";
 import { Link, NavLink } from "react-router-dom";
-import { getUserByName, ponerMedalla } from "../services/user.service";
+import { aplicarExp, getUserByName, ponerMedalla } from "../services/user.service";
 import { medallasPersonajes } from "../services/services";
 import { useAuth } from "../context/authContext";
 import { useForm } from "react-hook-form";
@@ -18,17 +18,31 @@ export const CartaAccion = ({ miPj }) => {
   const [usuarioActual, setUsuarioActual] = useState();
   const { register, handleSubmit } = useForm();
   const [res, setRes] = useState({});
-  const[dado,setDado]=useState(Math.ceil(Math.random() * 6))
+  const [dado, setDado] = useState(Math.ceil(Math.random() * 6));
   const [send, setSend] = useState(false);
-  const borderStyle = resImage === "buena" ? "4px solid green" : 
-                   resImage === "regular" ? "4px solid orange" : 
-                   resImage === "mala" ? "4px solid red" : "4px solid black";
+  const borderStyle =
+    resImage === "buena"
+      ? "4px solid green"
+      : resImage === "regular"
+      ? "4px solid orange"
+      : resImage === "mala"
+      ? "4px solid red"
+      : "4px solid black";
 
   const lanzarDado = () => {
     const nuevoNumero = Math.ceil(Math.random() * 6);
     setDado(nuevoNumero);
-   
   };
+  const getExp = async (exper) => {
+    console.log("mi oro",exper)
+    const respuesta = await aplicarExp({ experiencia:+exper });
+    setRes(respuesta);
+  };
+  useEffect(() => {
+    if (res?.status == 200) {
+      console.log("datos cambiados"), setRes(null);
+    }
+  }, [res]);
   const formSubmit = async (formData) => {
     const customFormData = {
       ...formData,
@@ -36,7 +50,7 @@ export const CartaAccion = ({ miPj }) => {
       salud: miPj.salud,
       personaje: miPj.name,
     };
-
+getExp(miPj.oro)
     setSend(true);
     setRes(await registerRecord(customFormData));
     Swal.fire({
@@ -81,7 +95,8 @@ export const CartaAccion = ({ miPj }) => {
           <div className="cartaConsecuencia">
             <p>Has ganado!</p>
             <p>
-              {miPj.name} ha conseguido salir con {miPj.oro} monedas de oro.
+              {miPj.name} ha conseguido el honor de enfrentarte al dragón y has
+              ganado {miPj.oro} de experiencia.
             </p>
             {!usuarioActual?.data?.medallas.includes(miPj.name) &&
             usuarioActual != null ? (
@@ -96,19 +111,19 @@ export const CartaAccion = ({ miPj }) => {
                 ></img>
                 <form onSubmit={handleSubmit(formSubmit)}>
                   <button disabled={send} type="submit">
-                    Guarda la partida.
+                    Recoge tus puntos.
                   </button>
                 </form>
               </>
             ) : user ? (
               <form onSubmit={handleSubmit(formSubmit)}>
                 <button disabled={send} type="submit">
-                  Guarda la partida.
+                  Recoge tus puntos.
                 </button>
               </form>
             ) : (
               <NavLink to="/login">
-                <button>Inicia sesión para guardar tus récords</button>
+                <button>Inicia sesión para guardar tus partidas.</button>
               </NavLink>
             )}
           </div>
@@ -128,22 +143,24 @@ export const CartaAccion = ({ miPj }) => {
               {acciones[accion].opcion.map((op, index) => (
                 <button
                   key={op.accion}
-               
                   onClick={() => {
-             
-                    const brm = miPj[acciones[accion].habilidad[index]]+dado;
-                    if (brm < 5 ||dado==1) {
-                      setConsecuencia(secuelas[accion].consecuencias[index].mala);
+                    const brm = miPj[acciones[accion].habilidad[index]] + dado;
+                    if (brm < 5 || dado == 1) {
+                      setConsecuencia(
+                        secuelas[accion].consecuencias[index].mala
+                      );
                       setResImage("mala");
                     } else if (brm >= 5 && brm < 8) {
-                      setConsecuencia(secuelas[accion].consecuencias[index].regular);
+                      setConsecuencia(
+                        secuelas[accion].consecuencias[index].regular
+                      );
                       setResImage("regular");
-                    } 
-                    else {
-                      setConsecuencia(secuelas[accion].consecuencias[index].buena);
+                    } else {
+                      setConsecuencia(
+                        secuelas[accion].consecuencias[index].buena
+                      );
                       setResImage("buena");
                     }
-              
 
                     setIndice(index);
                   }}
@@ -155,17 +172,17 @@ export const CartaAccion = ({ miPj }) => {
           </>
         ) : (
           <>
-       
             <div className="cartaConsecuencia" style={{ border: borderStyle }}>
               <p>{consecuencia}</p>
-   
-              <img 
+
+              <img
                 className="imgResolucion"
-               
                 src={
-                  resImage =="mala"
+                  resImage == "mala"
                     ? secuelas[accion].imagenes[0]?.mala
-                    :resImage=="buena"?secuelas[accion].imagenes[0].buena:secuelas[accion].imagenes[0].regular
+                    : resImage == "buena"
+                    ? secuelas[accion].imagenes[0].buena
+                    : secuelas[accion].imagenes[0].regular
                 }
                 alt=""
               />
@@ -176,17 +193,19 @@ export const CartaAccion = ({ miPj }) => {
                 handleAccion(accion);
 
                 actualizarRecursos(
-                 resImage=="buena"
-                    ? 10+dado
-                    :resImage=="regular"?dado: 0,
-                  resImage=="mala"
-                    ? (-30+dado):resImage=="regular"?
-                    (-10+dado)
+                  resImage == "buena"
+                    ? 10 + dado
+                    : resImage == "regular"
+                    ? dado
+                    : 0,
+                  resImage == "mala"
+                    ? -30 + dado
+                    : resImage == "regular"
+                    ? -10 + dado
                     : 0
                 );
                 setConsecuencia(null);
-             lanzarDado()
-               
+                lanzarDado();
               }}
             >
               Siguiente
@@ -197,12 +216,9 @@ export const CartaAccion = ({ miPj }) => {
         <>
           <div className="cartaConsecuencia">
             <h2>DERROTA</h2>
-            <p>
-              {miPj.name} ha muerto poco después de la última prueba.
-             
-            
-            </p>
-            <img className="imgResolucion"
+            <p>{miPj.name} ha muerto poco después de la última prueba.</p>
+            <img
+              className="imgResolucion"
               src="https://res.cloudinary.com/djfkchzyq/image/upload/v1705064810/dtxkqyzkbslt7o9zo4cq.jpg"
               alt=""
             />
@@ -212,8 +228,14 @@ export const CartaAccion = ({ miPj }) => {
           </Link>
         </>
       )}
-      
-      <BarraJugador consec={consecuencia?true:false}dado={dado}acciones={acciones} accion={accion} miPj={miPj} />
+
+      <BarraJugador
+        consec={consecuencia ? true : false}
+        dado={dado}
+        acciones={acciones}
+        accion={accion}
+        miPj={miPj}
+      />
     </>
   );
 };

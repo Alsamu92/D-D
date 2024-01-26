@@ -1,33 +1,121 @@
 .miPerfil{
-    width: 100%;
+  
+    background-color: rgba(255, 132, 0, 0.101);
+
     z-index: 10;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+   
 
 }
-.miPerfil h2{
-    position: relative;
-    left: 30%;
-    color: blue;
- font-size: 40px;
 
-}
 .cajonPjPerfil{
     display: flex;
+    cursor: pointer;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: 300px;
-    height: 150px;
-    background-color: white;
+    justify-content: center;
+    align-items: flcenterex-start;
+    width: 25%;
+    min-width: 190px;
+    max-width: 200px;
+    height: 200px;
+    margin: 0;
+    overflow: hidden;
+   border-radius: 20px 20px 0px 0px;
+   border: 2px solid silver;
+ 
+    background-color: rgb(107, 51, 18);
 }
 .cajonPjPerfil img{
-   width: 10%;
+    width: 170%;
+    position: relative;
 }
+.cajonPjPerfil h3{
+top: -120%;
+    position: relative;
+    color: gold;
+    padding: 5px;
+    background-color: rgba(1, 0, 0, 0.511);
+}
+.Lirena img{
+top: 65%;
+left: -30%;
+}
+.Lirena h3{
+top: -143%;
+
+left: 0%;
+}
+.Bruster img{top: 75%;
+    left: -45%;}
+.Bruster h3{top: -100%;
+    left: 0%;}
+.Krista img{top: 45%;
+    left: -30%;}
+.Krista h3{top: -68%;
+   ;}
+.Furtur img{top: 95%;
+    left: -30%;}
+.Furtur h3{top: -115%;
+  }
+.Darion img{top: 75%;
+    left: -50%;}
+.Darion h3{top: -95%;
+ }
 .cajonesPerfil{
-    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+ gap: 10px;
+ margin-top: 40px;
+ flex-wrap: wrap;
     top: 0%;
   
 }
+.algo:nth-child(5) {
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+.algo{
+    min-width: 200px;
+}
+.cajonExperiencia input{
+  background: red;
+}
+.algo div{
+    background-color: rgba(8, 7, 7, 0.734);
+    margin: 0;
+    width: 95%;
+    text-align: center;
+    color: gold;
+    border-radius: 0px 0px 20px 20px;
+}
+.expPorPj{
+    color: white;
+}
+.cajonExperiencia button{
+padding: 5px;
+margin: 10px;
+border-radius: 5px;
+background-color: gold;
+font-weight: 700;
+}
+.todoPerfil h2{
+    color: white;
+    width: 350px;
+    height: 100px;
+    background-color: rgba(26, 21, 8, 0.768);
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.todoPerfil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
