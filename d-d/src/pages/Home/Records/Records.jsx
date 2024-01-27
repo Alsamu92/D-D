@@ -29,7 +29,7 @@ useEffect(()=>{
           <td>Jugador</td>
           <td>Pers</td>
           <td>Exp</td>
-          <td>Salud</td>
+        
         </tr>
       </thead>
       
@@ -38,7 +38,7 @@ useEffect(()=>{
     <td>{record?.jugadorName}</td>
     <td>{record?.personaje}</td>
     <td>{record?.oro}</td>
-    <td>{record?.salud}</td>
+   
 </tr>
         ))}
 

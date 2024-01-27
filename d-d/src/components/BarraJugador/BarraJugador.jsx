@@ -6,7 +6,8 @@ export const BarraJugador = ({ miPj, dado, consec, brm }) => {
   const { allUser } = useAuth();
   useEffect(() => {}, [miPj]);
   const habilidadComparar =brm?brm[1][0]:"Aun no hay"
-
+console.log(dado)
+console.log(brm[0])
   return (
     <>
     
@@ -29,7 +30,7 @@ export const BarraJugador = ({ miPj, dado, consec, brm }) => {
               <div className="dice rolling">{dado} </div>
               <div className="textoTirada">
                 <p>+ {brm[1]}</p>
-                <p className="numeroFinal waitDice">= {brm[0]}</p>
+                <p className="numeroFinal waitDice">= {dado==1?1:brm[0]}</p>
               </div>{" "}
               {/* <div className="cuadroInst">
                 <strong>4- </strong>

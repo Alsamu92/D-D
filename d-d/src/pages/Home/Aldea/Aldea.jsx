@@ -52,7 +52,7 @@ const{user}=useAuth()
                   Los puntos de tu personaje en la acción más el <strong>DADO</strong> será el resultado de la tirada.
                 </li>
                <div className="cuadroInst"><strong>1 2 3 4</strong> <strong>5 6 7</strong> <strong>8 9 10+ </strong></div>
-               
+               <li>Un 1 en el dado es 1 en el resultado! </li>
               </ul>
 
               <button onClick={() => handleStart()}>Empezar!</button>
