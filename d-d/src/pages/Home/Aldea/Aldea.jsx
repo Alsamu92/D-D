@@ -7,6 +7,8 @@ import { useConfirmacionPj } from "../../../hooks/useConfirmacionPj";
 import { CartaAccion } from "./../../../components/CartaAccion";
 import { useAuth } from "../../../context/authContext";
 import { getUserByName } from "../../../services/user.service";
+
+import Swal from "sweetalert2";
 export const Aldea = () => {
   const [pjConfirmed, setPjConfirmed] = useState(null);
 const{user}=useAuth()
@@ -25,10 +27,20 @@ const{user}=useAuth()
   };
 
   const handleStart = () => {
-    pjConfirmed.oro = 0;
-    pjConfirmed.salud =miPersonaje[enMinus]>49?120:100 ;
-    setStart(true);
-  };
+    if (user) {
+        pjConfirmed.oro = 0;
+        pjConfirmed.salud = miPersonaje[enMinus] > 49 ? 120 : 100;
+        setStart(true);
+    } else {
+      Swal.fire({
+        icon: "error",
+        title: "Necesitas una cuenta para jugar",
+        text: "Ve a inicio de sesión.",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+    }
+};
   useEffect(() => setGaleriaItems(persSeleccionables), []);
   useEffect(() =>{ traerMiExp()}, []);
 
