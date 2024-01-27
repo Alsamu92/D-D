@@ -69,7 +69,7 @@ const{user}=useAuth()
           <>
             <div className="divJuego">
               <div className="divPreguntas">
-                <CartaAccion miPj={pjConfirmed} nivelDos={miPersonaje[enMinus]>49 } />
+                <CartaAccion miPj={pjConfirmed} nivelDos={miPersonaje[enMinus]>99  }nivelTres={miPersonaje[enMinus]>149  } />
               </div>
             </div>
           </>

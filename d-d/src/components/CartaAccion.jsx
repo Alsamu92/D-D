@@ -9,7 +9,7 @@ import { useAuth } from "../context/authContext";
 import { useForm } from "react-hook-form";
 import { registerRecord } from "../services/record.service";
 import Swal from "sweetalert2";
-export const CartaAccion = ({ miPj,nivelDos }) => {
+export const CartaAccion = ({ miPj,nivelDos,nivelTres }) => {
   const [consecuencia, setConsecuencia] = useState();
   const [resImage, setResImage] = useState();
   const [recogida, setRecogida] = useState(false);
@@ -19,6 +19,7 @@ export const CartaAccion = ({ miPj,nivelDos }) => {
   const { register, handleSubmit } = useForm();
   const [res, setRes] = useState({});
   const [dado, setDado] = useState(Math.ceil(Math.random() * 6));
+  const [dadoPro, setDadoPro] = useState(Math.ceil(Math.random() * 8));
   const [send, setSend] = useState(false);
   useEffect(() => {
     if (nivelDos) {
@@ -41,7 +42,7 @@ export const CartaAccion = ({ miPj,nivelDos }) => {
       ? "4px solid red"
       : "4px solid black";
   const lanzarDado = () => {
-    const nuevoNumero = Math.ceil(Math.random() * 6);
+    const nuevoNumero =nivelTres? Math.ceil(Math.random() * 8):Math.ceil(Math.random() * 6)
     setDado(nuevoNumero);
   };
   const getExp = async (exper) => {

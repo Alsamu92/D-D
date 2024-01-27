@@ -10,6 +10,7 @@ export const Perfil = () => {
   const [info, setInfo] = useState(false);
   const [cadaPj, setCadaPj] = useState();
   const [res, setRes] = useState();
+  const [send, setSend] = useState(false);
   const [selectedPersonaje, setSelectedPersonaje] = useState();
   const [lirena, setLirena] = useState();
   const [bruster, setBruster] = useState();
@@ -77,6 +78,7 @@ export const Perfil = () => {
     }
   };
   const getExp = async (nombreCambiar) => {
+    setSend(true)
     let respuesta;
     switch (nombreCambiar) {
       case "lirena":
@@ -112,17 +114,19 @@ export const Perfil = () => {
           experiencia: -(darion - cadaPj?.data.darion),
           darion: darion,
         });
+      
         setRes(respuesta);
+       
         break;
       default:
         break;
     }
   };
   useEffect(() => {
+    console.log(send)
+   
     if (res?.data.patchUser.experiencia!=res?.data.updateUser.experiencia) {
-      console.log(res?.data.patchUser.experiencia)
-      console.log(res?.data.updateUser.experiencia)
-      console.log(res?.data?.patchUser?.experiencia!=res?.data?.updateUser?.experiencia)
+  
       Swal.fire({
         icon: "success",
         title: "Experiencia aplicada.",
@@ -131,6 +135,9 @@ export const Perfil = () => {
         timer: 1500,
       });
       setRes(null);
+    setSend(false)
+    }else{
+      setSend(false)
     }
   }, [res]);
 
@@ -224,7 +231,7 @@ export const Perfil = () => {
               <tr>
                 <td>3</td>
                 <td>150</td>
-                <td>Próximamente 3</td>
+                <td>Tu dado es de 8 caras.</td>
               </tr>
               <tr>
                 <td>4</td>
@@ -288,6 +295,7 @@ export const Perfil = () => {
                       {handleEstadoName(pers.name)}/200
                     </h3>
                     <button
+                    disabled={send}
                       onClick={() => getExp(pers.name.toLocaleLowerCase())}
                     >
                       Dar Exp

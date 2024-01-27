@@ -9,7 +9,7 @@ export const Header = () => {
   const{user,logout}=useAuth()
 
   return (<>
-  {tamanoPantalla > 768 ?<header className='headerDesktop'>
+  {tamanoPantalla > 900 ?<header className='headerDesktop'>
     <div className='logoTit'>
        <img className='logo' src="https://res.cloudinary.com/djfkchzyq/image/upload/v1705694107/wtnl9l3iplvjrz3f6jmy.png" alt="Logo página" />
        <h2 className='tituloHeader'>Aventuras Dracómicas</h2>
@@ -18,6 +18,9 @@ export const Header = () => {
         <nav className="navUno">
             <ul className='about'>
              
+              <Link to="/Perfil">
+              <li>Perfil</li>
+              </Link>
               <Link to="/records">
               <li>Récords</li>
               </Link>
