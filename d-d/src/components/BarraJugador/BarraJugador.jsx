@@ -6,8 +6,8 @@ export const BarraJugador = ({ miPj, dado, consec, brm }) => {
   const { allUser } = useAuth();
   useEffect(() => {}, [miPj]);
   const habilidadComparar =brm?brm[1][0]:"Aun no hay"
-console.log(dado)
-console.log(brm[0])
+
+  
   return (
     <>
     

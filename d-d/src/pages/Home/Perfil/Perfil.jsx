@@ -82,40 +82,55 @@ export const Perfil = () => {
     let respuesta;
     switch (nombreCambiar) {
       case "lirena":
-        respuesta = await aplicarExp({
-          experiencia: -(lirena - cadaPj?.data.lirena),
-          lirena: lirena,
-        });
-        setRes(respuesta);
+        if (miExperienciaDisponible > 49) {
+          respuesta = await aplicarExp({
+            experiencia: -50,
+            lirena: cadaPj?.data.lirena + 50,
+          });
+
+          setRes(respuesta);
+        }
+        
         break;
       case "bruster":
-        respuesta = await aplicarExp({
-          experiencia: -(bruster - cadaPj?.data.bruster),
-          bruster: bruster,
-        });
-        setRes(respuesta);
+        if (miExperienciaDisponible > 49) {
+          respuesta = await aplicarExp({
+            experiencia: -50,
+            bruster: cadaPj?.data.bruster + 50,
+          });
+
+          setRes(respuesta);
+        }
         break;
       case "krista":
-        respuesta = await aplicarExp({
-          experiencia: -(krista - cadaPj?.data.krista),
-          krista: krista,
-        });
-        setRes(respuesta);
+        if (miExperienciaDisponible > 49) {
+          respuesta = await aplicarExp({
+            experiencia: -50,
+            krista: cadaPj?.data.krista + 50,
+          });
+
+          setRes(respuesta);
+        }
         break;
       case "furtur":
-        respuesta = await aplicarExp({
-          experiencia: -(furtur - cadaPj?.data.furtur),
-          furtur: furtur,
-        });
-        setRes(respuesta);
+        if (miExperienciaDisponible > 49) {
+          respuesta = await aplicarExp({
+            experiencia: -50,
+            furtur: cadaPj?.data.furtur + 50,
+          });
+
+          setRes(respuesta);
+        }
         break;
       case "darion":
-        respuesta = await aplicarExp({
-          experiencia: -(darion - cadaPj?.data.darion),
-          darion: darion,
-        });
-      
-        setRes(respuesta);
+        if (miExperienciaDisponible > 49) {
+          respuesta = await aplicarExp({
+            experiencia: -50,
+           darion: cadaPj?.data.darion + 50,
+          });
+
+          setRes(respuesta);
+        }
        
         break;
       default:
@@ -129,7 +144,7 @@ export const Perfil = () => {
   
       Swal.fire({
         icon: "success",
-        title: "Experiencia aplicada.",
+        title: "Has subido de nivel.",
         text: "Tu personaje ahora es más fuerte.",
         showConfirmButton: false,
         timer: 1500,
@@ -141,50 +156,50 @@ export const Perfil = () => {
     }
   }, [res]);
 
-  // Lirena
-  if (lirena > cadaPj?.data.lirena + miExperienciaDisponible) {
-    setLirena(cadaPj?.data.lirena + miExperienciaDisponible);
-  }
+  // // Lirena
+  // if (lirena > cadaPj?.data.lirena + miExperienciaDisponible) {
+  //   setLirena(cadaPj?.data.lirena + miExperienciaDisponible);
+  // }
 
-  if (lirena < cadaPj?.data.lirena) {
-    setLirena(cadaPj?.data.lirena);
-  }
+  // if (lirena < cadaPj?.data.lirena) {
+  //   setLirena(cadaPj?.data.lirena);
+  // }
 
-  // Bruster
-  if (bruster > cadaPj?.data.bruster + miExperienciaDisponible) {
-    setBruster(cadaPj?.data.bruster + miExperienciaDisponible);
-  }
+  // // Bruster
+  // if (bruster > cadaPj?.data.bruster + miExperienciaDisponible) {
+  //   setBruster(cadaPj?.data.bruster + miExperienciaDisponible);
+  // }
 
-  if (bruster < cadaPj?.data.bruster) {
-    setBruster(cadaPj?.data.bruster);
-  }
+  // if (bruster < cadaPj?.data.bruster) {
+  //   setBruster(cadaPj?.data.bruster);
+  // }
 
-  // Krista
-  if (krista > cadaPj?.data.krista + miExperienciaDisponible) {
-    setKrista(cadaPj?.data.krista + miExperienciaDisponible);
-  }
+  // // Krista
+  // if (krista > cadaPj?.data.krista + miExperienciaDisponible) {
+  //   setKrista(cadaPj?.data.krista + miExperienciaDisponible);
+  // }
 
-  if (krista < cadaPj?.data.krista) {
-    setKrista(cadaPj?.data.krista);
-  }
+  // if (krista < cadaPj?.data.krista) {
+  //   setKrista(cadaPj?.data.krista);
+  // }
 
-  // Furtur
-  if (furtur > cadaPj?.data.furtur + miExperienciaDisponible) {
-    setFurtur(cadaPj?.data.furtur + miExperienciaDisponible);
-  }
+  // // Furtur
+  // if (furtur > cadaPj?.data.furtur + miExperienciaDisponible) {
+  //   setFurtur(cadaPj?.data.furtur + miExperienciaDisponible);
+  // }
 
-  if (furtur < cadaPj?.data.furtur) {
-    setFurtur(cadaPj?.data.furtur);
-  }
+  // if (furtur < cadaPj?.data.furtur) {
+  //   setFurtur(cadaPj?.data.furtur);
+  // }
 
-  // Darion
-  if (darion > cadaPj?.data.darion + miExperienciaDisponible) {
-    setDarion(cadaPj?.data.darion + miExperienciaDisponible);
-  }
+  // // Darion
+  // if (darion > cadaPj?.data.darion + miExperienciaDisponible) {
+  //   setDarion(cadaPj?.data.darion + miExperienciaDisponible);
+  // }
 
-  if (darion < cadaPj?.data.darion) {
-    setDarion(cadaPj?.data.darion);
-  }
+  // if (darion < cadaPj?.data.darion) {
+  //   setDarion(cadaPj?.data.darion);
+  // }
   const expANivel = (expEnNum) => {
     return expEnNum < 50
       ? 0
@@ -275,31 +290,13 @@ export const Perfil = () => {
                     </h3>
                   </figure>
                   <div className="cajonExperiencia">
-                    <input
-                      type="range"
-                      min="0"
-                      max="200"
-                      step="1"
-                      value={handleEstadoName(pers.name)}
-                      onChange={(e) => darExp(e, pers.name)}
-                      style={{
-                        width: "100%",
-                        height: "10px",
-                        margin: "5px 0",
-                        background: `linear-gradient(to right, white, brown)`,
-                        outline: "none",
-                        WebkitAppearance: "none",
-                      }}
-                    />
-                    <h3 className="expPorPj">
-                      {handleEstadoName(pers.name)}/200
-                    </h3>
-                    <button
+                  {cadaPj?.data[pers.name.toLowerCase()]>199?<button>Nivel máximo</button>: <button
                     disabled={send}
                       onClick={() => getExp(pers.name.toLocaleLowerCase())}
                     >
-                      Dar Exp
-                    </button>
+                      Subir nivel(50 exp)
+                    </button>}
+                   
                   </div>
                 </div>
               ))}
