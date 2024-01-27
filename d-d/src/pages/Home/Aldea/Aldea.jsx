@@ -46,20 +46,13 @@ const{user}=useAuth()
                 alt="imagen control"
               />
               <ul className="textInstrucciones">
-                <li>Si el aguante llega a 0 no podrás seguir.</li>
+                <li>Tienes que elegir la acción que mejor le vaya a tu personaje basándote en sus estadísticas</li>
                 <li>
                   {" "}
-                  Los puntos de tu personaje en la acción más el <strong>DADO</strong> será el resultado
+                  Los puntos de tu personaje en la acción más el <strong>DADO</strong> será el resultado de la tirada.
                 </li>
-                <li>Menos de 5 restará aguante</li>
-                <li>Más de 7 dará experiencia</li>
-                <li>
-                 5, 6 y 7 quitan salud y dan experiencia basado en tu dado
-                </li>
-                <li>
-                  A veces, tendrás que elegir
-                  el mal menor
-                </li>
+               <div className="cuadroInst"><strong>1 2 3 4</strong> <strong>5 6 7</strong> <strong>8 9 10+ </strong></div>
+               
               </ul>
 
               <button onClick={() => handleStart()}>Empezar!</button>

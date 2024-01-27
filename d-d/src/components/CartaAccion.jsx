@@ -21,6 +21,7 @@ export const CartaAccion = ({ miPj,nivelDos,nivelTres }) => {
   const [dado, setDado] = useState(Math.ceil(Math.random() * 6));
   const [dadoPro, setDadoPro] = useState(Math.ceil(Math.random() * 8));
   const [send, setSend] = useState(false);
+  const [resultadoFinal, setResultadoFinal] = useState();
   useEffect(() => {
     if (nivelDos) {
 
@@ -157,6 +158,8 @@ getExp(miPj.oro)
                   key={op.accion}
                   onClick={() => {
                     const brm = miPj[acciones[accion].habilidad[index]] + dado;
+                   
+                    setResultadoFinal([brm,[acciones[accion].habilidad[index]]])
                     if (brm < 5 || dado == 1) {
                       setConsecuencia(
                         secuelas[accion].consecuencias[index].mala
@@ -247,6 +250,7 @@ getExp(miPj.oro)
         acciones={acciones}
         accion={accion}
         miPj={miPj}
+        brm={resultadoFinal}
       />
     </>
   );
