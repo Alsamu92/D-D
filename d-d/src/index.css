@@ -60,7 +60,7 @@ background-size: cover;
 }
 @media screen and (max-width: 800px) {
 main{
-  min-height: 130vh;
+  min-height: 100vh;
 }
 }
 

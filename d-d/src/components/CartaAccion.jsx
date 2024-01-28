@@ -140,7 +140,7 @@ getExp(miPj.oro)
               </NavLink>
             )}
           </div>
-          <Link className="botonConsecuencias" to="/">
+          <Link className="botonConsecuencias" to="/Perfil">
             <button disabled={!send}>Inicio</button>
           </Link>
         </>

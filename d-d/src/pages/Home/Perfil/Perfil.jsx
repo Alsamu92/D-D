@@ -10,7 +10,7 @@ export const Perfil = () => {
   const [info, setInfo] = useState(false);
   const [cadaPj, setCadaPj] = useState();
   const [res, setRes] = useState();
-  const [send, setSend] = useState(false);
+  const [enviado, setEnviado] = useState(false);
   const [selectedPersonaje, setSelectedPersonaje] = useState();
   const [lirena, setLirena] = useState();
   const [bruster, setBruster] = useState();
@@ -78,7 +78,7 @@ export const Perfil = () => {
     }
   };
   const getExp = async (nombreCambiar) => {
-    setSend(true)
+    setEnviado(true)
     let respuesta;
     switch (nombreCambiar) {
       case "lirena":
@@ -138,7 +138,7 @@ export const Perfil = () => {
     }
   };
   useEffect(() => {
-    console.log(send)
+    console.log(enviado)
    
     if (res?.data.patchUser.experiencia!=res?.data.updateUser.experiencia) {
   
@@ -150,9 +150,9 @@ export const Perfil = () => {
         timer: 1500,
       });
       setRes(null);
-    setSend(false)
+    setEnviado(false)
     }else{
-      setSend(false)
+      setEnviado(false)
     }
   }, [res]);
 
@@ -291,7 +291,7 @@ export const Perfil = () => {
                   </figure>
                   <div className="cajonExperiencia">
                   {cadaPj?.data[pers.name.toLowerCase()]>199?<button>Nivel máximo</button>: <button
-                    disabled={send}
+                    disabled={enviado}
                       onClick={() => getExp(pers.name.toLocaleLowerCase())}
                     >
                       Subir nivel(50 exp)
