@@ -114,7 +114,7 @@ getExp(miPj.oro)
             {!usuarioActual?.data?.medallas.includes(miPj.name) &&
             usuarioActual != null ? (
               <>
-                <p className="enfasis">Click en la medalla de {miPj.name}</p>
+                <h4 className="enfasis">Click en la medalla de {miPj.name}</h4>
                 <img
                   src={misMedallas[miPj.name]}
                   onClick={handleMedalla}
