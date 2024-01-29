@@ -46,8 +46,9 @@
 }
 
 .headerRecords td {
-  padding: 15px 0px;
+  padding: 10px 0px;
   font-weight: bold;
+  text-align: left;
 
   text-align: center;
   border-bottom: 2px solid #6b4d2e36;
@@ -61,7 +62,8 @@
 }
 
 .contenedorRecord td {
-  padding: 10px 10px;
+  padding: 10px 5px;
+  text-align: left;
   color: #d9cb9e;
 }
 .personajesSelect {
@@ -101,21 +103,21 @@
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: relative;
-    top: -6%;
+    top: -1%;
   }
   .paginRec {
-    top: 15%;
+    top: 19%;
     position: relative;
   }
   .personajesSelect {
     position: relative;
-    top: -7%;
+    top: -1%;
     cursor: pointer;
     font-weight: 700;
     width: 200px;
-    padding: 10px;
+    padding: 5px;
     border-radius: 10px;
-    font-size: 18px;
+    font-size: 16px;
     text-align: center;
     background-color: hsl(42, 52%, 48%);
   }

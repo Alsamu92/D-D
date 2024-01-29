@@ -65,5 +65,7 @@ export const usePaginacion = (num) => {
     ),
     dataPag: currentItems,
     setGaleriaItems,
-    itemsPerPage
+    itemsPerPage,
+    currentPage,
+    setCurrentPage,
   };}
