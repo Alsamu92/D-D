@@ -108,6 +108,12 @@ margin:0
     100% { color: rgb(255, 255, 255); }
    
   }
+  @keyframes waitbg {
+    0% { background-color: rgba(211, 13, 13, 0); }
+    75% { background-color: rgba(92, 59, 59, 0); }
+   
+   
+  }
 
 .textoTirada{
     display: flex;
@@ -134,4 +140,11 @@ margin:0
     width: 60px;
     text-align: center;
  }
-  
+ .numeroFinal{
+    width: 50px;
+   animation: waitbg 1.1s ease;
+    border-radius: 10px;
+    color: white;
+    border: 2px solid silver;
+    padding: 5px;
+  }

@@ -30,13 +30,18 @@ export const BarraJugador = ({ miPj, dado, consec, brm }) => {
               <div className="dice rolling">{dado} </div>
               <div className="textoTirada">
                 <p>+ {brm[1]}</p>
-                <p className="numeroFinal waitDice">= {dado==1?1:brm[0]}</p>
+                <p style={{
+    backgroundColor:
+      dado === 1
+        ? "black"
+        : brm[0] < 5
+        ? "red"
+        : brm[0] > 7
+        ? "green"
+        : "orange",
+  }} className="numeroFinal waitDice">= {dado==1?"Pifia":brm[0]}</p>
+             
               </div>{" "}
-              {/* <div className="cuadroInst">
-                <strong>4- </strong>
-                <strong>X </strong>
-                <strong>8+</strong>{" "}
-              </div> */}
             </div>
           )}
         </div>
