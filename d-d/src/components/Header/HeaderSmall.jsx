@@ -60,7 +60,7 @@ export const HeaderSmall = () => {
               </NavLink>
             </figure>
             <figure className="figureNav">
-            <span class="material-symbols-outlined">
+            <span className="material-symbols-outlined">
 swords
 </span>
               <NavLink to={"/Aldea"} onClick={() => setShowMenu(false)}>

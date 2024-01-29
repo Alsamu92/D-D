@@ -77,7 +77,7 @@ export const Records = () => {
 
           {todosRecords &&
             dataPag?.map((record, index) => (
-              <tr className="contenedorRecord">
+              <tr className="contenedorRecord" key={record._id}>
              
                 <td onClick={() => setValorJugador(record.jugadorName)}>
                 {(acc++)+((currentPage-1)*5)}.{record.jugadorName}

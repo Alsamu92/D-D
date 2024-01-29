@@ -101,6 +101,7 @@ getExp(miPj.oro)
     miPj.salud += salud;
   };
   if (miPj.oro < 0) miPj.oro = 0;
+
   return (
     <>
       {accion >= acciones.length ? (
@@ -151,6 +152,7 @@ getExp(miPj.oro)
               Prueba {accion + 1}/{acciones.length}
             </h2>
             <div className="cartaAccion">
+           
               <p>{acciones[accion].accion}</p>
 
               {acciones[accion].opcion.map((op, index) => (

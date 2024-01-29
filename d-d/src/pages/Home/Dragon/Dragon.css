@@ -1,14 +1,68 @@
-.dragon{
-    min-height:90vh ;
-    width: 100%;
-    background-image: url("https://res.cloudinary.com/djfkchzyq/image/upload/v1705696468/yayr3uquyovsakopantv.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.dragon {
+  min-height: 90vh;
+  width: 100%;
+  background-image: url("https://res.cloudinary.com/djfkchzyq/image/upload/v1705696468/yayr3uquyovsakopantv.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.dragon h1{
-    color: white;
-    font-size: 30px;
+.cartaDragon {
+  background-image: url("https://res.cloudinary.com/djfkchzyq/image/upload/v1706531112/j661vrarw3mca8kq0fvm.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 50px auto;
+  position: relative;
+
+  width: 60vw;
+  min-width: 370px;
+
+  max-width: 600px;
+  min-height: 735px;
+  height: 70vh;
+}
+.empezarDragon {
+  position: relative;
+  top: 90%;
+  left: 75%;
+}
+
+.rondaDragon {
+  background-color: rgba(0, 0, 255, 0.292);
+  width: 85%;
+  height: 45px;
+  position: relative;
+  top:5%;
+  left: 7%;
+  
+}
+.cuadroDragon {
+  background-color: rgba(195, 201, 18, 0.193);
+  width: 87%;
+  height: 320px;
+  position: relative;
+  top:6.0%;
+  left: 7%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.infoMedioDragon {
+  background-color: rgba(221, 61, 7, 0.238);
+  width: 85%;
+  height: 40px;
+  position: relative;
+  top:7%;
+  left: 8%;
+}
+.cuadroPersonajes {
+  background-color: rgba(89, 225, 21, 0.219);
+  width: 85%;
+  left: 7%;
+  height: 200px;
+  position: relative;
+  top:7.2%;
 }

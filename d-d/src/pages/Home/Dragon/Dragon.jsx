@@ -1,10 +1,26 @@
-import React from 'react';
+import React, { useState } from "react";
 import "./Dragon.css";
 
 export const Dragon = () => {
-    return (
-     <div className='dragon'>
-        <h1>Próximamente...</h1>
-     </div>
-    );
+  const [instDragon, setInstDragon] = useState(false);
+  return (
+    <div className="dragon">
+      {!instDragon ? (
+        <div className="cartaDragon">
+          <button onClick={()=>setInstDragon(true)} className="empezarDragon">Adelante!</button>
+        </div>
+      ) : (
+        <div className="cartaDragon">
+         
+            <div className="rondaDragon"></div>
+            <div className="cuadroDragon">
+                Próximamente...
+            </div>
+            <div className="infoMedioDragon"></div>
+            <div className="cuadroPersonajes"></div>
+         
+        </div>
+      )}
+    </div>
+  );
 };

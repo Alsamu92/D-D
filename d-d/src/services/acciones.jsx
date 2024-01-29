@@ -4,6 +4,7 @@ export const acciones = [
     accion:
       "La primera prueba es una carrera nocturna por el bosque.Es necesario tener una vista aguda en malas condiciones si quieres entrar en la guarida de un dragón y salir con vida.",
   habilidad:["sigilo","fuerza","sabiduria"],
+  numero:0,
     opcion: [
       "Seguir al corredor más hábil y adelantarle si se despista.",
       "Afrontar la carrera con normalidad.",
@@ -15,6 +16,7 @@ export const acciones = [
     accion:
       "Muchos quedaron en el bosque. Ahora debereís recoger del lago una esfera roja. Aguantar la respiración es vital para no inhalar humo en tu batalla final.",
       habilidad:["carisma","destreza","sigilo"],
+      numero:1,
     opcion: [
       "Buscar al alquimista para que te de ayuda.",
       "Saltar desde el risco para llegar antes al fondo.",
@@ -25,6 +27,7 @@ export const acciones = [
   {
     accion: "Mantener la calma es un don valorado para esta tarea. Los animales a los que os enfrentaís son ciegos pero detectan el movimiento. Conseguid pasar la noche estando quietos y demostrareís que la poseeis.",
     habilidad:["fuerza","sabiduria","carisma"],
+    numero:2,
     opcion: [
       "Mantenerte firme con todo tu equipamiento.",
       "Hacer estiramientos y acolchar las botas",
@@ -35,6 +38,7 @@ export const acciones = [
   {
     accion: "Es importante que la persona a la que se le prestará la capa sea de fiar. Van a pedir reportes a los reinos cercanos de los participantes que siguen en pie. Hay cosas que no deberían saber.",
     habilidad:["destreza","sigilo","fuerza"],
+    numero:3,
     opcion: [
       "Dar el cambiazo cuando lleguen los informes.",
       "Asaltar a los mensajeros por los caminos.",
@@ -45,6 +49,7 @@ export const acciones = [
   {
     accion: "Todos los que quedaís ya habeís demostrado ser muy dignos pero quedan las pruebas mas duras. Una justa a caballo será una prueba de resistencia, valor y temple.",
     habilidad:["sabiduria","carisma","destreza"],
+    numero:4,
     opcion: [
       "Reconoces un caballo que ganó en tu ciudad.Elegirlo.",
       "Presumir mucho de tus habilidades para intimidar.",
@@ -55,6 +60,7 @@ export const acciones = [
   {
     accion: "Parece que teneís lo que hay que tener para la siguiente prueba. Una manada de jabalíes tremendamente grandes está destrozando las cosechas de calabazas. Cazad uno, si podeís.",
     habilidad:["sigilo","fuerza","sabiduria"],
+    numero:5,
     opcion: [
       "Emboscarlos en una plantación de calabazas.",
       "Echarte al monte a por ellos.",
@@ -65,6 +71,7 @@ export const acciones = [
   {
     accion: "Quedaís muy pocos participantes. El dragon vive en una montaña congelada. Sobrevivid una noche en ella y quizá esteís preparados para escalarla cuando llegue el momento.",
     habilidad:["carisma","destreza","sigilo"],
+    numero:6,
     opcion: [
       "Conseguir información de los posibles refugios de la zona.",
       "Construir un refugio con materiales de por allí.",
@@ -75,6 +82,7 @@ export const acciones = [
   {
     accion: "Los aletadracos no son tan fieros como los dragones pero comparten una cosa, se puede hablar con ellos. Si consigues hablar con uno seguramente puedas comunicarte bien con un dragón. Prueba, no hablan casi con nadie.",
     habilidad:["fuerza","sabiduria","carisma"],
+    numero:7,
     opcion: [
       "Agarrar al pez por las aletas hasta que diga algo.",
       "Presionar ligeramente las agallas y tirar de la cola.",
@@ -85,6 +93,7 @@ export const acciones = [
   {
     accion: "La prueba final es un duelo a muerte contra otro participante. Mala suerte, te ha tocado 'El Hachas', no es conocido por su delicadeza.",
     habilidad:["destreza","sigilo","fuerza"],
+    numero:8,
     opcion: [
       "Parece pesado, intentas cansarlo corriendo sin que te toque.",
       "Despistarlo y ocultarte para darle un golpe maestro.",
@@ -95,6 +104,7 @@ export const acciones = [
   {
     accion: "Ya os van a hacer entregas de vuestras capas anti-dragones, pero una muchedumbre furiosa, compuesta por los descartados, asalta el palacio. Detenlos, rápido.",
     habilidad:["sabiduria","carisma","destreza"],
+    numero:9,
     opcion: [
       "Has calculado que la lámpara podría caerles encima, con un poco de ayuda",
       "Los persuades y los intentas convencer de que paren.",
@@ -131,7 +141,8 @@ export const secuelas = [
      { buena:"https://res.cloudinary.com/djfkchzyq/image/upload/v1705975817/soluciones/b3qrc2bxezkfgtureasc.jpg",
       regular:"https://res.cloudinary.com/djfkchzyq/image/upload/v1705975817/soluciones/b3qrc2bxezkfgtureasc.jpg",
       mala:"https://res.cloudinary.com/djfkchzyq/image/upload/v1705975817/soluciones/paylh6ya3derts6nkwib.avif"}
-    ]
+    ],
+    numero:0
   },
   // --------------SECUELA 1-----------------
 {
@@ -159,7 +170,8 @@ export const secuelas = [
     { buena:"https://res.cloudinary.com/djfkchzyq/image/upload/v1705975818/soluciones/srrkjd0gyxbcligi0jub.avif",
      regular:"https://res.cloudinary.com/djfkchzyq/image/upload/v1705975818/soluciones/jk7wsxysckcdq1nrfdh2.avif",
      mala:"https://res.cloudinary.com/djfkchzyq/image/upload/v1705975817/soluciones/x1zshkn9evvxfpzafnwy.avif"}
-   ]
+   ],
+   numero:1
 },
 // --------------SECUELA 2-----------------
 {
@@ -187,8 +199,8 @@ export const secuelas = [
     { buena:"https://res.cloudinary.com/djfkchzyq/image/upload/v1706012544/soluciones/aehttlnqesab4jisfdyz.avif",
      regular:"https://res.cloudinary.com/djfkchzyq/image/upload/v1705978503/soluciones/tuv88xd8vgf2cpg7f5wf.png",
      mala:"https://res.cloudinary.com/djfkchzyq/image/upload/v1705978614/soluciones/uz5t3eonu5qwhvoklysk.jpg"}
-   ]
-  
+    ],
+    numero:2
 },
 // --------------SECUELA 3-----------------
 {
@@ -216,7 +228,8 @@ export const secuelas = [
     { buena:"https://res.cloudinary.com/djfkchzyq/image/upload/v1706012861/soluciones/n2y1qjbdqa5tih26znro.jpg",
      regular:"https://res.cloudinary.com/djfkchzyq/image/upload/v1706012863/soluciones/i38wgxmtuqjpaxgbu4ws.png",
      mala:"https://res.cloudinary.com/djfkchzyq/image/upload/v1706012863/soluciones/i38wgxmtuqjpaxgbu4ws.png"}
-   ]
+    ],
+    numero:3
 },
 // --------------SECUELA 4-----------------
 { consecuencias: [
@@ -243,8 +256,8 @@ imagenes:[
   { buena:"https://res.cloudinary.com/djfkchzyq/image/upload/v1706012546/soluciones/mp7empojsnlffwmoofzb.jpg",
    regular:"https://res.cloudinary.com/djfkchzyq/image/upload/v1706012545/soluciones/u9n9tytzlqye7wp8g7xn.jpg",
    mala:"https://res.cloudinary.com/djfkchzyq/image/upload/v1706012545/soluciones/u9n9tytzlqye7wp8g7xn.jpg"}
- ]
- 
+  ],
+  numero:4
 },
 // --------------SECUELA 5-----------------
 { consecuencias: [
@@ -271,8 +284,8 @@ imagenes:[
   { buena:"https://res.cloudinary.com/djfkchzyq/image/upload/v1706037873/si1a7wa8ha3o1ywd8mda.avif",
   regular:"https://res.cloudinary.com/djfkchzyq/image/upload/v1706037873/k0anzb5lktcm0sty2oar.jpg",
   mala:"https://res.cloudinary.com/djfkchzyq/image/upload/v1706037873/r5ksmztl85din6qaizit.jpg"}
- ]
- 
+],
+numero:5
 }
 ,
 // --------------SECUELA 6-----------------
@@ -300,8 +313,8 @@ imagenes:[
   { buena:"https://res.cloudinary.com/djfkchzyq/image/upload/v1706119040/soluciones/ey7sacbsaa396tkdeh0m.jpg",
    regular:"https://res.cloudinary.com/djfkchzyq/image/upload/v1706119041/soluciones/gzv9smccjf1rpmd7n1hu.jpg",
    mala:"https://res.cloudinary.com/djfkchzyq/image/upload/v1706119040/soluciones/xto0myfetomv5qelu3gk.jpg"}
- ]
- 
+  ],
+  numero:6
 },
 // --------------SECUELA 7-----------------
 { consecuencias: [
@@ -328,7 +341,8 @@ imagenes:[
   { buena:"https://res.cloudinary.com/djfkchzyq/image/upload/v1706113178/soluciones/w5jw7lluiro2cs6ldqxc.jpg",
    regular:"https://res.cloudinary.com/djfkchzyq/image/upload/v1706113178/soluciones/w5jw7lluiro2cs6ldqxc.jpg",
    mala:"https://res.cloudinary.com/djfkchzyq/image/upload/v1706113178/soluciones/w5jw7lluiro2cs6ldqxc.jpg"}
- ]
+  ],
+  numero:7
  
 },
 // --------------SECUELA 8-----------------
@@ -356,8 +370,8 @@ imagenes:[
   { buena:"https://res.cloudinary.com/djfkchzyq/image/upload/v1706113177/soluciones/hs1dt7grfchki3xlzpqp.jpg",
    regular:"https://res.cloudinary.com/djfkchzyq/image/upload/v1706113148/soluciones/o9mttohcjlmwjxxbehrw.png",
    mala:"https://res.cloudinary.com/djfkchzyq/image/upload/v1706113177/soluciones/equc9ukdtm0ivl2fa8ir.jpg"}
- ]
- 
+  ],
+  numero:8
 },
 // --------------SECUELA 9-----------------
 { consecuencias: [
@@ -384,7 +398,8 @@ imagenes:[
   { buena:"https://res.cloudinary.com/djfkchzyq/image/upload/v1706113177/soluciones/hs1dt7grfchki3xlzpqp.jpg",
    regular:"https://res.cloudinary.com/djfkchzyq/image/upload/v1706113148/soluciones/o9mttohcjlmwjxxbehrw.png",
    mala:"https://res.cloudinary.com/djfkchzyq/image/upload/v1706113177/soluciones/equc9ukdtm0ivl2fa8ir.jpg"}
- ]
+  ],
+  numero:9
  
 }
 ];

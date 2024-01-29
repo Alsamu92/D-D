@@ -14,7 +14,7 @@ export const Aldea = () => {
 const{user}=useAuth()
   const [start, setStart] = useState(null);
   const [miPersonaje, setMiPersonaje] = useState(null);
-  const { setGaleriaItems, dataPag, ComponentPaginacion,currentPage } = usePaginacion();
+  const { setGaleriaItems, dataPag, ComponentPaginacion } = usePaginacion();
   const traerMiExp = async () => {
     const miExp = await getUserByName(user.username);
     setMiPersonaje(miExp?.data);
@@ -25,7 +25,7 @@ const{user}=useAuth()
   const handleConfirmedClick = (person) => {
     useConfirmacionPj(setPjConfirmed, person);
   };
-console.log(currentPage)
+
   const handleStart = () => {
     if (user) {
         pjConfirmed.oro = 0;

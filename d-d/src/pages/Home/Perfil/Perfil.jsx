@@ -275,7 +275,7 @@ export const Perfil = () => {
           <div className="miPerfil">
             <div className="cajonesPerfil">
               {persSeleccionables.map((pers) => (
-                <div className="algo">
+                <div className="algo" key={pers.name}>
                   <figure
                     onClick={() => setSelectedPersonaje(pers)}
                     key={pers.name}
