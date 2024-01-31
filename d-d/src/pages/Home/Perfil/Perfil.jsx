@@ -19,7 +19,22 @@ export const Perfil = () => {
   const [darion, setDarion] = useState();
   const [miExperienciaDisponible, setMiExperienciaDisponible] = useState();
   const { user } = useAuth();
-
+const avisoIns=()=>{
+  Swal.fire({
+    title: 'Puntos insuficientes.',
+    text: 'Consigue más jugando',
+    icon: 'error',
+    showCancelButton: true,
+    confirmButtonText: 'Ir al juego',
+    cancelButtonText: 'Cerrar',
+  }).then((result) => {
+    if (result.value) {
+    
+      window.location.href = '/aldea';
+    }
+  });
+      setEnviado(false)
+}
   const traerMiExp = async () => {
     const miExp = await getUserByName(user.username);
     setCadaPj(miExp);
@@ -89,6 +104,9 @@ export const Perfil = () => {
           });
 
           setRes(respuesta);
+        }else{
+        avisoIns()
+      
         }
         
         break;
@@ -100,7 +118,10 @@ export const Perfil = () => {
           });
 
           setRes(respuesta);
-        }
+        }else{
+          avisoIns()
+        
+          }
         break;
       case "krista":
         if (miExperienciaDisponible > 49) {
@@ -110,7 +131,10 @@ export const Perfil = () => {
           });
 
           setRes(respuesta);
-        }
+        }else{
+          avisoIns()
+        
+          }
         break;
       case "furtur":
         if (miExperienciaDisponible > 49) {
@@ -120,7 +144,10 @@ export const Perfil = () => {
           });
 
           setRes(respuesta);
-        }
+        }else{
+          avisoIns()
+        
+          }
         break;
       case "darion":
         if (miExperienciaDisponible > 49) {
@@ -130,7 +157,10 @@ export const Perfil = () => {
           });
 
           setRes(respuesta);
-        }
+        }else{
+          avisoIns()
+        
+          }
        
         break;
       default:
@@ -152,6 +182,7 @@ export const Perfil = () => {
       setRes(null);
     setEnviado(false)
     }else{
+  
       setEnviado(false)
     }
   }, [res]);

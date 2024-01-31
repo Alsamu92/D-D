@@ -76,7 +76,7 @@
 
 .btnContainer button {
   background-color: white;
-  color: rgb(255, 158, 27);
+  color: rgb(0, 0, 0);
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -101,4 +101,7 @@
 .loginParagraph a {
   color: white;
   font-weight: bold;
+}
+.footerForm a {
+  color: brown;
 }
