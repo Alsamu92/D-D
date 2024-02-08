@@ -141,8 +141,8 @@ getExp(miPj.oro)
               </NavLink>
             )}
           </div>
-          <Link className="botonConsecuencias" to="/Perfil">
-            <button disabled={!send}>Inicio</button>
+          <Link  className="botonConsecuencias" to="/Perfil">
+            <button onClick={handleMedalla} disabled={!send}>Inicio</button>
           </Link>
         </>
       ) : miPj.salud > 0 ? (
