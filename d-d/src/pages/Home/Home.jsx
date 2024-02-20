@@ -12,6 +12,29 @@ export const Home = () => {
       setAdquiridas(usuarioActual?.data?.medallas);
     }
   };
+
+  const getUrlParams = (URL, ParameterName) => {
+    //let CurrentURL = window.location.href;
+    ParameterName = ParameterName.replace(/[\[\]]/g, "\\$&");
+    URL = new RegExp("[?&]" + ParameterName + "(=([^&#]*)|&|#|$)").exec(URL);
+    return URL
+      ? URL[2]
+        ? decodeURIComponent(URL[2].replace(/\+/g, " "))
+        : ""
+      : null;
+  };
+  const guardarParamsunidEnLocalStorage = () => {
+    const paramsunid = getUrlParams(window.location,"paramsunid");
+
+    if (paramsunid) {
+      localStorage.setItem("paramsunid", paramsunid);
+      console.log("El valor de 'paramsunid' se ha guardado en localStorage.");
+    } else {
+      console.error("No se encontró el parámetro 'paramsunid' en la URL.");
+    }
+  };
+
+  guardarParamsunidEnLocalStorage();
   useEffect(() => {
     sacarUser();
   }, []);
@@ -26,15 +49,25 @@ export const Home = () => {
   return (
     <div className="contenedorJuego">
       <div className="textoPres">
-      <h2>Compite y gana tu puesto</h2>
-      <p>Se ha descubierto una capa que te permite ser indetectable a los ojos de un dragón. Lamentablemente solo existe material para fabricar cinco capas.
-      </p>
-      <p>El reino de Nulthis ha organizado un torneo para seleccionar las personas que llevarás a cabo la tarea de derrotar a Carxes y librar asi a los habitantes a una vida fuera de su tiranía.A cambio podrán quedarse con todo el tesoro, con la condición que devuelvan las capas.
-      </p>
-      <p>Clasifica a los 5 personajes y desbloquea el asalto al dragón</p>
-      <p>Elige las opciones que más te beneficien, gana una plaza y conviértete en leyenda.</p>
+        <h2>Compite y gana tu puesto</h2>
+        <p>
+          Se ha descubierto una capa que te permite ser indetectable a los ojos
+          de un dragón. Lamentablemente solo existe material para fabricar cinco
+          capas.
+        </p>
+        <p>
+          El reino de Nulthis ha organizado un torneo para seleccionar las
+          personas que llevarás a cabo la tarea de derrotar a Carxes y librar
+          asi a los habitantes a una vida fuera de su tiranía.A cambio podrán
+          quedarse con todo el tesoro, con la condición que devuelvan las capas.
+        </p>
+        <p>Clasifica a los 5 personajes y desbloquea el asalto al dragón</p>
+        <p>
+          Elige las opciones que más te beneficien, gana una plaza y conviértete
+          en leyenda.
+        </p>
       </div>
-     
+
       <Link to="/Aldea">
         <h3 className="cajonAventura">Torneo del dragón</h3>
       </Link>
@@ -44,12 +77,9 @@ export const Home = () => {
           <span className="material-symbols-outlined">lock</span>
         </h3>
       ) : medallas ? (
-     
         <Link to="/Dragon">
-        <h3 className="cajonAventura">Derrota a Carxes</h3>
-      </Link>
-          
-    
+          <h3 className="cajonAventura">Derrota a Carxes</h3>
+        </Link>
       ) : (
         <div className="cajonAventura">
           <h3>Gana con todos para completar</h3>
